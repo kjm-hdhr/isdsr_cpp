@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../../adhoc/adhoc_node.hpp"
-#include "../isdsr_routing.hpp"
+#include "../adhoc/adhoc_node.hpp"
+#include "../isdsr/isdsr_routing.hpp"
 #include "ecdsa_sig.hpp"
 #include <array>
 #include <unistd.h>

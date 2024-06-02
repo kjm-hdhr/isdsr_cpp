@@ -3,7 +3,7 @@
 
 #include <mcl/bn_c384_256.h>
 #include <array>
-#include "../signature_scheme.hpp"
+#include "../isdsr/signature_scheme.hpp"
 
 namespace oit::ist::nws::adhoc_routing{
 
