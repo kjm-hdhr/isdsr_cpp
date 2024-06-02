@@ -41,3 +41,8 @@ uint32_t isdsr_packet::deserialize(const vector<uint8_t> &buf){
     std::copy(buf.begin()+INDEX_SIG,buf.end(),this->sig.begin());
     return INDEX_SIG+this->sig_length;
 }
+string isdsr_packet::to_string(){
+    string ret=this->dsr_packet::to_string();
+    ret+=" sig length:"+std::to_string(this->sig_length);
+    return ret;
+}
