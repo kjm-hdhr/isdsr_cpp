@@ -8,7 +8,7 @@ ecdsa_rt_dir = $(root_dir)/isdsr_ecdsa
 adhoc_rt = $(adhoc_rt_dir)/adhoc_routing_fragment.cpp $(adhoc_rt_dir)/adhoc_routing_packet.cpp $(adhoc_rt_dir)/adhoc_node.cpp
 dsr_rt = $(dsr_rt_dir)/dsr_routing.cpp $(dsr_rt_dir)/dsr_packet.cpp
 isdsr_rt = $(isdsr_rt_dir)/isdsr_packet.cpp $(isdsr_rt_dir)/isdsr_routing.cpp
-ecdsa_rt = $(ecdsa_rt_dir)/ecdsa_sig.cpp
+ecdsa_rt = $(ecdsa_rt_dir)/ecdsa_sig.cpp $(ecdsa_rt_dir)/ecdsa_main.cpp
 
 mcl_root_dir = ../../mcl
 mcl_include = $(mcl_root_dir)/include
