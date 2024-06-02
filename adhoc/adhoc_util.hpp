@@ -57,6 +57,16 @@ class adhoc_util{
         }
         return ret+"]";
     }
+    static string to_string_vector(vector<uint8_t> &v){
+        if(v.size()<1){
+            return "";
+        }
+        string ret="v["+std::to_string(v[0]);
+        for(int i=1;i<v.size();i++){
+            ret+=","+std::to_string(v[i]);
+        }
+        return ret+"]";
+    }
 };
 };
 #endif

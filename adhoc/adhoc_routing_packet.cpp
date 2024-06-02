@@ -7,9 +7,11 @@ ar_packet::ar_packet(){
 	this->initialize();
 }
 ar_packet::ar_packet(uint8_t type, array<uint8_t,ADDR_SIZE> &src_id, array<uint8_t,ADDR_SIZE> &dest_id):ar_packet(){
+	//std::cerr<<"ar packet constructor"<<std::endl;
 	this->type=type;
 	this->set_src(src_id);
 	this->set_dest(dest_id);
+	//std::cerr<<"ar pakcet "<<this->to_string()<<std::endl;
 }
 ar_packet::~ar_packet(){
 

@@ -1,6 +1,7 @@
 #include "ecdsa_sig.hpp"
 #include <openssl/sha.h>
 #include <fstream>
+#include <iostream>
 using namespace oit::ist::nws::adhoc_routing;
 
 void ecdsa_sig::H1(mclBnG1 &g1, const array<uint8_t,ADDR_SIZE> &msg){
@@ -118,6 +119,7 @@ void ecdsa_sig::sign(isdsr_packet &p){
     for(int i=0;i<p.get_ri_length();i++){
         std::copy(ri->at(i).begin(),ri->at(i).end(),tmp.begin()+(ADDR_SIZE*(i+1)));
     }
+    std::cerr<<"sign:"<<adhoc_util::to_string_vector(tmp)<<std::endl;
     //memcpy(&idm[0],id,IP_LENGTH);
     //memcpy(&idm[IP_LENGTH],p->dsr->ri,p->dsr->rilen*IP_LENGTH);
     //char idm[idmeslength];
@@ -166,9 +168,8 @@ bool ecdsa_sig::verify(isdsr_packet &p){
         for(int j=0;j<(i+1);j++){
             std::copy(ri->at(j).begin(),ri->at(j).end(),idmsg.begin()+(ADDR_SIZE+(ADDR_SIZE*j)));
         }
+        std::cerr<<"verify:"<<adhoc_util::to_string_vector(idmsg)<<std::endl;
         this->H3(t6,idmsg);
-        mclBnG1_mul(&t5,&t5,&t6);
-        mclBnG1_add(&t7,&t7,&t5);
         mclBnG1_mul(&t5,&t5,&t6);
         mclBnG1_add(&t7,&t7,&t5);
         i++;

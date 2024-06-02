@@ -1,5 +1,5 @@
 #include "dsr_packet.hpp"
-
+#include <iostream>
 using namespace oit::ist::nws::adhoc_routing;
 
 dsr_packet::dsr_packet(){
@@ -8,6 +8,7 @@ dsr_packet::dsr_packet(){
 dsr_packet::dsr_packet(uint8_t type, array<uint8_t,ADDR_SIZE> &src_id, array<uint8_t,ADDR_SIZE> &dest_id):ar_packet(type,src_id,dest_id){
     this->ri_length=0;
     this->ri.clear();
+    //std::cerr<<"dsr packet constructor "<<this->to_string()<<std::endl;
 }
 dsr_packet::~dsr_packet(){
     this->ri.clear();

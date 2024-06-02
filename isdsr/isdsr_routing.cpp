@@ -3,6 +3,12 @@
 #include <iostream>
 using namespace oit::ist::nws::adhoc_routing;
 
+void isdsr_routing::set_signature_scheme(signature_scheme *ss){
+	this->ss=ss;
+	this->ss->set_id(this->id);
+	this->ss->setup();
+	this->ss->key_derivation();
+}
 array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<uint8_t> &buf){
 	isdsr_packet p;
     
@@ -10,6 +16,7 @@ array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<uint8_t> &b
 	p.deserialize(buf);
 
     bool verification=this->ss->verify(p);
+	std::cerr<<"----- verification -----"<<std::to_string(verification)<<std::endl;
     if(!verification){
         return nullptr;
     }
@@ -64,9 +71,20 @@ array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_data(std::vector<uint8_t> &b
 	return nullptr;
 }
 array<uint8_t,ADDR_SIZE>* isdsr_routing::generate_initiali_request(array<uint8_t,ADDR_SIZE> dest, std::vector<uint8_t> &buf){
-	dsr_packet p(RREQ,id,dest);
+	isdsr_packet p(RREQ,id,dest);
 	p.add_id(id);
+	std::cerr<<"routing "<<std::endl;
+	std::cerr<<this->to_string()<<std::endl;
+	std::cerr<<"isdsr initial req"<<std::endl;
+	std::cerr<<p.dsr_packet::to_string()<<std::endl;
+	this->ss->sign(p);
 	p.serialize(buf);
+	std::cerr<<"isdsr_routing initial request: "<<p.to_string()<<std::endl;
+	std::cerr<<"isdsr_routing initial request buf["<<std::to_string(buf[0]);
+	for(int i=1;i<buf.size();i++){
+		std::cerr<<","<<std::to_string(buf[i]);
+	}
+	std::cerr<<"]"<<std::endl;
 	return &(this->broadcast);
 }
 

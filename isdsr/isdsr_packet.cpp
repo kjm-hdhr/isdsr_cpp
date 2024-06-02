@@ -1,12 +1,13 @@
 #include "isdsr_packet.hpp"
-
+#include <iostream>
 using namespace oit::ist::nws::adhoc_routing;
 
 isdsr_packet::isdsr_packet(){
     this->initialize();
 }
 isdsr_packet::isdsr_packet(uint8_t type, array<uint8_t,ADDR_SIZE> &src_id, array<uint8_t,ADDR_SIZE> &dest_id):dsr_packet(type,src_id,dest_id){
-    this->initialize();
+    this->sig_length=0;
+    this->sig.clear();
 }
 isdsr_packet::~isdsr_packet(){
     this->sig.clear();
@@ -29,6 +30,8 @@ uint32_t isdsr_packet::serialize(vector<uint8_t> &buf){
         buf.resize(this->packet_size());
     }
     this->dsr_packet::serialize(buf);
+
+    std::cerr<<"isdsr_packet serialize dsr"<<adhoc_util::to_string_vector(buf)<<std::endl;
     this->sig_length=this->sig.size();
     adhoc_util::serialize_uint32(INDEX_SIG_LENGTH,buf,this->sig_length);
     std::copy(this->sig.begin(),this->sig.end(),buf.begin()+INDEX_SIG);
@@ -39,10 +42,16 @@ uint32_t isdsr_packet::deserialize(const vector<uint8_t> &buf){
     this->sig_length=adhoc_util::deserialize_uint32(INDEX_SIG_LENGTH,buf);
     this->sig.resize(this->sig_length);
     std::copy(buf.begin()+INDEX_SIG,buf.end(),this->sig.begin());
+    std::cerr<<"isdsr_packet deserialize:"<<this->to_string()<<std::endl;
     return INDEX_SIG+this->sig_length;
 }
 string isdsr_packet::to_string(){
     string ret=this->dsr_packet::to_string();
     ret+=" sig length:"+std::to_string(this->sig_length);
+    ret+=" sig["+std::to_string(this->sig[0]);
+    for(int i=1;i<this->sig.size();i++){
+        ret+=","+std::to_string(this->sig[i]);
+    }
+    ret+="]";
     return ret;
 }

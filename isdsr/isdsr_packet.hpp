@@ -5,8 +5,8 @@
 #define SIG_LENGTH_SIZE 4
 #define SIG_SIZE this->sig.size()
 
-#define INDEX_SIG_LENGTH INDEX_RI+this->ri.size()
-#define INDEX_SIG INDEX_SIG_LENGTH+SIG_SIZE
+#define INDEX_SIG_LENGTH INDEX_RI+this->ri.size()*ADDR_SIZE
+#define INDEX_SIG INDEX_SIG_LENGTH+SIG_LENGTH_SIZE
 namespace oit::ist::nws::adhoc_routing{
 
 class isdsr_packet : public dsr_packet{
