@@ -1,0 +1,20 @@
+#ifndef LATTICE_SIG
+#define LATTICE_SIG
+
+#include "../isdsr/signature_scheme.hpp"
+namespace oit::ist::nws::adhoc_routing{
+class signature_scheme{
+
+    protected:
+    array<uint8_t,ADDR_SIZE> id;
+
+    public:
+    void set_id(array<uint8_t, ADDR_SIZE> &id){std::copy(id.begin(),id.end(),this->id.begin());}
+    virtual void setup()=0;
+    virtual void key_derivation()=0;
+    virtual void sign(isdsr_packet &pkt)=0;
+    virtual bool verify(isdsr_packet &pkt)=0;
+    virtual string signature_scheme_name()=0;
+};
+};
+#endif
