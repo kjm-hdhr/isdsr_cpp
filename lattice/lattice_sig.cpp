@@ -1,8 +1,7 @@
 #include "lattice_sig.hpp"
 
 #include <fstream>
-
-#include "packing_agg.h"
+#include <cstring>
 using namespace oit::ist::nws::adhoc_routing;
 
 void lattice_sig::setup(){

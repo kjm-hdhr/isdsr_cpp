@@ -4,7 +4,11 @@
 #include <array>
 
 #include "../isdsr/signature_scheme.hpp"
-#include "sign_agg.h"
+extern "C"{
+    #include "sign_agg.h"
+    #include "packing_agg.h"
+}
+
 namespace oit::ist::nws::adhoc_routing{
 
 class lattice_sig:public signature_scheme{
