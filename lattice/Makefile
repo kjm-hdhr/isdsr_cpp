@@ -1,31 +1,24 @@
-dsr_dir = ../dsr
-dsr_src = $(dsr_dir)/dsr.c $(dsr_dir)/dsr_packet.c
-isdsr_dir = ../isdsr
-isdsr_src = $(isdsr_dir)/isdsr_packet.c $(isdsr_dir)/isdsr.c
-include_dir = ../../dilithium/ref
-lib_dir = ../../dilithium/build/ref
+root_dir = ..
+
+adhoc_rt_dir = $(root_dir)/adhoc
+dsr_rt_dir = $(root_dir)/dsr
+isdsr_rt_dir = $(root_dir)/isdsr
+lattice_rt_dir = $(root_dir)/lattice
+
+adhoc_rt = $(adhoc_rt_dir)/adhoc_routing_fragment.cpp $(adhoc_rt_dir)/adhoc_routing_packet.cpp $(adhoc_rt_dir)/adhoc_node.cpp
+dsr_rt = $(dsr_rt_dir)/dsr_routing.cpp $(dsr_rt_dir)/dsr_packet.cpp
+isdsr_rt = $(isdsr_rt_dir)/isdsr_packet.cpp $(isdsr_rt_dir)/isdsr_routing.cpp
+lattice_rt = $(lattice_rt_dir)/matrix.c $(lattice_rt_dir)/packing_agg.c $(lattice_rt_dir)/sign_agg.c $(lattice_rt_dir)/lattice_sig.cpp 
+
+dilithium_root_dir = ../../dilithium
+dilithium_include = $(dilithium_root_dir)/ref
+ssl_include = /opt/homebrew/opt/openssl@3/include
+dilithium_lib = $(dilithium_root_dir)/build/ref
+ssl_lib = /opt/homebrew/opt/openssl@3/lib
 flags = -ldilithium2_ref -lfips202_ref -lpthread
 
-isdsr_lattice = sign_agg.c packing_agg.c matrix.c isdsr_lattice.c
-isdsr_node = $(dsr_src) $(isdsr_src) $(isdsr_lattice) $(isdsr_dir)/isdsr_node.c
-isdsr_node_test = $(dsr_src) $(isdsr_src) $(isdsr_lattice) isdsr_node_test.c
-isdsr_lattice_test = $(dsr_src) $(isdsr_src) $(isdsr_lattice) isdsr_lattice_test.c
+lattice_test: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt)
+	g++ -o lattice_test $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt) $(lattice_rt_dir)/lattice_test.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
+lattice_node: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt)
+	g++ -o lattice_node $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
 
-isdsr_rtt_sender = $(dsr_src) $(isdsr_src) $(isdsr_lattice) $(isdsr_dir)/isdsr_node_rtt_sender.c
-
-isdsr_rtt_rcv = $(dsr_src) $(isdsr_src) $(isdsr_lattice) $(isdsr_dir)/isdsr_node_rtt.c
-
-node: $(isdsr_node) 
-	gcc -Wall -o isdsr_node -I$(include_dir) -L$(lib_dir) $(isdsr_node) $(flags)
-
-node_test: $(isdsr_node_test)
-	gcc -Wall -o isdsr_node_test $(isdsr_node_test) $(flags)
-
-lattice_test:
-	gcc -Wall -o isdsr_lattice_test -I$(include_dir) -L$(lib_dir)  $(isdsr_lattice_test) $(flags)
-
-rtt_receiver: $(isdsr_rtt_rcv)
-	gcc -Wall -o isdsr_rtt_rcv -I$(include_dir) -L$(lib_dir)  $(isdsr_rtt_rcv) $(flags)
-
-rtt_client: $(isdsr_rtt_sender)
-	gcc -g -Wall -o isdsr_node_test_rtt -I$(include_dir) -L$(lib_dir)  $(isdsr_rtt_sender) $(flags)
