@@ -1,11 +1,18 @@
 #ifndef MATRIX_H
 #define MATRIX_H
+#ifdef __cplusplus
+extern "C"{
+#endif
 
 #include <stdio.h>
 #include <stdint.h>
 #include <params.h>
 #include <poly.h>
 #include <polyvec.h>
+
+#ifdef __cplusplus
+}
+#endif
 
 void print_mat33(int32_t mat33[9]);
 void print_mat44(int32_t mat44[16]);

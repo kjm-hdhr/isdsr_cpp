@@ -1,9 +1,15 @@
 #ifndef PACKING_AGG_H
 #define PACKING_AGG_H
+#ifdef __cplusplus
+extern "C"{
+#endif
 #include <stdint.h>
 #include <params.h>
 #include <poly.h>
 #include <polyvec.h>
+#ifdef __cplusplus
+}
+#endif
 
 #define POLY_MODQ_LENGTH 256*3
 #define POLYS2ID_LENGTH 128

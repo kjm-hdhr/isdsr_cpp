@@ -18,7 +18,7 @@ ssl_lib = /opt/homebrew/opt/openssl@3/lib
 flags = -ldilithium2_ref -lfips202_ref -lpthread
 
 lattice_test: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt)
-	g++ -o lattice_test $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt) $(lattice_rt_dir)/lattice_test.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
+	g++ -o lattice_test $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_test.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
 lattice_node: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt)
 	g++ -o lattice_node $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
 
