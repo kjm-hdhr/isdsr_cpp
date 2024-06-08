@@ -1,15 +1,15 @@
 #include "matrix_calc.hpp"
 #include "../adhoc/adhoc_util.hpp"
-
+#include <iostream>
 using namespace oit::ist::nws::adhoc_routing;
 
 string mat33_calc::to_string(){
 	int len=3;
 	string ret="[";
 	for(int i=0;i<len;i++){
-		ret+="["+std::to_string(this->mat[i][0]);
+		ret+="["+std::to_string(this->mat.at(i).at(0));
 		for(int j=1;j<len;j++){
-			ret+=","+std::to_string(this->mat[i][j]);
+			ret+=","+std::to_string(this->mat.at(i).at(j));
 		}
 		ret+="]\n";
 	}
@@ -17,26 +17,26 @@ string mat33_calc::to_string(){
 }
 void mat33_calc::initialize(){
 	for(int i=0;i<3;i++){
-		this->mat[i].fill(0);
+		this->mat.at(i).fill(0);
 	}
 }
 void mat33_calc::set_array(int32_t v[3][3]){
 	for(int i=0;i<3;i++){
 		for(int j=0;j<3;j++){
-			this->mat[i][j]=v[i][j];
+			this->mat.at(i).at(j)=v[i][j];
 		}
 	}
 }
 void mat33_calc::set_array(array<array<int32_t,3>,3> &mat33){
 	for(int i=0;i<3;i++){
-		std::copy(mat33[i].begin(),mat33[i].end(),this->mat[i].begin());
+		std::copy(mat33.at(i).begin(),mat33.at(i).end(),this->mat.at(i).begin());
 	}
 }
 void mat33_calc::set(int32_t r, int32_t c, int32_t v){
-	this->mat[r-1][c-1]=v;
+	this->mat.at(r-1).at(c-1)=v;
 }
 int32_t mat33_calc::get(int32_t r, int32_t c){
-	return this->mat[r-1][c-1];
+	return this->mat.at(r-1).at(c-1);
 }
 int32_t mat33_calc::mat33_det_elem(int32_t a, int32_t b, int32_t c, int32_t p){
 	//printf("%d x %d x %d = ",a,b,c);
@@ -64,20 +64,20 @@ int32_t mat33_calc::get_det(int32_t p){
 void mat44_calc::set_array(int32_t v[4][4]){
 	for(int i=0;i<4;i++){
 		for(int j=0;j<4;j++){
-			this->mat[i][j]=v[i][j];
+			this->mat.at(i).at(j)=v[i][j];
 		}
 	}
 }
 void mat44_calc::set_array(array<array<int32_t,4>,4> &mat44){
 	for(int i=0;i<4;i++){
-		std::copy(mat44[i].begin(),mat44[i].end(),this->mat[i].begin());
+		std::copy(mat44.at(i).begin(),mat44.at(i).end(),this->mat.at(i).begin());
 	}
 }
 void mat44_calc::set(int32_t r, int32_t c, int32_t v){
-	this->mat[r-1][c-1]=v;
+	this->mat.at(r-1).at(c-1)=v;
 }
 int32_t mat44_calc::get(int32_t r, int32_t c){
-	return this->mat[r-1][c-1];
+	return this->mat.at(r-1).at(c-1);
 }
 void mat44_calc::make_cofactor_matrix(int32_t r, int32_t c,array<array<int32_t,3>,3> &mat33){
 	
@@ -87,22 +87,25 @@ void mat44_calc::make_cofactor_matrix(int32_t r, int32_t c,array<array<int32_t,3
 		if(i==r){
 			continue;
 		}
+		mat33_c=0;
 		for(int j=1;j<=4;j++){//col
 			if(j==c){
 				continue;
 			}
-			mat33[mat33_r][mat33_c]=this->mat[i-1][j-1];
+			//std::cout<<"mat33r:"<<std::to_string(mat33_r)<<" mat33c:"<<std::to_string(mat33_c)<<std::endl;
+			mat33.at(mat33_r).at(mat33_c)=this->mat.at(i-1).at(j-1);
 			mat33_c++;
 		}
 		mat33_r++;
 	}
 }
 int32_t mat44_calc::get_cofactor_det(int32_t r, int32_t c, int32_t p){
+	//std::cout<<"get cofactor det1"<<std::endl;
 	this->make_cofactor_matrix(r,c,*(this->mat33c.get_mat()));
+	//std::cout<<"get cofactor det2"<<std::endl;
 	return this->mat33c.get_det(p);
 }
 int32_t mat44_calc::get_det(int32_t p){
-	int32_t mat33[9];
 	int64_t a=0;
 	int64_t ret=0;
 	for(int i=1;i<=4;i++){
@@ -119,7 +122,7 @@ void mat44_calc::make_adjugate_mat44(int32_t p,array<array<int32_t,4>,4> &adj_ma
 		for(j=1;j<=4;j++){
 			mat44_element=this->get_cofactor_det(i,j,p);
 			mat44_element=((i+j)%2==0)?mat44_element:mat44_element*(-1);
-			adj_mat[i][j]=mat44_element;
+			adj_mat.at(i-1).at(j-1)=mat44_element;
 		}
 	}
 }
@@ -158,27 +161,4 @@ int32_t oit::ist::nws::adhoc_routing::multiply(int32_t a, int32_t b, int p){
 	int64_t ret=a;
 	ret=(ret*b)%p;
 	return ret;
-}
-void multipy_elem(int row, int col, int32_t a[16], int32_t b[16], int32_t c[16], int p){
-	//C=A*B
-	c[(row-1)*4+(col-1)]=
-		(multiply(a[(row-1)*4],b[(col-1)],p)+
-		multiply(a[(row-1)*4+1],b[(col-1)+4],p)+
-		multiply(a[(row-1)*4+2],b[(col-1)+8],p)+
-		multiply(a[(row-1)*4+3],b[(col-1)+12],p))%p;
-}
-void multiply_mat(int32_t a[16], int32_t b[16], int32_t c[16], int p){
-//C=A*B
-// mat44[16]={11,12,13,14,21,22,23,24,31,32,33,34,41,42,43,44}
-// (r-1)*4+(c-1)
-// r1c1= 0 r1c2= 1 r1c3= 2 r1c4= 3
-// r2c1= 4 r2c2= 5 r2c3= 6 r2c4= 7
-// r3c1= 8 r3c2= 9 r3c3=10 r3c4=11
-// r4c1=12 r4c2=13 r4c3=14 r4c4=15
-	int i,j;
-	for(i=1;i<=4;i++){
-		for(j=1;j<=4;j++){
-			multipy_elem(i,j,a,b,c,p);
-		}
-	}
 }

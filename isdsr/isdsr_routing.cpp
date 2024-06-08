@@ -72,19 +72,23 @@ array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_data(std::vector<uint8_t> &b
 }
 array<uint8_t,ADDR_SIZE>* isdsr_routing::generate_initiali_request(array<uint8_t,ADDR_SIZE> dest, std::vector<uint8_t> &buf){
 	isdsr_packet p(RREQ,id,dest);
-	p.add_id(id);
+	p.add_id(this->id);
 	std::cerr<<"routing "<<std::endl;
 	std::cerr<<this->to_string()<<std::endl;
 	std::cerr<<"isdsr initial req"<<std::endl;
 	std::cerr<<p.dsr_packet::to_string()<<std::endl;
 	this->ss->sign(p);
+	std::cerr<<"isdsr initial req generate signature"<<std::endl;
+	bool v=this->ss->verify(p);
+	std::cerr<<"isdsr initial req generate signature verify "<<std::to_string(v)<<std::endl;
 	p.serialize(buf);
-	std::cerr<<"isdsr_routing initial request: "<<p.to_string()<<std::endl;
+	//std::cerr<<"isdsr_routing initial request: "<<p.to_string()<<std::endl;
 	std::cerr<<"isdsr_routing initial request buf["<<std::to_string(buf[0]);
-	for(int i=1;i<buf.size();i++){
+	for(size_t i=1;i<buf.size();i++){
 		std::cerr<<","<<std::to_string(buf[i]);
 	}
 	std::cerr<<"]"<<std::endl;
+	std::cerr<<"isdsr_packet addr:"<<&p<<std::endl;
 	return &(this->broadcast);
 }
 

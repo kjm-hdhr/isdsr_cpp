@@ -42,11 +42,11 @@ void poly_operation::serialize_poly(const poly &p, std::vector<std::uint8_t> &bu
 	if(buf.size()<POLY_REGULAR_SIZE){
 		buf.resize(POLY_REGULAR_SIZE);
 	}
-	uint8_t *tmp=(uint8_t*)(p.coeffs[0]);
+	uint8_t *tmp=(uint8_t*)(p.coeffs);
 	std::copy(((uint8_t*)(p.coeffs)),((uint8_t*)(p.coeffs))+POLY_REGULAR_SIZE,buf.begin()+index);
 }
 void poly_operation::deserialize_poly(poly &p, const std::vector<std::uint8_t> &buf,int index){
-	uint8_t *tmp=(uint8_t*)(p.coeffs[0]);
+	uint8_t *tmp=(uint8_t*)(p.coeffs);
 	std::copy(buf.begin()+index,buf.begin()+index+POLY_REGULAR_SIZE,((uint8_t*)(p.coeffs)));
 }
 void poly_operation::serialize_poly_modQ(const poly &p, std::vector<std::uint8_t> &buf,int index){

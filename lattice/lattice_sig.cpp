@@ -3,6 +3,19 @@
 #include "matrix_calc.hpp"
 #include <fstream>
 #include <cstring>
+#include <iostream>
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+#include <fips202.h>
+#include <packing.h>
+#include <reduce.h>
+#ifdef __cplusplus
+}
+#endif
+
 using namespace oit::ist::nws::adhoc_routing;
 
 uint32_t lattice_sig::aggregate_sig_length(const aggregate_sig &agg_sig){
@@ -50,14 +63,17 @@ void lattice_sig::setup(){
     unpack_pk(this->mpk.rho,&(mpk.t1),mpk_buf);
 }
 void lattice_sig::key_derivation(){
+    
+    //std::cerr<<"key derivation"<<std::endl;
     polyvecl msk_mat[K];
     polyvec_matrix_expand(msk_mat, this->mpk.rho);//msk_mat = A
-    int32_t idhash_value=hash_id(this->id);
+    //int32_t idhash_value=hash_id(this->id);
     uint8_t id_array[this->id.size()];
     std::copy(this->id.begin(),this->id.end(),id_array);
     uint8_t idhash[CRHBYTES];
-    shake256(idhash,CRHBYTES,id_array,SINGLE_ID_LENGTH);
+    shake256(idhash,CRHBYTES,id_array,ADDR_SIZE);
 
+    //std::cerr<<"key derivation1"<<std::endl;
     polyveck t;
     this->pvo.polyvec_pointwise(t,msk_mat,this->msk.s1,Q);
     this->pvo.polyveck_add_mod(t, t, this->msk.s2,Q);
@@ -66,7 +82,7 @@ void lattice_sig::key_derivation(){
     //id pub key t and rho
     this->pvo.copy_polyveck(this->idpk.t,t);
     std::copy(this->mpk.rho,this->mpk.rho+RHO_SIZE,this->idpk.rho);
-
+    //std::cerr<<"key derivation2"<<std::endl;
     //id sec key tid
     vector<uint8_t> idpk_array_vector(ID_PUB_KEY_SIZE);
     this->generate_idpk_array(this->id,this->idsk.tid,idpk_array_vector);
@@ -77,16 +93,17 @@ void lattice_sig::key_derivation(){
     std::copy(this->msk.rho, this->msk.rho+RHO_SIZE,this->idsk.rhoid);
     //id sec key keyid
     std::copy(this->msk.key, this->msk.key+KEY_SIZE,this->idsk.keyid);
-
+    //std::cerr<<"key derivation3"<<std::endl;
 
     //pkid_pack(pkid,rho,&pkt);
     polyveck idh2;
     polyveck_uniform_eta(&idh2, idhash, L);
     this->pvo.polyveck_pointwise(idh2,idh2,msk.s2,Q);
     this->pvo.polyveck_sub_mod(t,t,this->idsk.s2id,Q);
+    //std::cerr<<"key derivation4"<<std::endl;
     //id sec key s1id
     this->generate_s1id(this->idsk.s1id, msk_mat, t);
-	
+	//std::cerr<<"key derivation5"<<std::endl;
 	//pkid_pack(pkid,msk_rho,&pkt);
 	//skid_pack(skid, rho, trid, key, &tid, &s1id, &s2id);
 }
@@ -106,7 +123,7 @@ bool lattice_sig::verify(isdsr_packet &p){
     this->pvo.polyvec_pointwise(Az,mat,agg_sig.z,Q);
     polyveck_caddq(&Az);
 
-    int32_t idhash_value=0;
+    
     vector<uint8_t> id_array_vector(ID_PUB_KEY_SIZE);
     uint8_t ri_array[p.get_ri_length()*ADDR_SIZE];
     for(int i=0;i<p.get_ri_length();i++){
@@ -123,7 +140,7 @@ bool lattice_sig::verify(isdsr_packet &p){
     keccak_state state;
     this->pvo.polyveck_initialize(wsum);
     this->pvo.polyveck_initialize(ctid);
-
+    int32_t idhash_value=0;
     for(int i=0;i<p.get_ri_length();i++){
         idhash_value=this->hash_id(p.get_ri()->at(i));
         this->generate_idpk_array(p.get_ri()->at(i),tid,id_array_vector);
@@ -176,7 +193,7 @@ void lattice_sig::serialize_aggregate_sig(const aggregate_sig &agg_sig, vector<u
     std::copy(agg_sig.c,agg_sig.c+SEEDBYTES,buf.begin());
     this->pvo.serialize_polyvecl_modQ(agg_sig.z,buf,INDEX_AGG_SIG_Z);
     buf[INDEX_AGG_SIG_WLENGTH]=len;
-    for(int i=0;i<agg_sig.w.size();i++){
+    for(size_t i=0;i<agg_sig.w.size();i++){
         this->pvo.serialize_polyveck(agg_sig.w.at(i),buf,INDEX_AGG_SIG_W+(i*POLYVECK_MODQ_SIZE));
     }
 }
@@ -193,12 +210,12 @@ int32_t lattice_sig::hash_id(array<uint8_t,ADDR_SIZE> &id_array){
 	uint8_t idh[4];
     uint8_t tmp_id[id_array.size()];
     std::copy(id_array.begin(),id_array.end(),tmp_id);
-	shake256(idh,4,tmp_id,SINGLE_ID_LENGTH);
+	shake256(idh,4,tmp_id,ADDR_SIZE);
 	int32_t* idhash_value=(int32_t*)idh;
 	return caddq((*idhash_value)%Q);
 }
 void lattice_sig::generate_s1id(polyvecl &s1id, polyvecl mat[K], polyveck &t){
-
+    //std::cout<<"skid"<<std::endl;
     int32_t b[4];
     int32_t inv;
 	int i,j;
@@ -208,7 +225,7 @@ void lattice_sig::generate_s1id(polyvecl &s1id, polyvecl mat[K], polyveck &t){
 	for(i=0;i<N;i++){
         for(int r=0;r<4;r++){
             for(int c=0;c<4;c++){
-                mat44c.set(r,c,mat[r].vec[c].coeffs[i]);
+                mat44c.set(r+1,c+1,mat[r].vec[c].coeffs[i]);
             }
         }
         for(j=0;j<K;j++){
@@ -219,26 +236,31 @@ void lattice_sig::generate_s1id(polyvecl &s1id, polyvecl mat[K], polyveck &t){
         inv=caddq(inv);
         inv=this->invmod(inv,Q);
         mat44c.make_adjugate_mat44(Q,adj_mat);
+        //std::cout<<"skid2 N:"<<std::to_string(i)<<std::endl;
         //make_adjugate_mat44(mat44_t,mat44,Q);
+        //for(int r=0;r<4;r++){
+        //    for(int c=0;c<4;c++){
+        //        adj_mat[r][c]=caddq(adj_mat[r][c]);
+        //    }
+        //}
+        //std::cout<<"skid3 N:"<<std::to_string(i)<<std::endl;
         for(int r=0;r<4;r++){
             for(int c=0;c<4;c++){
                 adj_mat[r][c]=caddq(adj_mat[r][c]);
-            }
-        }
-        for(int r=0;r<4;r++){
-            for(int c=0;c<4;c++){
                 tmp=(tmp+this->multiply(adj_mat[r][c],b[c],Q))%Q;
             }
-            s1id.vec[j].coeffs[i]=multiply(tmp,inv,Q);
+            s1id.vec[r].coeffs[i]=this->multiply(tmp,inv,Q);
             tmp=0;
         }
+        //std::cout<<"skid4 N:"<<std::to_string(i)<<std::endl;
     }
+    //std::cout<<"skid5"<<std::endl;
 }
 void lattice_sig::sign_single_signature(isdsr_packet &p, single_sig &s_sig){
-    uint8_t c[SEEDBYTES];
+    
     uint16_t nonce = 0;
     polyvecl mat[K], y;
-    polyveck t, w1, w0, w;
+    polyveck w1, w0, w;
     poly cp;
     uint32_t rilength=p.get_ri_length()*ADDR_SIZE;
     uint8_t ri[rilength];
@@ -342,12 +364,7 @@ void lattice_sig::sign_single_signature(isdsr_packet &p, single_sig &s_sig){
     //return 0;
 }
 void lattice_sig::sign_agg_signature(isdsr_packet &p, single_sig &s_sig){
-/*(
-	uint8_t *agg_sig,
-	uint8_t *prev_agg_sig,
-	uint8_t *sig,
-	uint8_t prev_agg_sig_wlen){
-*/	
+
     aggregate_sig agg_sig;
     if(p.get_ri_length()<2){
         for(int i=0;i<SEEDBYTES;i++){

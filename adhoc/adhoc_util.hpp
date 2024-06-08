@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <vector>
 #include <array>
-
+#include <iostream>
 #define LENGTH_UINT32 4
 #define LENGTH_UINT16 2
 
@@ -62,7 +62,8 @@ class adhoc_util{
             return "";
         }
         string ret="v["+std::to_string(v[0]);
-        for(int i=1;i<v.size();i++){
+        for(size_t i=1;i<v.size();i++){
+            //std::cerr<<"i:"<<std::to_string(i)<<" v[]:"<<std::to_string(v[i])<<std::endl;
             ret+=","+std::to_string(v[i]);
         }
         return ret+"]";

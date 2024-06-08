@@ -6,11 +6,6 @@
 #include "../isdsr/signature_scheme.hpp"
 #include "polyvec.hpp"
 
-extern "C"{
-    #include "sign_agg.h"
-    #include "packing_agg.h"
-    #include "matrix.h"
-}
 
 namespace oit::ist::nws::adhoc_routing{
 
@@ -25,14 +20,7 @@ namespace oit::ist::nws::adhoc_routing{
 
 #define ID_PUB_KEY_SIZE RHO_SIZE+POLYVECK_MODQ_SIZE
 
-typedef struct secret_key_id{
-	uint8_t rho[SEEDBYTES];
-	uint8_t tr[SEEDBYTES];
-	uint8_t key[SEEDBYTES];
-	uint8_t t[POLY_MODQ_LENGTH*K];
-	uint8_t s1id[POLY_MODQ_LENGTH*L];
-	uint8_t s2id[POLYS2ID_LENGTH*4];
-} sec_key_id;
+
 
 typedef struct {
     uint8_t c[SEEDBYTES];
@@ -81,11 +69,6 @@ class lattice_sig:public signature_scheme{
     protected:
     poly_operation po;
     polyvec_operation pvo;
-    //uint8_t mpk[CRYPTO_PUBLICKEYBYTES];
-    //uint8_t msk[CRYPTO_SECRETKEYBYTES];
-    uint8_t pk_agg[PUBLIC_KEY_AGG_BYTES];
-    uint8_t skid[SECRET_KEY_AGG_BYTES];
-    uint8_t pkid[PUBLIC_KEY_AGG_BYTES];
     id_pub_key idpk;
     id_sec_key idsk;
     master_pub_key mpk;

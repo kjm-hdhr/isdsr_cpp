@@ -8,7 +8,7 @@ lattice_rt_dir = $(root_dir)/lattice
 adhoc_rt = $(adhoc_rt_dir)/adhoc_routing_fragment.cpp $(adhoc_rt_dir)/adhoc_routing_packet.cpp $(adhoc_rt_dir)/adhoc_node.cpp
 dsr_rt = $(dsr_rt_dir)/dsr_routing.cpp $(dsr_rt_dir)/dsr_packet.cpp
 isdsr_rt = $(isdsr_rt_dir)/isdsr_packet.cpp $(isdsr_rt_dir)/isdsr_routing.cpp
-lattice_rt = $(lattice_rt_dir)/matrix.c $(lattice_rt_dir)/packing_agg.c $(lattice_rt_dir)/sign_agg.c $(lattice_rt_dir)/lattice_sig.cpp 
+lattice_rt = $(lattice_rt_dir)/matrix_calc.cpp $(lattice_rt_dir)/polyvec.cpp  $(lattice_rt_dir)/lattice_sig.cpp 
 
 dilithium_root_dir = ../../dilithium
 dilithium_include = $(dilithium_root_dir)/ref
@@ -17,8 +17,8 @@ dilithium_lib = $(dilithium_root_dir)/build/ref
 ssl_lib = /opt/homebrew/opt/openssl@3/lib
 flags = -ldilithium2_ref -lfips202_ref -lpthread
 
-lattice_test: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt)
-	g++ -o lattice_test $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_test.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
-lattice_node: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt)
+lattice_test: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_test.cpp
+	g++ -g -O0 -Wall -o lattice_test $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_test.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
+lattice_node: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt) $(lattice_rt_dir)/lattice_main.cpp
 	g++ -o lattice_node $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
 

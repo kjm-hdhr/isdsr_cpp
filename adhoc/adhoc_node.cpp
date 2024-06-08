@@ -70,11 +70,7 @@ void adhoc_node::set_routing(adhoc_routing* routing){
 }
 
 void adhoc_node::receive_msg(){
-    uint32_t packet_size=0;
 	uint32_t rcv=0;
-	uint8_t *buffer;
-	uint8_t buf_size[5];
-	struct sockaddr_in dest;
     vector<uint8_t> fragmented_buf;
     uint8_t rcv_length[ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE];
     uint32_t fragment_length;
@@ -105,8 +101,8 @@ void adhoc_node::receive_msg(){
         std::cerr<<"receive msg 7"<<std::endl;
         fragmented_buf.resize(fragment_length);
 
-    std::cerr<<"receive msg 8"<<std::endl;
-        for(int i=0;i<fragment_length;i++){
+        std::cerr<<"receive msg 8"<<std::endl;
+        for(uint32_t i=0;i<fragment_length;i++){
             fragmented_buf[i]=rcv_buf[i];
             std::cerr<<","<<std::to_string(fragmented_buf[i]);
         }
@@ -130,7 +126,7 @@ void adhoc_node::send_msg(array<uint8_t,ADDR_SIZE> &next,vector<uint8_t> &buf){
     
     std::cerr<<"adhoc node send_msg next:"<<adhoc_util::to_string_iparray(next)<<std::endl;
     std::cerr<<"buf["<<std::to_string(buf[0]);
-    for(int i=1;i<buf.size();i++){
+    for(size_t i=1;i<buf.size();i++){
         std::cerr<<","<<std::to_string(buf[i]);
     }
     std::cerr<<"]"<<std::endl;
@@ -142,7 +138,7 @@ void adhoc_node::send_msg(array<uint8_t,ADDR_SIZE> &next,vector<uint8_t> &buf){
     dest.sin_port = htons(PORT);
     dest.sin_addr.s_addr=next_ip;
     vector<uint8_t> send_buf;
-    for(int i=0;i<arfp_v.size();i++){
+    for(size_t i=0;i<arfp_v.size();i++){
         send_buf.clear();
         send_buf.resize(arfp_v.at(i).get_fragment_length());
         arfp_v.at(i).serialize(send_buf);
@@ -168,7 +164,7 @@ void adhoc_node::data_send(ar_packet* pkt){
     dest.sin_addr.s_addr=next_ip;
     vector<uint8_t> send_buf;
 
-    for(int i=0;i<arfp_v.size();i++){
+    for(size_t i=0;i<arfp_v.size();i++){
         send_buf.clear();
         send_buf.resize(arfp_v.at(i).get_fragment_length());
         arfp_v.at(i).serialize(send_buf);
@@ -199,33 +195,15 @@ void adhoc_node::establish_route(array<uint8_t,ADDR_SIZE> &dest){
 string adhoc_node::to_string(){
     string ret="if name: "+this->if_name;
     ret+=" ip addr: ["+std::to_string(this->ip_addr.at(0));
-    for(int i=1;i<this->ip_addr.size();i++){
+    for(size_t i=1;i<this->ip_addr.size();i++){
         ret+=","+std::to_string(this->ip_addr.at(i));
     }
     ret+="]";
 
     ret+=" brd: ["+std::to_string(this->brd_addr.at(0));
-    for(int i=1;i<this->ip_addr.size();i++){
+    for(size_t i=1;i<this->ip_addr.size();i++){
         ret+=","+std::to_string(this->brd_addr.at(i));
     }
     ret+="]";
     return ret;
 }
-/*
-void adhoc_node::an_receiver::receive_msg(){
-
-}
-void adhoc_node::an_receiver::start(){
-    this->loop=true;
-
-    std::cerr<<"start 1"<<std::endl;
-    std::thread rcv_th=std::thread(&adhoc_node::receive_msg, this);
-
-    std::cerr<<"start 2"<<std::endl;
-    rcv_th.join();
-}
-
-void adhoc_node::an_receiver::stop(){
-    this->loop=false;
-}
-*/

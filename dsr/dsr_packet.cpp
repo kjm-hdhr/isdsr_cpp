@@ -11,14 +11,13 @@ dsr_packet::dsr_packet(uint8_t type, array<uint8_t,ADDR_SIZE> &src_id, array<uin
     //std::cerr<<"dsr packet constructor "<<this->to_string()<<std::endl;
 }
 dsr_packet::~dsr_packet(){
-    this->ri.clear();
 }
 void dsr_packet::add_id(array<uint8_t,ADDR_SIZE> &id){
     this->ri.push_back(id);
     this->ri_length=this->ri.size();
 }
 int dsr_packet::find_id(array<uint8_t,ADDR_SIZE> &id){
-    for(int i=0;i<this->ri.size();i++){
+    for(size_t i=0;i<this->ri.size();i++){
         if(std::equal(ri.at(i).begin(),ri.at(i).end(),id.begin(),id.end())){
             return i;
         }
@@ -27,7 +26,6 @@ int dsr_packet::find_id(array<uint8_t,ADDR_SIZE> &id){
 }
 array<uint8_t,ADDR_SIZE>* dsr_packet::previous_id(array<uint8_t,ADDR_SIZE> &id){
     //return a previous id of own id
-    array<uint8_t,ADDR_SIZE>* ret;
     int index=this->find_id(id);
     if(index==-1){
         return nullptr;
@@ -56,7 +54,7 @@ uint32_t dsr_packet::serialize(vector<uint8_t> &buf){
     this->ar_packet::serialize(buf);
     this->ri_length=this->ri.size();
     buf[INDEX_RI_LENGTH]=this->ri_length;
-    for(int i=0;i<this->ri.size();i++){
+    for(size_t i=0;i<this->ri.size();i++){
         std::copy(this->ri.at(i).begin(),this->ri.at(i).end(),buf.begin()+INDEX_RI+ADDR_SIZE*i);
     }
     return INDEX_RI+this->ri_length*ADDR_SIZE;
@@ -78,7 +76,7 @@ string dsr_packet::to_string(){
     string ret=this->ar_packet::to_string();
     ret+=" ri length: "+std::to_string(this->ri_length);
     ret+=" ri[";
-    for(int i=0;i<ri.size();i++){
+    for(size_t i=0;i<ri.size();i++){
         ret+=adhoc_util::to_string_iparray(this->ri.at(i));
     }
     return ret+"]";

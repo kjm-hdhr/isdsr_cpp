@@ -60,7 +60,7 @@ string arf_packet::to_string(){
     this->fragment_length=this->get_fragment_length();
     ret+=" fragment length: "+std::to_string(this->fragment_length);
     ret+=" payload["+std::to_string(payload.at(0));
-    for(int i=1;i<this->payload.size();i++){
+    for(size_t i=1;i<this->payload.size();i++){
         ret+=","+std::to_string(payload.at(i));
     }
     ret+="]";
@@ -76,7 +76,7 @@ bool arf_portion::find_arf_packet_with_fragment_id(arf_packet& arfp){
     if(this->seq_no!=arfp.get_seq_no()){
         return false;
     }
-    for (int i=0;i<this->storage.size();i++){
+    for (size_t i=0;i<this->storage.size();i++){
         if(this->storage.at(i).get_fragment_id()==arfp.get_fragment_id()){
             return true;
         }
@@ -96,7 +96,7 @@ uint32_t arf_portion::combine_arfp(vector<uint8_t> &buf){
     this->sort_arfp();
     uint32_t index=0;
     buf.resize(this->total_length);
-    for(int i=0;i<this->storage.size();i++){
+    for(size_t i=0;i<this->storage.size();i++){
         index+=this->storage.at(i).move_date(index,buf);
     }
     this->storage.clear();
@@ -105,7 +105,7 @@ uint32_t arf_portion::combine_arfp(vector<uint8_t> &buf){
 string arf_portion::to_string(){
     string ret=this->arf_header::to_string();
     ret+=" portion size: "+std::to_string(this->storage.size())+"\n";
-    for(int i=0;i<this->storage.size();i++){
+    for(size_t i=0;i<this->storage.size();i++){
         ret+=this->storage.at(i).to_string()+"\n";
     }
     return ret;
@@ -160,9 +160,8 @@ void arf_manager::fragment(vector<arf_packet> &pkts,const vector<uint8_t> &buf){
 }
 
 int arf_manager::store_arfp(arf_packet &arfp){
-    bool stored=false;
     arf_portion *arf_p=nullptr;
-    for(int i=0;i<this->storage.size();i++){
+    for(size_t i=0;i<this->storage.size();i++){
         arf_p=&(this->storage.at(i));
         bool seq=arf_p->get_seq_no()==arfp.get_seq_no();
         if((seq=arf_p->get_seq_no()==arfp.get_seq_no())&&
@@ -183,7 +182,6 @@ int arf_manager::store_arfp(arf_packet &arfp){
 
 int arf_manager::defragment(arf_packet &arfp, vector<uint8_t> &buf){
     int ret=0;
-    arf_portion *arf_p;
     int stored_index=this->store_arfp(arfp);
     if(this->storage.at(stored_index).storage_size()==arfp.get_num_of_fragments()){
         ret=this->storage.at(stored_index).combine_arfp(buf);
@@ -195,7 +193,7 @@ int arf_manager::defragment(arf_packet &arfp, vector<uint8_t> &buf){
 string arf_manager::to_string(){
     string ret="current seq no: "+std::to_string(this->seq_no);
     ret+=" fragment size:"+std::to_string(this->fragment_size)+"\n";
-    for(int i=0;i<this->storage.size();i++){
+    for(size_t i=0;i<this->storage.size();i++){
         ret+=this->storage.at(i).to_string()+"\n";
     }
     return ret;
