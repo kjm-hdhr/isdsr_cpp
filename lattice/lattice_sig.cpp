@@ -18,8 +18,8 @@ extern "C"{
 
 using namespace oit::ist::nws::adhoc_routing;
 
-uint32_t lattice_sig::aggregate_sig_length(const aggregate_sig &agg_sig){
-    return SEEDBYTES+POLYVECL_MODQ_SIZE+1+POLYVECK_MODQ_SIZE*agg_sig.w.size();
+uint32_t lattice_sig::aggregate_sig_length(){
+    return SEEDBYTES+POLYVECL_MODQ_SIZE+1+POLYVECK_MODQ_SIZE*this->aggsig.w.size();
 }
 void lattice_sig::generate_idpk_array(std::array<uint8_t,ADDR_SIZE> &target_id, polyveck &tid,std::vector<uint8_t> &buf){
     int32_t idhash_value=0;
@@ -108,19 +108,17 @@ void lattice_sig::key_derivation(){
 	//skid_pack(skid, rho, trid, key, &tid, &s1id, &s2id);
 }
 void lattice_sig::sign(isdsr_packet &p){
-    single_sig s_sig;
-    this->sign_single_signature(p,s_sig);
-    this->sign_agg_signature(p,s_sig);
+    this->sign_single_signature(p);
+    this->sign_agg_signature(p);
 }
 bool lattice_sig::verify(isdsr_packet &p){
     
-    aggregate_sig agg_sig;
-    this->deserialize_aggregate_sig(agg_sig,*(p.get_sig()));
+    this->deserialize_aggregate_sig(*(p.get_sig()));
 
     polyvecl mat[K];
     polyveck Az;
     polyvec_matrix_expand(mat, this->idpk.rho);//rho=A
-    this->pvo.polyvec_pointwise(Az,mat,agg_sig.z,Q);
+    this->pvo.polyvec_pointwise(Az,mat,this->aggsig.z,Q);
     polyveck_caddq(&Az);
 
     
@@ -155,7 +153,7 @@ bool lattice_sig::verify(isdsr_packet &p){
         shake256_finalize(&state);
         //mu = CRH(tr||M)
         shake256_squeeze(mu, CRHBYTES, &state);
-        polyveck_decompose(&w1, &w0, &(agg_sig.w[i]));
+        polyveck_decompose(&w1, &w0, &(this->aggsig.w[i]));
         polyveck_pack_w1(w1_pack, &w1);
 
         shake256_init(&state);
@@ -169,7 +167,7 @@ bool lattice_sig::verify(isdsr_packet &p){
 		}
 		//ct
 		poly_challenge(&pc, c_tmp);
-        this->pvo.polyveck_add_mod(wsum,wsum,agg_sig.w[i],Q);
+        this->pvo.polyveck_add_mod(wsum,wsum,this->aggsig.w[i],Q);
         this->pvo.polyveck_pointwise_poly(ct_tmp,pc,tid,Q);
         this->pvo.polyveck_add_mod(ctid,ctid,ct_tmp,Q);
     }
@@ -185,25 +183,30 @@ bool lattice_sig::verify(isdsr_packet &p){
 	return this->pvo.compare_polyveck(wsum1,wid1);
 
 }
-void lattice_sig::serialize_aggregate_sig(const aggregate_sig &agg_sig, vector<uint8_t> &buf){
-    uint8_t len=(uint8_t)agg_sig.w.size();
-    if(buf.size()<this->aggregate_sig_length(agg_sig)){
-        buf.resize(this->aggregate_sig_length(agg_sig));
+void lattice_sig::serialize_aggregate_sig(vector<uint8_t> &buf){
+    uint8_t len=(uint8_t)(this->aggsig.w.size());
+    if(buf.size()<this->aggregate_sig_length()){
+        buf.resize(this->aggregate_sig_length());
     }
-    std::copy(agg_sig.c,agg_sig.c+SEEDBYTES,buf.begin());
-    this->pvo.serialize_polyvecl_modQ(agg_sig.z,buf,INDEX_AGG_SIG_Z);
+    std::copy(this->aggsig.c,this->aggsig.c+SEEDBYTES,buf.begin());
+    this->pvo.serialize_polyvecl_modQ(this->aggsig.z,buf,INDEX_AGG_SIG_Z);
+    
     buf[INDEX_AGG_SIG_WLENGTH]=len;
-    for(size_t i=0;i<agg_sig.w.size();i++){
-        this->pvo.serialize_polyveck(agg_sig.w.at(i),buf,INDEX_AGG_SIG_W+(i*POLYVECK_MODQ_SIZE));
+    std::cout<<"buf sig bun length:"<<std::to_string(buf.size())<<std::endl;
+
+    for(size_t i=0;i<this->aggsig.w.size();i++){
+        std::cout<<"w index:"<<std::to_string(INDEX_AGG_SIG_W+(i*POLYVECK_MODQ_SIZE))<<std::endl;
+        std::cout<<"w index end:"<<std::to_string(INDEX_AGG_SIG_W+((i+1)*POLYVECK_MODQ_SIZE))<<std::endl;
+        this->pvo.serialize_polyveck(this->aggsig.w.at(i),buf,INDEX_AGG_SIG_W+(i*POLYVECK_MODQ_SIZE));
     }
 }
-void lattice_sig::deserialize_aggregate_sig(aggregate_sig &agg_sig, const vector<uint8_t> &buf){
-    std::copy(buf.begin(),buf.begin()+SEEDBYTES,agg_sig.c);
-    this->pvo.deserialize_polyvecl(agg_sig.z,buf,INDEX_AGG_SIG_Z);
-    agg_sig.wlength=buf[INDEX_AGG_SIG_WLENGTH];
-    agg_sig.w.resize(agg_sig.wlength);
-    for(int i=0;i<agg_sig.wlength;i++){
-        this->pvo.deserialize_polyveck(agg_sig.w.at(i),buf,INDEX_AGG_SIG_W+(i*POLYVECK_MODQ_SIZE));
+void lattice_sig::deserialize_aggregate_sig(const vector<uint8_t> &buf){
+    std::copy(buf.begin(),buf.begin()+SEEDBYTES,this->aggsig.c);
+    this->pvo.deserialize_polyvecl(this->aggsig.z,buf,INDEX_AGG_SIG_Z);
+    this->aggsig.wlength=buf[INDEX_AGG_SIG_WLENGTH];
+    this->aggsig.w.resize(this->aggsig.wlength);
+    for(int i=0;i<this->aggsig.wlength;i++){
+        this->pvo.deserialize_polyveck(this->aggsig.w.at(i),buf,INDEX_AGG_SIG_W+(i*POLYVECK_MODQ_SIZE));
     }
 }
 int32_t lattice_sig::hash_id(array<uint8_t,ADDR_SIZE> &id_array){
@@ -256,7 +259,7 @@ void lattice_sig::generate_s1id(polyvecl &s1id, polyvecl mat[K], polyveck &t){
     }
     //std::cout<<"skid5"<<std::endl;
 }
-void lattice_sig::sign_single_signature(isdsr_packet &p, single_sig &s_sig){
+void lattice_sig::sign_single_signature(isdsr_packet &p){
     
     uint16_t nonce = 0;
     polyvecl mat[K], y;
@@ -295,7 +298,7 @@ void lattice_sig::sign_single_signature(isdsr_packet &p, single_sig &s_sig){
     polyvecl_uniform_gamma1(&y, rhoprime, nonce++);
 	//polyvecl_uniform_eta(&y, rhoprime, nonce++);
     /* Matrix-vector multiplication */
-    this->pvo.copy_polyvecl(s_sig.z,y);
+    this->pvo.copy_polyvecl(this->ssig.z,y);
     //z = y;
     //polyvecl_ntt(&z);
     this->pvo.polyvec_pointwise(w,mat,y,Q);//Ay
@@ -307,7 +310,7 @@ void lattice_sig::sign_single_signature(isdsr_packet &p, single_sig &s_sig){
     /* Decompose w and call the random oracle */
     //polyveck_caddq(&w1);
     polyveck_caddq(&w);
-    this->pvo.copy_polyveck(s_sig.w,w);
+    this->pvo.copy_polyveck(this->ssig.w,w);
     //polyveck_decompose(&w1, &w0, &w1);
     //polyveck_pack_w1(sig, &w1);
 
@@ -319,19 +322,19 @@ void lattice_sig::sign_single_signature(isdsr_packet &p, single_sig &s_sig){
     shake256_absorb(&state, mu, CRHBYTES);
     shake256_absorb(&state, packw1, K*POLYW1_PACKEDBYTES);
     shake256_finalize(&state);
-    shake256_squeeze(s_sig.c, SEEDBYTES, &state);
+    shake256_squeeze(this->ssig.c, SEEDBYTES, &state);
     //c_pack(c,sig);
 
     //poly_challenge(&cp, sig);
-    poly_challenge(&cp, s_sig.c);
+    poly_challenge(&cp, this->ssig.c);
     //poly_ntt(&cp);
 
     /* Compute z, reject if it reveals secret */
-    this->pvo.polyvecl_pointwise_poly(s_sig.z,cp,this->idsk.s1id,Q);
+    this->pvo.polyvecl_pointwise_poly(this->ssig.z,cp,this->idsk.s1id,Q);
     //polyvecl_pointwise_poly(&z, &cp, &s1id,Q);
     //polyvecl_pointwise_poly_montgomery(&z, &cp, &s1);
     //polyvecl_invntt_tomont(&z);
-    this->pvo.polyvecl_add_mod(s_sig.z,s_sig.z,y,Q);
+    this->pvo.polyvecl_add_mod(this->ssig.z,this->ssig.z,y,Q);
     //polyvecl_add_mod(&z, &z, &y,Q);
 
     //polyvecl_reduce(&z);
@@ -363,27 +366,26 @@ void lattice_sig::sign_single_signature(isdsr_packet &p, single_sig &s_sig){
     //*siglen=SEEDBYTES+POLY_MODQ_LENGTH*L+POLY_MODQ_LENGTH*K;
     //return 0;
 }
-void lattice_sig::sign_agg_signature(isdsr_packet &p, single_sig &s_sig){
+void lattice_sig::sign_agg_signature(isdsr_packet &p){
 
-    aggregate_sig agg_sig;
     if(p.get_ri_length()<2){
         for(int i=0;i<SEEDBYTES;i++){
-            agg_sig.c[i]=0;
+            this->aggsig.c[i]=0;
         }
-        this->pvo.polyvecl_initialize(agg_sig.z);
-        agg_sig.w.clear();
-        agg_sig.wlength=0;
+        this->pvo.polyvecl_initialize(this->aggsig.z);
+        this->aggsig.w.clear();
+        this->aggsig.wlength=0;
     }
     else{
-        this->deserialize_aggregate_sig(agg_sig,*(p.get_sig()));
+        this->deserialize_aggregate_sig(*(p.get_sig()));
     }
     for(int i=0;i<SEEDBYTES;i++){
-		agg_sig.c[i]=(agg_sig.c[i]+s_sig.c[i])%Q;
+		this->aggsig.c[i]=(this->aggsig.c[i]+this->ssig.c[i])%Q;
 	}
-    this->pvo.polyvecl_add_mod(agg_sig.z,agg_sig.z,s_sig.z,Q);
-    agg_sig.w.push_back(s_sig.w);
-    agg_sig.wlength=agg_sig.w.size();
-    p.get_sig()->resize(this->aggregate_sig_length(agg_sig));
-    this->serialize_aggregate_sig(agg_sig,*(p.get_sig()));
+    this->pvo.polyvecl_add_mod(this->aggsig.z,this->aggsig.z,this->ssig.z,Q);
+    this->aggsig.w.push_back(this->ssig.w);
+    this->aggsig.wlength=this->aggsig.w.size();
+    p.get_sig()->resize(this->aggregate_sig_length());
+    this->serialize_aggregate_sig(*(p.get_sig()));
 }
 

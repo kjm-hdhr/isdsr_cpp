@@ -73,15 +73,17 @@ class lattice_sig:public signature_scheme{
     id_sec_key idsk;
     master_pub_key mpk;
     master_sec_key msk;
+    single_sig ssig;
+    aggregate_sig aggsig;
 
     uint64_t invmod (uint64_t a, uint64_t p);
     int32_t multiply(int32_t a, int32_t b, int p);
     void generate_s1id(polyvecl &s1id, polyvecl mat[K], polyveck &t);
-    void sign_single_signature(isdsr_packet &pkt, single_sig &s_sig);
-    void sign_agg_signature(isdsr_packet &pkt, single_sig &s_sig);
-    void serialize_aggregate_sig(const aggregate_sig &agg_sig, vector<uint8_t> &buf);
-    void deserialize_aggregate_sig(aggregate_sig &agg_sig, const vector<uint8_t> &buf);
-    uint32_t aggregate_sig_length(const aggregate_sig &agg_sig);
+    void sign_single_signature(isdsr_packet &pkt);
+    void sign_agg_signature(isdsr_packet &pkt);
+    void serialize_aggregate_sig(vector<uint8_t> &buf);
+    void deserialize_aggregate_sig(const vector<uint8_t> &buf);
+    uint32_t aggregate_sig_length();
     void generate_idpk_array(std::array<uint8_t,ADDR_SIZE> &target_id, polyveck &tid, std::vector<uint8_t> &buf);
     
     public:
