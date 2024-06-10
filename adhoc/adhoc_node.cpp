@@ -77,28 +77,28 @@ void adhoc_node::receive_msg(){
     arf_packet arfp;
     vector<uint8_t> buf;
     array<uint8_t,ADDR_SIZE> *next;
-    std::cerr<<"receive msg 1"<<std::endl;
+    //std::cerr<<"receive msg 1"<<std::endl;
     vector<uint8_t> fl_array(4);
     while(loop){
 
-    std::cerr<<"receive msg 2"<<std::endl;
+        //std::cerr<<"receive msg 2"<<std::endl;
         rcv=recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
-        std::cerr<<"receive msg 3 rcv:"<<rcv<<std::endl;
-        std::cerr<<"rcv_length["<<std::to_string(rcv_length[0]);
-        for(int i=1;i<(ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE);i++){
-            std::cerr<<","<<std::to_string(rcv_length[i]);
-        }
-        std::cerr<<"]"<<std::endl;
+        //std::cerr<<"receive msg 3 rcv:"<<rcv<<std::endl;
+        //std::cerr<<"rcv_length["<<std::to_string(rcv_length[0]);
+        //for(int i=1;i<(ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE);i++){
+        //    std::cerr<<","<<std::to_string(rcv_length[i]);
+        //}
+        //std::cerr<<"]"<<std::endl;
         //std::copy(std::begin(rcv_length)+INDEX_FRAGMENT_LENGTH,std::end(rcv_length),buf.begin());
         std::copy(std::begin(rcv_length)+INDEX_FRAGMENT_LENGTH,std::end(rcv_length),fl_array.begin());
-        std::cerr<<"receive msg 4"<<std::endl;
+        //std::cerr<<"receive msg 4"<<std::endl;
         //fragment_length=adhoc_util::deserialize_uint32(0,buf);
         fragment_length=adhoc_util::deserialize_uint32(0,fl_array);
-        std::cerr<<"receive msg 5"<<std::endl;
+        //std::cerr<<"receive msg 5"<<std::endl;
         uint8_t rcv_buf[fragment_length];
-        std::cerr<<"receive msg 6"<<std::endl;
+        //std::cerr<<"receive msg 6"<<std::endl;
         rcv=recv(this->rcv_sock,rcv_buf,fragment_length,0);
-        std::cerr<<"receive msg 7"<<std::endl;
+        //std::cerr<<"receive msg 7"<<std::endl;
         fragmented_buf.resize(fragment_length);
 
         std::cerr<<"receive msg 8"<<std::endl;
