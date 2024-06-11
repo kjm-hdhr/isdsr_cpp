@@ -128,7 +128,7 @@ void arf_manager::fragment(vector<arf_packet> &pkts,const vector<uint8_t> &buf){
         arfp.set_seq_no(this->seq_no);
         id++;
         arfp.set_fragment_id(id);
-        arfp.set_num_of_fratments(num);
+        arfp.set_num_of_fratments(num+((mod==0)?0:1));
         arfp.set_total_length(buf.size());
         arfp.set_remote_address(this->own_id);
         arfp.put_data(index,index+this->fragment_size,buf);

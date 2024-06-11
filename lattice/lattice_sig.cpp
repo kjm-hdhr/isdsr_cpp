@@ -34,7 +34,7 @@ void lattice_sig::sign(isdsr_packet &p){
 
 	//uint8_t *prev_aggsig=p->sig;
     uint8_t prev_aggsig[p.get_sig()->size()];
-    printf("sign p sig size:%d\n",p.get_sig()->size());
+    //printf("sign p sig size:%d\n",p.get_sig()->size());
     std::copy(p.get_sig()->begin(),p.get_sig()->end(),prev_aggsig);
     int agg_sig_length=SEEDBYTES+POLY_MODQ_LENGTH*L+POLY_MODQ_LENGTH*K*p.get_ri_length()+1;
     uint8_t agg_sig[agg_sig_length];

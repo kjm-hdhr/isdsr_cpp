@@ -15,7 +15,7 @@ extern "C"{
 #ifdef __cplusplus
 }
 #endif
-#include "matrix_calc.hpp"
+#include "matrix_cpp.hpp"
 #include "packing_agg_cpp.hpp"
 #include "sign_agg_cpp.hpp"
 

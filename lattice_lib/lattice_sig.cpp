@@ -1,4 +1,4 @@
-#include "lattice_sig2.hpp"
+#include "lattice_sig.hpp"
 #include "polyvec.hpp"
 #include "matrix_calc.hpp"
 #include <fstream>
@@ -122,7 +122,8 @@ bool lattice_sig::verify(isdsr_packet &p){
     polyveck_caddq(&Az);
 
     
-    vector<uint8_t> id_array_vector(ID_PUB_KEY_SIZE);
+    vector<uint8_t> id_array_vector;
+    id_array_vector.resize(ID_PUB_KEY_SIZE);
     uint8_t ri_array[p.get_ri_length()*ADDR_SIZE];
     for(int i=0;i<p.get_ri_length();i++){
         std::copy(p.get_ri()->at(i).begin(),p.get_ri()->at(i).end(),ri_array+(i+ADDR_SIZE));
@@ -386,6 +387,7 @@ void lattice_sig::sign_agg_signature(isdsr_packet &p){
     this->aggsig.w.push_back(this->ssig.w);
     this->aggsig.wlength=this->aggsig.w.size();
     p.get_sig()->resize(this->aggregate_sig_length());
+    std::cout<<"p sig size:"<<std::to_string(p.get_sig()->size())<<std::endl;
     this->serialize_aggregate_sig(*(p.get_sig()));
 }
 
