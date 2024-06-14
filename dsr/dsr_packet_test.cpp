@@ -4,11 +4,11 @@ using namespace oit::ist::nws::adhoc_routing;
 
 int main(int argc, char** argv){
 
-    array<uint8_t,ADDR_SIZE> src={10,0,0,1};
-    array<uint8_t,ADDR_SIZE> dest={10,0,0,5};
-    array<uint8_t,ADDR_SIZE> f1={10,0,0,4};
-    array<uint8_t,ADDR_SIZE> f2={10,0,0,10};
-    array<uint8_t,ADDR_SIZE> f3={10,0,0,20};
+    array<std::uint8_t,ADDR_SIZE> src={10,0,0,1};
+    array<std::uint8_t,ADDR_SIZE> dest={10,0,0,5};
+    array<std::uint8_t,ADDR_SIZE> f1={10,0,0,4};
+    array<std::uint8_t,ADDR_SIZE> f2={10,0,0,10};
+    array<std::uint8_t,ADDR_SIZE> f3={10,0,0,20};
     std::cout<<"src[0]:";
     std::cout<<(int)src[0]<<std::endl;
     dsr_packet p(1,src,dest);
@@ -31,7 +31,7 @@ int main(int argc, char** argv){
     p.add_id(f2);
     p.add_id(f3);
     std::cout<<p.to_string()<<std::endl;
-    array<uint8_t,ADDR_SIZE> *tmp;
+    array<std::uint8_t,ADDR_SIZE> *tmp;
     tmp=p.previous_id(f2);
     std::cout<<"previous id"<<adhoc_util::to_string_iparray(*tmp)<<std::endl;
     dsr_packet p2;

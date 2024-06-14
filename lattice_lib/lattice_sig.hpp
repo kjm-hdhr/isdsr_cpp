@@ -23,41 +23,41 @@ namespace oit::ist::nws::adhoc_routing{
 
 
 typedef struct {
-    uint8_t c[SEEDBYTES];
+    std::uint8_t c[SEEDBYTES];
 	polyvecl z;
 	polyveck w;
 } single_sig;
 
 typedef struct {
-    uint8_t c[SEEDBYTES];
+    std::uint8_t c[SEEDBYTES];
 	polyvecl z;
     vector<polyveck> w;
-    uint8_t wlength;
+    std::uint8_t wlength;
 } aggregate_sig;
 
 typedef struct {
-    uint8_t rhoid[RHO_SIZE];
-	uint8_t trid[TR_SIZE];
-	uint8_t keyid[KEY_SIZE];
+    std::uint8_t rhoid[RHO_SIZE];
+	std::uint8_t trid[TR_SIZE];
+	std::uint8_t keyid[KEY_SIZE];
     polyveck tid;
     polyvecl s1id;
     polyveck s2id;
 } id_sec_key;
 
 typedef struct public_key_id{
-    uint8_t rho[RHO_SIZE];
+    std::uint8_t rho[RHO_SIZE];
     polyveck t;
 } id_pub_key;
 
 typedef struct {
-    uint8_t rho[RHO_SIZE];
+    std::uint8_t rho[RHO_SIZE];
     polyveck t1;
 } master_pub_key;
 
 typedef struct {
-    uint8_t rho[RHO_SIZE];
-    uint8_t tr[TR_SIZE];
-    uint8_t key[KEY_SIZE];
+    std::uint8_t rho[RHO_SIZE];
+    std::uint8_t tr[TR_SIZE];
+    std::uint8_t key[KEY_SIZE];
     polyvecl s1;
     polyveck s2;
     polyveck t0;
@@ -81,11 +81,11 @@ class lattice_sig:public signature_scheme{
     void generate_s1id(polyvecl &s1id, polyvecl mat[K], polyveck &t);
     void sign_single_signature(isdsr_packet &pkt);
     void sign_agg_signature(isdsr_packet &pkt);
-    void serialize_aggregate_sig(vector<uint8_t> &buf);
-    void deserialize_aggregate_sig(const vector<uint8_t> &buf);
-    uint32_t aggregate_sig_length();
-    void generate_idpk_array(std::array<uint8_t,ADDR_SIZE> &target_id, polyveck &tid, std::vector<uint8_t> &buf);
-    
+    void serialize_aggregate_sig(vector<std::uint8_t> &buf);
+    void deserialize_aggregate_sig(const vector<std::uint8_t> &buf);
+    std::uint32_t aggregate_sig_length();
+    void generate_idpk_array(std::array<std::uint8_t,ADDR_SIZE> &target_id, polyveck &tid, std::vector<std::uint8_t> &buf);
+    void idpk_byte_array(std::array<std::uint8_t,ADDR_SIZE> &target_id, polyveck &tid,std::uint8_t *byte_array);
     public:
     lattice_sig(){};
     ~lattice_sig(){};
@@ -93,7 +93,7 @@ class lattice_sig:public signature_scheme{
     virtual void key_derivation();
     virtual void sign(isdsr_packet &pkt);
     virtual bool verify(isdsr_packet &pkt);
-    int32_t hash_id(array<uint8_t,ADDR_SIZE> &id_array);
+    int32_t hash_id(array<std::uint8_t,ADDR_SIZE> &id_array);
     void generate_keypair_from_own_id();
     virtual string signature_scheme_name(){return " lattice";}
 };

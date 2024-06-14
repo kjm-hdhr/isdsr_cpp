@@ -58,12 +58,12 @@ class ecdsa_sig:public signature_scheme{
     master_sk msk;
     id_secret_key isk;
 
-    void H1(mclBnG1 &g1, const array<uint8_t,ADDR_SIZE> &msg);
-    void H2(mclBnG1 &g1, const array<uint8_t,ADDR_SIZE> &msg);
-    void H3(mclBnFr &fr, const vector<uint8_t> &msg);
+    void H1(mclBnG1 &g1, const array<std::uint8_t,ADDR_SIZE> &msg);
+    void H2(mclBnG1 &g1, const array<std::uint8_t,ADDR_SIZE> &msg);
+    void H3(mclBnFr &fr, const vector<std::uint8_t> &msg);
     void deserialize_keys();
-    void serialize_sig(const signature &sig, vector<uint8_t> &buf);
-    void deserialize_sig(signature &sig, const vector<uint8_t> &buf);
+    void serialize_sig(const signature &sig, vector<std::uint8_t> &buf);
+    void deserialize_sig(signature &sig, const vector<std::uint8_t> &buf);
     public:
     ecdsa_sig(){}
     ~ecdsa_sig(){}

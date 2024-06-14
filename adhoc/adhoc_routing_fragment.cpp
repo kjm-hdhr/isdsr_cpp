@@ -5,7 +5,7 @@
 
 using namespace oit::ist::nws::adhoc_routing;
 
-void arf_header::serialize(vector<uint8_t> &buf){
+void arf_header::serialize(vector<std::uint8_t> &buf){
     if(buf.size()<this->header_length()){
         buf.resize(this->header_length());
     }
@@ -15,7 +15,7 @@ void arf_header::serialize(vector<uint8_t> &buf){
     adhoc_util::serialize_uint32(INDEX_TOTAL_LENGTH,buf,this->total_length);
     std::copy(this->remote_address.begin(),this->remote_address.end(),buf.begin()+INDEX_REMOTE_ADDRESS);
 }
-void arf_header::deserialize(const vector<uint8_t> &buf){
+void arf_header::deserialize(const vector<std::uint8_t> &buf){
     this->seq_no=adhoc_util::deserialize_uint32(INDEX_SEQUENCE_NUMBER,buf);
     this->fragment_id=buf[INDEX_FRAGMENT_ID];
     this->num_of_fragments=buf[INDEX_NUM_OF_FRAGMENTS];
@@ -32,13 +32,13 @@ string arf_header::to_string(){
     return ret;
 }
 
-void arf_packet::put_data(uint32_t index_begin, uint32_t index_end, const vector<uint8_t> &buf){
+void arf_packet::put_data(std::uint32_t index_begin, std::uint32_t index_end, const vector<std::uint8_t> &buf){
     this->payload.clear();
     this->payload.resize(index_end-index_begin);
     std::copy(buf.begin()+index_begin,buf.begin()+index_end,this->payload.begin());
 }
 
-void arf_packet::serialize(vector<uint8_t> &buf){
+void arf_packet::serialize(vector<std::uint8_t> &buf){
     this->fragment_length=this->get_fragment_length();
     if(buf.size()<this->fragment_length){
         buf.resize(this->fragment_length);
@@ -48,7 +48,7 @@ void arf_packet::serialize(vector<uint8_t> &buf){
     std::copy(this->payload.begin(),this->payload.end(),buf.begin()+INDEX_PAYLOAD);
 }
 
-void arf_packet::deserialize(const vector<uint8_t> &buf){
+void arf_packet::deserialize(const vector<std::uint8_t> &buf){
     this->arf_header::deserialize(buf);
     this->fragment_length=adhoc_util::deserialize_uint32(INDEX_FRAGMENT_LENGTH,buf);
     this->payload.clear();
@@ -67,7 +67,7 @@ string arf_packet::to_string(){
     return ret;
 }
 
-int arf_packet::move_date(uint32_t index_begin, vector<uint8_t> &buf){
+int arf_packet::move_date(std::uint32_t index_begin, vector<std::uint8_t> &buf){
     std::copy(this->payload.begin(),this->payload.end(),buf.begin()+index_begin);
     return this->payload.size();
 }
@@ -92,9 +92,9 @@ int arf_portion::store_arf_packet(arf_packet &arfp){
 void arf_portion::sort_arfp(){
     std::sort(this->storage.begin(),this->storage.end(),[](arf_packet &s1, arf_packet &s2){return s1.get_fragment_id()<s2.get_fragment_id();});
 }
-uint32_t arf_portion::combine_arfp(vector<uint8_t> &buf){
+std::uint32_t arf_portion::combine_arfp(vector<std::uint8_t> &buf){
     this->sort_arfp();
-    uint32_t index=0;
+    std::uint32_t index=0;
     buf.resize(this->total_length);
     for(size_t i=0;i<this->storage.size();i++){
         index+=this->storage.at(i).move_date(index,buf);
@@ -111,7 +111,7 @@ string arf_portion::to_string(){
     return ret;
 }
 
-void arf_manager::fragment(vector<arf_packet> &pkts,const vector<uint8_t> &buf){
+void arf_manager::fragment(vector<arf_packet> &pkts,const vector<std::uint8_t> &buf){
 
     if(this->fragment_size<1){
         this->fragment_size=DEFAULT_FRAGMENT_SIZE;
@@ -180,7 +180,7 @@ int arf_manager::store_arfp(arf_packet &arfp){
     return this->storage.size()-1;
 }
 
-int arf_manager::defragment(arf_packet &arfp, vector<uint8_t> &buf){
+int arf_manager::defragment(arf_packet &arfp, vector<std::uint8_t> &buf){
     int ret=0;
     int stored_index=this->store_arfp(arfp);
     if(this->storage.at(stored_index).storage_size()==arfp.get_num_of_fragments()){

@@ -6,7 +6,7 @@ using namespace oit::ist::nws::adhoc_routing;
 ar_packet::ar_packet(){
 	this->initialize();
 }
-ar_packet::ar_packet(uint8_t type, array<uint8_t,ADDR_SIZE> &src_id, array<uint8_t,ADDR_SIZE> &dest_id):ar_packet(){
+ar_packet::ar_packet(std::uint8_t type, array<std::uint8_t,ADDR_SIZE> &src_id, array<std::uint8_t,ADDR_SIZE> &dest_id):ar_packet(){
 	//std::cerr<<"ar packet constructor"<<std::endl;
 	this->type=type;
 	this->set_src(src_id);
@@ -17,7 +17,7 @@ ar_packet::~ar_packet(){
 
 }
 
-uint32_t ar_packet::serialize(vector<uint8_t> &buf){
+uint32_t ar_packet::serialize(vector<std::uint8_t> &buf){
 	this->packet_length=this->packet_size();
 
 	if(buf.size()<this->packet_size()){
@@ -31,7 +31,7 @@ uint32_t ar_packet::serialize(vector<uint8_t> &buf){
     std::copy(this->dest.begin(),this->dest.end(),buf.begin()+INDEX_DEST);
 	return INDEX_DEST+ADDR_SIZE;
 }
-uint32_t ar_packet::deserialize(const vector<uint8_t> &buf){
+uint32_t ar_packet::deserialize(const vector<std::uint8_t> &buf){
     this->type=buf[INDEX_TYPE];
     this->packet_length=0;
     for(int i=0;i<PACKET_LENGTH_SIZE;i++){

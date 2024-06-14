@@ -35,6 +35,9 @@ class poly_operation{
     void deserialize_poly(poly &p, const std::vector<std::uint8_t> &buf,int index);
     void serialize_poly_modQ(const poly &p, std::vector<std::uint8_t> &buf,int index);
     void deserialize_poly_modQ(poly &p, const std::vector<std::uint8_t> &buf,int index);
+
+    void serialize_poly_modQ(const poly &p, uint8_t *byte_array,int index);
+    void deserialize_poly_modQ(poly &p, const uint8_t *byte_array,int index);
 };
 class polyvec_operation{
 
@@ -58,6 +61,7 @@ class polyvec_operation{
     void polyveck_multiply(polyveck &c, std::int32_t a, polyveck &b, std::int32_t p);
     bool compare_polyvecl(polyvecl &a, polyvecl &b);
     bool compare_polyveck(polyveck &a, polyveck &b);
+
     void serialize_polyvecl(const polyvecl &p, std::vector<std::uint8_t> &buf,int index);
     void deserialize_polyvecl(polyvecl &p, const std::vector<std::uint8_t> &buf,int index);
     void serialize_polyveck(const polyveck &p, std::vector<std::uint8_t> &buf,int index);
@@ -67,6 +71,11 @@ class polyvec_operation{
     void deserialize_polyvecl_modQ(polyvecl &p, const std::vector<std::uint8_t> &buf,int index);
     void serialize_polyveck_modQ(const polyveck &p, std::vector<std::uint8_t> &buf,int index);
     void deserialize_polyveck_modQ(polyveck &p, const std::vector<std::uint8_t> &buf,int index);
+
+    void serialize_polyvecl_modQ(const polyvecl &p, uint8_t *byte_array,int index);
+    void deserialize_polyvecl_modQ(polyvecl &p, const uint8_t *byte_array,int index);
+    void serialize_polyveck_modQ(const polyveck &p, uint8_t *byte_array,int index);
+    void deserialize_polyveck_modQ(polyveck &p, const uint8_t *byte_array,int index);
 };
 };
 #endif

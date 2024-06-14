@@ -17,11 +17,11 @@ class isdsr_routing:public dsr_routing{
 	~isdsr_routing(){}
 	string routing_name(){return string("isdsr")+" "+ss->signature_scheme_name();}
     void set_signature_scheme(signature_scheme *ss);
-	virtual array<uint8_t,ADDR_SIZE>* processing_rreq(std::vector<uint8_t> &buf);
-	virtual array<uint8_t,ADDR_SIZE>* processing_rrep(std::vector<uint8_t> &buf);
-	virtual array<uint8_t,ADDR_SIZE>* processing_rerr(std::vector<uint8_t> &buf);
-	virtual array<uint8_t,ADDR_SIZE>* processing_data(std::vector<uint8_t> &buf);
-	virtual array<uint8_t,ADDR_SIZE>* generate_initiali_request(array<uint8_t,ADDR_SIZE> dest, std::vector<uint8_t> &buf);
+	virtual array<std::uint8_t,ADDR_SIZE>* processing_rreq(std::vector<std::uint8_t> &buf);
+	virtual array<std::uint8_t,ADDR_SIZE>* processing_rrep(std::vector<std::uint8_t> &buf);
+	virtual array<std::uint8_t,ADDR_SIZE>* processing_rerr(std::vector<std::uint8_t> &buf);
+	virtual array<std::uint8_t,ADDR_SIZE>* processing_data(std::vector<std::uint8_t> &buf);
+	virtual array<std::uint8_t,ADDR_SIZE>* generate_initiali_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf);
 };
 }
 #endif

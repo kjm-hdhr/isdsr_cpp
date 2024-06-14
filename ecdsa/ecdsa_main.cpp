@@ -51,7 +51,7 @@ int main(int argc, char** argv){
     if(c_dest!=nullptr){
         struct in_addr inaddr;
         inet_aton(c_dest,&inaddr);
-        array<uint8_t,ADDR_SIZE> dest;
+        array<std::uint8_t,ADDR_SIZE> dest;
         adhoc_util::ip_to_array(inaddr.s_addr,dest);
         std::cout<<"dest ip:"<<adhoc_util::to_string_iparray(dest)<<std::endl;
         an.establish_route(dest);

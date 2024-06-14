@@ -9,42 +9,42 @@
 namespace oit::ist::nws::adhoc_routing{
 
 using namespace std;
-uint64_t invmod (uint64_t a, uint64_t p);
-int32_t multiply(int32_t a, int32_t b, int p);
+std::uint64_t invmod (std::uint64_t a, std::uint64_t p);
+std::int32_t multiply(std::int32_t a, std::int32_t b, int p);
 class mat33_calc{
     protected:
-    array<array<int32_t,3>,3> mat;
-    int32_t p;
-    //int32_t mat[3][3];
-    int32_t mat33_det_elem(int32_t a, int32_t b, int32_t c, int32_t p);
+    array<array<std::int32_t,3>,3> mat;
+    std::int32_t p;
+    //std::int32_t mat[3][3];
+    std::int32_t mat33_det_elem(std::int32_t a, std::int32_t b, std::int32_t c, std::int32_t p);
     public:
     mat33_calc(){}
     ~mat33_calc(){}
     string to_string();
     void initialize();
-    void set_array(int32_t v[3][3]);
-    void set_array(array<array<int32_t,3>,3> &mat33);
-    void set(int32_t r, int32_t c, int32_t v);
-    int32_t get(int32_t r, int32_t c);
-    int32_t get_det(int32_t p);
-    array<array<int32_t,3>,3>* get_mat(){return &(this->mat);}
+    void set_array(std::int32_t v[3][3]);
+    void set_array(array<array<std::int32_t,3>,3> &mat33);
+    void set(std::int32_t r, std::int32_t c, std::int32_t v);
+    std::int32_t get(std::int32_t r, std::int32_t c);
+    std::int32_t get_det(std::int32_t p);
+    array<array<std::int32_t,3>,3>* get_mat(){return &(this->mat);}
 };
 class mat44_calc{
     protected:
-    //array<std::int32_t,16> mat;
+    //array<std::std::int32_t,16> mat;
     array<array<std::int32_t,4>,4> mat;
     
     std::int32_t p;
     mat33_calc mat33c;
-    void make_cofactor_matrix(int32_t r, int32_t c,array<array<int32_t,3>,3> &mat33);
-    int32_t get_cofactor_det(int32_t r, int32_t c, int32_t p);
+    void make_cofactor_matrix(std::int32_t r, std::int32_t c,array<array<std::int32_t,3>,3> &mat33);
+    std::int32_t get_cofactor_det(std::int32_t r, std::int32_t c, std::int32_t p);
     public:
-    void set_array(int32_t v[4][4]);
-    void set_array(array<array<int32_t,4>,4> &mat44);
-    void set(int32_t r, int32_t c, int32_t v);
-    int32_t get(int32_t r, int32_t c);
-    int32_t get_det(int32_t p);
-    void make_adjugate_mat44(int32_t p,array<array<int32_t,4>,4> &adj_mat);
+    void set_array(std::int32_t v[4][4]);
+    void set_array(array<array<std::int32_t,4>,4> &mat44);
+    void set(std::int32_t r, std::int32_t c, std::int32_t v);
+    std::int32_t get(std::int32_t r, std::int32_t c);
+    std::int32_t get_det(std::int32_t p);
+    void make_adjugate_mat44(std::int32_t p,array<array<std::int32_t,4>,4> &adj_mat);
     
     
     
@@ -62,16 +62,16 @@ class mat44_calc{
 // r4c1=12 r4c2=13 r4c3=14 r4c4=15
 
 void make_cofactor_matrix(
-	int32_t mat44[16], int32_t mat33[9], int r, int c);
+	std::int32_t mat44[16], std::int32_t mat33[9], int r, int c);
 
-int32_t make_adjugate_matrix_elem(
-	int r, int c, int32_t mat44[16], int p);
+std::int32_t make_adjugate_matrix_elem(
+	int r, int c, std::int32_t mat44[16], int p);
 
-void make_adjugate_mat44(int32_t a[16], int32_t mat44[16],int p);
-int32_t mat44_det(int32_t mat44[16], int32_t p);
+void make_adjugate_mat44(std::int32_t a[16], std::int32_t mat44[16],int p);
+std::int32_t mat44_det(std::int32_t mat44[16], std::int32_t p);
 
-void multipy_elem(int row, int col, int32_t a[16], int32_t b[16], int32_t c[16], int p);
-void multiply_mat(int32_t a[16], int32_t b[16], int32_t c[16], int p);
+void multipy_elem(int row, int col, std::int32_t a[16], std::int32_t b[16], std::int32_t c[16], int p);
+void multiply_mat(std::int32_t a[16], std::int32_t b[16], std::int32_t c[16], int p);
 
 };
 };

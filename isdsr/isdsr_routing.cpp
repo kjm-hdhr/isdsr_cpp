@@ -9,10 +9,10 @@ void isdsr_routing::set_signature_scheme(signature_scheme *ss){
 	this->ss->setup();
 	this->ss->key_derivation();
 }
-array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<std::uint8_t> &buf){
 	isdsr_packet p;
     
-	array<uint8_t,ADDR_SIZE>* next=nullptr;
+	array<std::uint8_t,ADDR_SIZE>* next=nullptr;
 	p.deserialize(buf);
 
     bool verification=this->ss->verify(p);
@@ -21,9 +21,11 @@ array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<uint8_t> &b
         return nullptr;
     }
 	if(p.find_id(this->id)!=-1){
+		std::cerr<<"already sent this packet"<<std::endl;
 		return nullptr;
 	}
 	if(p.is_src(this->id)){
+		std::cerr<<"the source node of this packet"<<std::endl;
 		return nullptr;
 	}
 	std::cerr<<"req packet:"<<p.to_string()<<std::endl;
@@ -44,9 +46,9 @@ array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<uint8_t> &b
     
 	return &(this->next);
 }
-array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_rrep(std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rrep(std::vector<std::uint8_t> &buf){
 	dsr_packet p;
-	array<uint8_t,ADDR_SIZE>* next=nullptr;
+	array<std::uint8_t,ADDR_SIZE>* next=nullptr;
 	p.deserialize(buf);
 	std::cerr<<"receive reply:"<<p.to_string()<<std::endl;
 	if(p.find_id(id)==-1){
@@ -64,13 +66,13 @@ array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_rrep(std::vector<uint8_t> &b
 	p.set_next(this->next);
 	return &(this->next);
 }
-array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_rerr(std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rerr(std::vector<std::uint8_t> &buf){
 	return nullptr;
 }
-array<uint8_t,ADDR_SIZE>* isdsr_routing::processing_data(std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_data(std::vector<std::uint8_t> &buf){
 	return nullptr;
 }
-array<uint8_t,ADDR_SIZE>* isdsr_routing::generate_initiali_request(array<uint8_t,ADDR_SIZE> dest, std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* isdsr_routing::generate_initiali_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf){
 	isdsr_packet p(RREQ,id,dest);
 	p.add_id(this->id);
 	std::cerr<<"routing "<<std::endl;
@@ -79,8 +81,8 @@ array<uint8_t,ADDR_SIZE>* isdsr_routing::generate_initiali_request(array<uint8_t
 	std::cerr<<p.dsr_packet::to_string()<<std::endl;
 	this->ss->sign(p);
 	std::cerr<<"isdsr initial req generate signature"<<std::endl;
-	bool v=this->ss->verify(p);
-	std::cerr<<"isdsr initial req generate signature verify "<<std::to_string(v)<<std::endl;
+	//bool v=this->ss->verify(p);
+	//std::cerr<<"isdsr initial req generate signature verify "<<std::to_string(v)<<std::endl;
 	p.serialize(buf);
 	//std::cerr<<"isdsr_routing initial request: "<<p.to_string()<<std::endl;
 	//std::cerr<<"isdsr_routing initial request buf["<<std::to_string(buf[0]);

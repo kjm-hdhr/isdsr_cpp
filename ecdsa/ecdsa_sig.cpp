@@ -3,21 +3,21 @@
 #include <fstream>
 using namespace oit::ist::nws::adhoc_routing;
 
-void ecdsa_sig::H1(mclBnG1 &g1, const array<uint8_t,ADDR_SIZE> &msg){
+void ecdsa_sig::H1(mclBnG1 &g1, const array<std::uint8_t,ADDR_SIZE> &msg){
     int m[msg.size()];
     std::copy(msg.begin(),msg.end(),m);
     mclBnG1_hashAndMapTo(&g1,m, msg.size());
 }
-void ecdsa_sig::H2(mclBnG1 &g1, const array<uint8_t,ADDR_SIZE> &msg){
-	uint8_t hash[SHA256_DIGEST_LENGTH];
-    uint8_t m[msg.size()];
+void ecdsa_sig::H2(mclBnG1 &g1, const array<std::uint8_t,ADDR_SIZE> &msg){
+	std::uint8_t hash[SHA256_DIGEST_LENGTH];
+    std::uint8_t m[msg.size()];
     std::copy(msg.begin(),msg.end(),m);
 	SHA256( m, msg.size() , hash );
 	mclBnG1_hashAndMapTo(&g1,hash, SHA256_DIGEST_LENGTH);
 }
-void ecdsa_sig::H3(mclBnFr &fr, const vector<uint8_t> &msg){
-	uint8_t hash[SHA256_DIGEST_LENGTH];
-    uint8_t m[msg.size()];
+void ecdsa_sig::H3(mclBnFr &fr, const vector<std::uint8_t> &msg){
+	std::uint8_t hash[SHA256_DIGEST_LENGTH];
+    std::uint8_t m[msg.size()];
     std::copy(msg.begin(),msg.end(),m);
 
 	SHA256( m, msg.size() , hash );
@@ -28,8 +28,8 @@ void ecdsa_sig::deserialize_keys(){
     std::ifstream ifs_mpk("ecdsa_mpk.key", std::ios::binary);
     std::ifstream ifs_msk("ecdsa_msk.key", std::ios::binary);
     
-    uint8_t mpk_buf[MPK_LENGTH];
-    uint8_t msk_buf[MSK_LENGTH];
+    std::uint8_t mpk_buf[MPK_LENGTH];
+    std::uint8_t msk_buf[MSK_LENGTH];
     ifs_mpk.read((char*)mpk_buf,MPK_LENGTH);
     ifs_msk.read((char*)msk_buf,MSK_LENGTH);
     mclBnG1_deserialize(&(this->mpk.mpk1g1),&mpk_buf[INDEX_MPK_1G1],G1_LENGTH);
@@ -40,10 +40,10 @@ void ecdsa_sig::deserialize_keys(){
 	mclBnFr_deserialize(&(this->msk.msk2),&msk_buf[INDEX_MSK_2],FR_LENGTH);
 
 }
-void ecdsa_sig::serialize_sig(const signature &sig, vector<uint8_t> &buf){
+void ecdsa_sig::serialize_sig(const signature &sig, vector<std::uint8_t> &buf){
 
     buf.resize(SIG_LENGTH);
-    uint8_t tmp[SIG_LENGTH];
+    std::uint8_t tmp[SIG_LENGTH];
 
 	mclBnG1_serialize(&tmp[INDEX_SIG_1G1],G1_LENGTH,&(sig.g1));
 	mclBnG1_serialize(&tmp[INDEX_SIG_2G1],G1_LENGTH,&(sig.g2));
@@ -51,10 +51,10 @@ void ecdsa_sig::serialize_sig(const signature &sig, vector<uint8_t> &buf){
 	mclBnG2_serialize(&tmp[INDEX_SIG_3G2],G2_LENGTH,&(sig.g3g2));
     std::copy(tmp,tmp+SIG_LENGTH,buf.begin());
 }
-void ecdsa_sig::deserialize_sig(signature &sig, const vector<uint8_t> &buf){
+void ecdsa_sig::deserialize_sig(signature &sig, const vector<std::uint8_t> &buf){
 	int g1size=mclBn_getG1ByteSize();
 	int g2size=mclBn_getG2ByteSize();
-    uint8_t tmp[SIG_LENGTH];
+    std::uint8_t tmp[SIG_LENGTH];
     std::copy(buf.begin(),buf.end(),tmp);
 	mclBnG1_deserialize(&(sig.g1),&buf[INDEX_SIG_1G1],G1_LENGTH);
 	mclBnG1_deserialize(&(sig.g2),&buf[INDEX_SIG_2G1],G1_LENGTH);
@@ -111,9 +111,9 @@ void ecdsa_sig::sign(isdsr_packet &p){
     mclBnG1_mul(&xsig2p,&(sig.g2),&x);// tmp = sig2'*x
     int idmeslength=ADDR_SIZE+p.get_ri_length()*ADDR_SIZE;
 
-    vector<uint8_t> tmp(idmeslength);
+    vector<std::uint8_t> tmp(idmeslength);
     std::copy(this->id.begin(),this->id.end(),tmp.begin());
-    vector<array<uint8_t,ADDR_SIZE>> *ri=p.get_ri();
+    vector<array<std::uint8_t,ADDR_SIZE>> *ri=p.get_ri();
     for(int i=0;i<p.get_ri_length();i++){
         std::copy(ri->at(i).begin(),ri->at(i).end(),tmp.begin()+(ADDR_SIZE*(i+1)));
     }
@@ -144,8 +144,8 @@ bool ecdsa_sig::verify(isdsr_packet &p){
     mclBn_pairing(&t1, &(sig.g1),&(this->mpk.mpk1g2));
     mclBn_pairing(&t2, &(sig.g2),&(sig.g3g2));
 
-    vector<uint8_t> idmsg;
-    vector<array<uint8_t,ADDR_SIZE>> *ri=p.get_ri();
+    vector<std::uint8_t> idmsg;
+    vector<array<std::uint8_t,ADDR_SIZE>> *ri=p.get_ri();
     mclBnG1 t3,t4,t5,t7;
     mclBnFr t6;
     mclBnG1_clear(&t3);

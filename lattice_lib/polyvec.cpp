@@ -42,12 +42,12 @@ void poly_operation::serialize_poly(const poly &p, std::vector<std::uint8_t> &bu
 	if(buf.size()<POLY_REGULAR_SIZE){
 		buf.resize(POLY_REGULAR_SIZE);
 	}
-	uint8_t *tmp=(uint8_t*)(p.coeffs);
-	std::copy(((uint8_t*)(p.coeffs)),((uint8_t*)(p.coeffs))+POLY_REGULAR_SIZE,buf.begin()+index);
+	std::uint8_t *tmp=(uint8_t*)(p.coeffs);
+	std::copy(((std::uint8_t*)(p.coeffs)),((std::uint8_t*)(p.coeffs))+POLY_REGULAR_SIZE,buf.begin()+index);
 }
 void poly_operation::deserialize_poly(poly &p, const std::vector<std::uint8_t> &buf,int index){
-	uint8_t *tmp=(uint8_t*)(p.coeffs);
-	std::copy(buf.begin()+index,buf.begin()+index+POLY_REGULAR_SIZE,((uint8_t*)(p.coeffs)));
+	std::uint8_t *tmp=(std::uint8_t*)(p.coeffs);
+	std::copy(buf.begin()+index,buf.begin()+index+POLY_REGULAR_SIZE,((std::uint8_t*)(p.coeffs)));
 }
 void poly_operation::serialize_poly_modQ(const poly &p, std::vector<std::uint8_t> &buf,int index){
 	if(buf.size()<POLY_MODQ_SIZE){
@@ -64,8 +64,26 @@ void poly_operation::deserialize_poly_modQ(poly &p, const std::vector<std::uint8
 
 	for(int i=0;i<N;i++){
 		p.coeffs[i]=buf[i*3+0+index];
-		p.coeffs[i]|=((int32_t)buf[i*3+1+index])<<8;
-		p.coeffs[i]|=(((int32_t)buf[i*3+2+index])<<24)>>8;
+		p.coeffs[i]|=((std::int32_t)buf[i*3+1+index])<<8;
+		p.coeffs[i]|=(((std::int32_t)buf[i*3+2+index])<<24)>>8;
+		//printf("unpack[%x %x %x]=coeffs[%d] %x\n",pack[i*3+0],pack[i*3+1],pack[i*3+2],i,p->coeffs[i]);
+	}
+}
+
+void poly_operation::serialize_poly_modQ(const poly &p, std::uint8_t *byte_array,int index){
+	for(int i=0;i<N;i++){
+		byte_array[i*3+0+index]=p.coeffs[i];
+		byte_array[i*3+1+index]=p.coeffs[i]>>8;
+		byte_array[i*3+2+index]=p.coeffs[i]>>16;
+		//printf("pack[%x %x %x]=coeffs[%d] %x\n",pack[i*3+0],pack[i*3+1],pack[i*3+2],i,p->coeffs[i]);
+	}
+}
+void poly_operation::deserialize_poly_modQ(poly &p, const std::uint8_t *byte_array,int index){
+
+	for(int i=0;i<N;i++){
+		p.coeffs[i]=byte_array[i*3+0+index];
+		p.coeffs[i]|=((std::int32_t)byte_array[i*3+1+index])<<8;
+		p.coeffs[i]|=(((std::int32_t)byte_array[i*3+2+index])<<24)>>8;
 		//printf("unpack[%x %x %x]=coeffs[%d] %x\n",pack[i*3+0],pack[i*3+1],pack[i*3+2],i,p->coeffs[i]);
 	}
 }
@@ -240,5 +258,29 @@ void polyvec_operation::serialize_polyveck_modQ(const polyveck &p, std::vector<s
 void polyvec_operation::deserialize_polyveck_modQ(polyveck &p, const std::vector<std::uint8_t> &buf,int index){
 	for(int i=0;i<K;i++){
 		this->po.deserialize_poly_modQ(p.vec[i],buf,index+(i*POLY_MODQ_SIZE));
+	}
+}
+
+
+void polyvec_operation::serialize_polyvecl_modQ(const polyvecl &p, std::uint8_t *byte_array,int index){
+	
+	for(int i=0;i<L;i++){
+		this->po.serialize_poly_modQ(p.vec[i],byte_array,index+(i*POLY_MODQ_SIZE));
+	}
+}
+void polyvec_operation::deserialize_polyvecl_modQ(polyvecl &p, const std::uint8_t *byte_array,int index){
+	for(int i=0;i<L;i++){
+		this->po.deserialize_poly_modQ(p.vec[i],byte_array,index+(i*POLY_MODQ_SIZE));
+	}
+}
+void polyvec_operation::serialize_polyveck_modQ(const polyveck &p, std::uint8_t *byte_array,int index){
+	
+	for(int i=0;i<K;i++){
+		this->po.serialize_poly_modQ(p.vec[i],byte_array,index+(i*POLY_MODQ_SIZE));
+	}
+}
+void polyvec_operation::deserialize_polyveck_modQ(polyveck &p, const std::uint8_t *byte_array,int index){
+	for(int i=0;i<K;i++){
+		this->po.deserialize_poly_modQ(p.vec[i],byte_array,index+(i*POLY_MODQ_SIZE));
 	}
 }

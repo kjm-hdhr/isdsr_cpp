@@ -28,7 +28,7 @@ lattice_sig_test: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_d
 lattice_test: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_test.cpp
 	g++ -g -O0 -Wall -o lattice_test $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_test.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
 lattice_node: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main.cpp
-	g++ -o lattice_node $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
+	g++ -o -O2 lattice_node $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main.cpp -std=c++17 -I$(dilithium_include) -L$(dilithium_lib) $(flags)
 
 clean:
 	rm lattice_sig_test lattice_test lattice_node

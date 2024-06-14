@@ -3,9 +3,9 @@
 #include <iostream>
 using namespace oit::ist::nws::adhoc_routing;
 
-array<uint8_t,ADDR_SIZE>* dsr_routing::processing_rreq(std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* dsr_routing::processing_rreq(std::vector<std::uint8_t> &buf){
 	dsr_packet p;
-	array<uint8_t,ADDR_SIZE>* next=nullptr;
+	array<std::uint8_t,ADDR_SIZE>* next=nullptr;
 	p.deserialize(buf);
 	if(p.find_id(this->id)!=-1){
 		return nullptr;
@@ -31,9 +31,9 @@ array<uint8_t,ADDR_SIZE>* dsr_routing::processing_rreq(std::vector<uint8_t> &buf
 
 	return &(this->next);
 }
-array<uint8_t,ADDR_SIZE>* dsr_routing::processing_rrep(std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* dsr_routing::processing_rrep(std::vector<std::uint8_t> &buf){
 	dsr_packet p;
-	array<uint8_t,ADDR_SIZE>* next=nullptr;
+	array<std::uint8_t,ADDR_SIZE>* next=nullptr;
 	p.deserialize(buf);
 	std::cerr<<"receive reply:"<<p.to_string()<<std::endl;
 	if(p.find_id(id)==-1){
@@ -51,13 +51,13 @@ array<uint8_t,ADDR_SIZE>* dsr_routing::processing_rrep(std::vector<uint8_t> &buf
 	p.set_next(this->next);
 	return &(this->next);
 }
-array<uint8_t,ADDR_SIZE>* dsr_routing::processing_rerr(std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* dsr_routing::processing_rerr(std::vector<std::uint8_t> &buf){
 	return nullptr;
 }
-array<uint8_t,ADDR_SIZE>* dsr_routing::processing_data(std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* dsr_routing::processing_data(std::vector<std::uint8_t> &buf){
 	return nullptr;
 }
-array<uint8_t,ADDR_SIZE>* dsr_routing::generate_initiali_request(array<uint8_t,ADDR_SIZE> dest, std::vector<uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* dsr_routing::generate_initiali_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf){
 	dsr_packet p(RREQ,id,dest);
 	p.add_id(id);
 	p.serialize(buf);

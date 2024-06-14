@@ -1,19 +1,20 @@
 #include "isdsr_packet.hpp"
+#include <string>
 #include <iostream>
 using namespace oit::ist::nws::adhoc_routing;
 
 isdsr_packet::isdsr_packet(){
     this->initialize();
 }
-isdsr_packet::isdsr_packet(uint8_t type, array<uint8_t,ADDR_SIZE> &src_id, array<uint8_t,ADDR_SIZE> &dest_id):dsr_packet(type,src_id,dest_id){
+isdsr_packet::isdsr_packet(std::uint8_t type, array<std::uint8_t,ADDR_SIZE> &src_id, array<std::uint8_t,ADDR_SIZE> &dest_id):dsr_packet(type,src_id,dest_id){
     this->sig_length=0;
     this->sig.clear();
 }
 isdsr_packet::~isdsr_packet(){
     std::cerr<<"sig buf addr:"<<&(this->sig)<<std::endl;
 }
-uint32_t isdsr_packet::packet_size(){
-    uint32_t ret=this->dsr_packet::packet_size();
+std::uint32_t isdsr_packet::packet_size(){
+    std::uint32_t ret=this->dsr_packet::packet_size();
     ret+=SIG_LENGTH_SIZE;
     this->sig_length=this->sig.size();
     ret+=this->sig_length;
@@ -25,10 +26,13 @@ void isdsr_packet::initialize(){
     this->sig.clear();
 }
 
-uint32_t isdsr_packet::serialize(vector<uint8_t> &buf){
+std::uint32_t isdsr_packet::serialize(vector<std::uint8_t> &buf){
     std::cerr<<"serialize orignal buf size:"<<std::to_string(buf.size())<<std::endl;
+    std::cerr<<"serialize packet size:"<<std::to_string(this->packet_size())<<std::endl;
+    std::cout<<"max size:"<<std::to_string(buf.max_size())<<std::endl;
+    std::uint8_t buf_array[this->packet_size()];
     if(buf.size()<this->packet_size()){
-        buf.resize(this->packet_size());
+        buf.resize(this->packet_size(),0);
     }
     std::cerr<<"serialize update buf size1:"<<std::to_string(buf.size())<<std::endl;
     this->dsr_packet::serialize(buf);
@@ -43,9 +47,10 @@ uint32_t isdsr_packet::serialize(vector<uint8_t> &buf){
     this->sig_length=this->sig.size();
     adhoc_util::serialize_uint32(INDEX_SIG_LENGTH,buf,this->sig_length);
     std::copy(this->sig.begin(),this->sig.end(),buf.begin()+INDEX_SIG);
+    std::cout<<"sig length:"<<std::to_string(this->sig.size())<<"buf size:"<<std::to_string(buf.size())<<std::endl;
     return INDEX_SIG+this->sig_length;
 }
-uint32_t isdsr_packet::deserialize(const vector<uint8_t> &buf){
+std::uint32_t isdsr_packet::deserialize(const vector<std::uint8_t> &buf){
     this->dsr_packet::deserialize(buf);
     this->sig_length=adhoc_util::deserialize_uint32(INDEX_SIG_LENGTH,buf);
     this->sig.resize(this->sig_length);

@@ -5,18 +5,18 @@ using namespace oit::ist::nws::adhoc_routing;
 dsr_packet::dsr_packet(){
     this->initialize();
 }
-dsr_packet::dsr_packet(uint8_t type, array<uint8_t,ADDR_SIZE> &src_id, array<uint8_t,ADDR_SIZE> &dest_id):ar_packet(type,src_id,dest_id){
+dsr_packet::dsr_packet(std::uint8_t type, array<std::uint8_t,ADDR_SIZE> &src_id, array<std::uint8_t,ADDR_SIZE> &dest_id):ar_packet(type,src_id,dest_id){
     this->ri_length=0;
     this->ri.clear();
     //std::cerr<<"dsr packet constructor "<<this->to_string()<<std::endl;
 }
 dsr_packet::~dsr_packet(){
 }
-void dsr_packet::add_id(array<uint8_t,ADDR_SIZE> &id){
+void dsr_packet::add_id(array<std::uint8_t,ADDR_SIZE> &id){
     this->ri.push_back(id);
     this->ri_length=this->ri.size();
 }
-int dsr_packet::find_id(array<uint8_t,ADDR_SIZE> &id){
+int dsr_packet::find_id(array<std::uint8_t,ADDR_SIZE> &id){
     for(size_t i=0;i<this->ri.size();i++){
         if(std::equal(ri.at(i).begin(),ri.at(i).end(),id.begin(),id.end())){
             return i;
@@ -24,7 +24,7 @@ int dsr_packet::find_id(array<uint8_t,ADDR_SIZE> &id){
     }
     return -1;
 }
-array<uint8_t,ADDR_SIZE>* dsr_packet::previous_id(array<uint8_t,ADDR_SIZE> &id){
+array<std::uint8_t,ADDR_SIZE>* dsr_packet::previous_id(array<std::uint8_t,ADDR_SIZE> &id){
     //return a previous id of own id
     int index=this->find_id(id);
     if(index==-1){
@@ -35,8 +35,8 @@ array<uint8_t,ADDR_SIZE>* dsr_packet::previous_id(array<uint8_t,ADDR_SIZE> &id){
     }
     return &(this->ri.at(index-1));
 }
-uint32_t dsr_packet::packet_size(){
-    uint32_t ret=this->ar_packet::packet_size();
+std::uint32_t dsr_packet::packet_size(){
+    std::uint32_t ret=this->ar_packet::packet_size();
     this->ri_length=this->ri.size();
     ret+=RI_LENGTH_SIZE;
     ret+=this->ri_length*ADDR_SIZE;
@@ -47,7 +47,7 @@ void dsr_packet::initialize(){
     this->ri_length=0;
     this->ri.clear();
 }
-uint32_t dsr_packet::serialize(vector<uint8_t> &buf){
+std::uint32_t dsr_packet::serialize(vector<std::uint8_t> &buf){
     if(buf.size()<this->packet_size()){
         buf.resize(this->packet_size());
     }
@@ -59,12 +59,12 @@ uint32_t dsr_packet::serialize(vector<uint8_t> &buf){
     }
     return INDEX_RI+this->ri_length*ADDR_SIZE;
 }
-uint32_t dsr_packet::deserialize(const vector<uint8_t> &buf){
+std::uint32_t dsr_packet::deserialize(const vector<std::uint8_t> &buf){
     this->ar_packet::deserialize(buf);
     this->ri_length=buf[INDEX_RI_LENGTH];
     this->ri.resize(this->ri_length);
     for(int i=0;i<this->ri_length;i++){
-        array<uint8_t,ADDR_SIZE> tmp;
+        array<std::uint8_t,ADDR_SIZE> tmp;
         int index_begin=INDEX_RI+(i*ADDR_SIZE);
         int index_end=INDEX_RI+(i*ADDR_SIZE)+ADDR_SIZE;
         std::copy(buf.begin()+index_begin,buf.begin()+index_end,tmp.begin());

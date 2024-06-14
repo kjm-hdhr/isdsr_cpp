@@ -18,10 +18,17 @@ extern "C"{
 
 using namespace oit::ist::nws::adhoc_routing;
 
-uint32_t lattice_sig::aggregate_sig_length(){
+std::uint32_t lattice_sig::aggregate_sig_length(){
     return SEEDBYTES+POLYVECL_MODQ_SIZE+1+POLYVECK_MODQ_SIZE*this->aggsig.w.size();
 }
-void lattice_sig::generate_idpk_array(std::array<uint8_t,ADDR_SIZE> &target_id, polyveck &tid,std::vector<uint8_t> &buf){
+void lattice_sig::idpk_byte_array(std::array<std::uint8_t,ADDR_SIZE> &target_id, polyveck &tid,std::uint8_t *byte_array){
+    int32_t idhash_value=0;
+    idhash_value=this->hash_id(target_id);
+    this->pvo.polyveck_multiply(tid,idhash_value,this->idpk.t,Q);
+    std::copy(this->idpk.rho,this->idpk.rho+RHO_SIZE,byte_array);
+    this->pvo.serialize_polyveck_modQ(tid,byte_array,RHO_SIZE);
+}
+void lattice_sig::generate_idpk_array(std::array<std::uint8_t,ADDR_SIZE> &target_id, polyveck &tid,std::vector<std::uint8_t> &buf){
     int32_t idhash_value=0;
     idhash_value=this->hash_id(target_id);
     this->pvo.polyveck_multiply(tid,idhash_value,this->idpk.t,Q);
@@ -54,8 +61,8 @@ void lattice_sig::setup(){
     std::ifstream ifs_mpk("lattice_mpk.key", std::ios::binary);
     std::ifstream ifs_msk("lattice_msk.key", std::ios::binary);
     
-    uint8_t mpk_buf[CRYPTO_PUBLICKEYBYTES];
-    uint8_t msk_buf[CRYPTO_SECRETKEYBYTES];
+    std::uint8_t mpk_buf[CRYPTO_PUBLICKEYBYTES];
+    std::uint8_t msk_buf[CRYPTO_SECRETKEYBYTES];
     ifs_mpk.read(((char*)mpk_buf),CRYPTO_PUBLICKEYBYTES);
     ifs_msk.read(((char*)msk_buf),CRYPTO_SECRETKEYBYTES);
 
@@ -68,9 +75,9 @@ void lattice_sig::key_derivation(){
     polyvecl msk_mat[K];
     polyvec_matrix_expand(msk_mat, this->mpk.rho);//msk_mat = A
     //int32_t idhash_value=hash_id(this->id);
-    uint8_t id_array[this->id.size()];
+    std::uint8_t id_array[this->id.size()];
     std::copy(this->id.begin(),this->id.end(),id_array);
-    uint8_t idhash[CRHBYTES];
+    std::uint8_t idhash[CRHBYTES];
     shake256(idhash,CRHBYTES,id_array,ADDR_SIZE);
 
     //std::cerr<<"key derivation1"<<std::endl;
@@ -84,9 +91,9 @@ void lattice_sig::key_derivation(){
     std::copy(this->mpk.rho,this->mpk.rho+RHO_SIZE,this->idpk.rho);
     //std::cerr<<"key derivation2"<<std::endl;
     //id sec key tid
-    vector<uint8_t> idpk_array_vector(ID_PUB_KEY_SIZE);
+    vector<std::uint8_t> idpk_array_vector(ID_PUB_KEY_SIZE);
     this->generate_idpk_array(this->id,this->idsk.tid,idpk_array_vector);
-    uint8_t idpk_array[ID_PUB_KEY_SIZE];
+    std::uint8_t idpk_array[ID_PUB_KEY_SIZE];
     //id sec key trid
 	shake256(this->idsk.trid, SEEDBYTES, idpk_array, ID_PUB_KEY_SIZE);
     //id sec key rhoid
@@ -122,18 +129,18 @@ bool lattice_sig::verify(isdsr_packet &p){
     polyveck_caddq(&Az);
 
     
-    vector<uint8_t> id_array_vector;
-    id_array_vector.resize(ID_PUB_KEY_SIZE);
-    uint8_t ri_array[p.get_ri_length()*ADDR_SIZE];
+    vector<std::uint8_t> id_array_vector;
+    //id_array_vector.resize(ID_PUB_KEY_SIZE);
+    std::uint8_t ri_array[p.get_ri_length()*ADDR_SIZE];
     for(int i=0;i<p.get_ri_length();i++){
         std::copy(p.get_ri()->at(i).begin(),p.get_ri()->at(i).end(),ri_array+(i+ADDR_SIZE));
     }
-    uint8_t id_array[ID_PUB_KEY_SIZE];
-    uint8_t trid[TR_SIZE];
-    uint8_t mu[CRHBYTES];
+    std::uint8_t id_array[ID_PUB_KEY_SIZE];
+    std::uint8_t trid[TR_SIZE];
+    std::uint8_t mu[CRHBYTES];
     polyveck w1,w0,wid,wsum;
-    uint8_t w1_pack[K*POLYW1_PACKEDBYTES];
-    uint8_t cid[SEEDBYTES]={0},c_tmp[SEEDBYTES];
+    std::uint8_t w1_pack[K*POLYW1_PACKEDBYTES];
+    std::uint8_t cid[SEEDBYTES]={0},c_tmp[SEEDBYTES];
     polyveck ctid,ct_tmp,tid;
     poly pc;
     keccak_state state;
@@ -142,9 +149,9 @@ bool lattice_sig::verify(isdsr_packet &p){
     int32_t idhash_value=0;
     for(int i=0;i<p.get_ri_length();i++){
         idhash_value=this->hash_id(p.get_ri()->at(i));
-        this->generate_idpk_array(p.get_ri()->at(i),tid,id_array_vector);
-        std::copy(id_array_vector.begin(),id_array_vector.end(),id_array);
-
+        //this->generate_idpk_array(p.get_ri()->at(i),tid,id_array_vector);
+        //std::copy(id_array_vector.begin(),id_array_vector.end(),id_array);
+        this->idpk_byte_array(p.get_ri()->at(i),tid,id_array);
 		// tr = CRH(rho || t)
 		shake256(trid, SEEDBYTES, id_array, ID_PUB_KEY_SIZE);
 
@@ -184,8 +191,8 @@ bool lattice_sig::verify(isdsr_packet &p){
 	return this->pvo.compare_polyveck(wsum1,wid1);
 
 }
-void lattice_sig::serialize_aggregate_sig(vector<uint8_t> &buf){
-    uint8_t len=(uint8_t)(this->aggsig.w.size());
+void lattice_sig::serialize_aggregate_sig(vector<std::uint8_t> &buf){
+    std::uint8_t len=(std::uint8_t)(this->aggsig.w.size());
     if(buf.size()<this->aggregate_sig_length()){
         buf.resize(this->aggregate_sig_length());
     }
@@ -201,7 +208,7 @@ void lattice_sig::serialize_aggregate_sig(vector<uint8_t> &buf){
         this->pvo.serialize_polyveck(this->aggsig.w.at(i),buf,INDEX_AGG_SIG_W+(i*POLYVECK_MODQ_SIZE));
     }
 }
-void lattice_sig::deserialize_aggregate_sig(const vector<uint8_t> &buf){
+void lattice_sig::deserialize_aggregate_sig(const vector<std::uint8_t> &buf){
     std::copy(buf.begin(),buf.begin()+SEEDBYTES,this->aggsig.c);
     this->pvo.deserialize_polyvecl(this->aggsig.z,buf,INDEX_AGG_SIG_Z);
     this->aggsig.wlength=buf[INDEX_AGG_SIG_WLENGTH];
@@ -210,9 +217,9 @@ void lattice_sig::deserialize_aggregate_sig(const vector<uint8_t> &buf){
         this->pvo.deserialize_polyveck(this->aggsig.w.at(i),buf,INDEX_AGG_SIG_W+(i*POLYVECK_MODQ_SIZE));
     }
 }
-int32_t lattice_sig::hash_id(array<uint8_t,ADDR_SIZE> &id_array){
-	uint8_t idh[4];
-    uint8_t tmp_id[id_array.size()];
+int32_t lattice_sig::hash_id(array<std::uint8_t,ADDR_SIZE> &id_array){
+	std::uint8_t idh[4];
+    std::uint8_t tmp_id[id_array.size()];
     std::copy(id_array.begin(),id_array.end(),tmp_id);
 	shake256(idh,4,tmp_id,ADDR_SIZE);
 	int32_t* idhash_value=(int32_t*)idh;
@@ -266,14 +273,14 @@ void lattice_sig::sign_single_signature(isdsr_packet &p){
     polyvecl mat[K], y;
     polyveck w1, w0, w;
     poly cp;
-    uint32_t rilength=p.get_ri_length()*ADDR_SIZE;
-    uint8_t ri[rilength];
+    std::uint32_t rilength=p.get_ri_length()*ADDR_SIZE;
+    std::uint8_t ri[rilength];
     for(int i=0;i<p.get_ri_length();i++){
         std::copy(p.get_ri()->at(i).begin(),p.get_ri()->at(i).end(),ri+(ADDR_SIZE*i));
     }
 
     keccak_state state;
-    uint8_t mu[CRHBYTES];
+    std::uint8_t mu[CRHBYTES];
     /* Compute CRH(tr, msg) */
     shake256_init(&state);
     shake256_absorb(&state, this->idsk.trid, SEEDBYTES);
@@ -282,10 +289,10 @@ void lattice_sig::sign_single_signature(isdsr_packet &p){
     shake256_finalize(&state);
     shake256_squeeze(mu, CRHBYTES, &state);
 
-    uint8_t keymu[SEEDBYTES+CRHBYTES];
+    std::uint8_t keymu[SEEDBYTES+CRHBYTES];
     std::copy(this->idsk.keyid,this->idsk.keyid+SEEDBYTES,keymu);
     std::copy(mu,mu+CRHBYTES,keymu+SEEDBYTES);
-    uint8_t rhoprime[CRHBYTES];
+    std::uint8_t rhoprime[CRHBYTES];
 
 #ifdef DILITHIUM_RANDOMIZED_SIGNING
     randombytes(rhoprime, CRHBYTES);
@@ -316,7 +323,7 @@ void lattice_sig::sign_single_signature(isdsr_packet &p){
     //polyveck_pack_w1(sig, &w1);
 
     polyveck_decompose(&w1, &w0, &w);
-    uint8_t packw1[K*POLYW1_PACKEDBYTES];
+    std::uint8_t packw1[K*POLYW1_PACKEDBYTES];
     polyveck_pack_w1(packw1, &w1);
 
     shake256_init(&state);
