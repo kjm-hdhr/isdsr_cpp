@@ -21,9 +21,9 @@ class adhoc_node{
     };
     protected:
     string if_name;
-    array<uint8_t,ADDR_SIZE> ip_addr;
-    array<uint8_t,ADDR_SIZE> brd_addr;
-    array<uint8_t,ADDR_SIZE> ip_dest;
+    array<std::uint8_t,ADDR_SIZE> ip_addr;
+    array<std::uint8_t,ADDR_SIZE> brd_addr;
+    array<std::uint8_t,ADDR_SIZE> ip_dest;
     arf_manager arfm;
     std::thread rcv_th;
 
@@ -43,9 +43,9 @@ class adhoc_node{
     adhoc_node(string &if_name);
     ~adhoc_node();
     void set_routing(adhoc_routing* routing);
-    void establish_route(array<uint8_t,ADDR_SIZE> &dest);
+    void establish_route(array<std::uint8_t,ADDR_SIZE> &dest);
     void receive_msg();
-    void send_msg(array<uint8_t,ADDR_SIZE> &next,vector<uint8_t> &buf);
+    void send_msg(array<std::uint8_t,ADDR_SIZE> &next,vector<std::uint8_t> &buf);
     string to_string();
     void data_send(ar_packet* pkt);
     void start();

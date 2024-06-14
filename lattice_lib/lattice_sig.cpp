@@ -199,7 +199,7 @@ void lattice_sig::serialize_aggregate_sig(vector<std::uint8_t> &buf){
     std::copy(this->aggsig.c,this->aggsig.c+SEEDBYTES,buf.begin());
     this->pvo.serialize_polyvecl_modQ(this->aggsig.z,buf,INDEX_AGG_SIG_Z);
     
-    buf[INDEX_AGG_SIG_WLENGTH]=len;
+    buf.at(INDEX_AGG_SIG_WLENGTH)=len;
     std::cout<<"buf sig bun length:"<<std::to_string(buf.size())<<std::endl;
 
     for(size_t i=0;i<this->aggsig.w.size();i++){
@@ -211,7 +211,7 @@ void lattice_sig::serialize_aggregate_sig(vector<std::uint8_t> &buf){
 void lattice_sig::deserialize_aggregate_sig(const vector<std::uint8_t> &buf){
     std::copy(buf.begin(),buf.begin()+SEEDBYTES,this->aggsig.c);
     this->pvo.deserialize_polyvecl(this->aggsig.z,buf,INDEX_AGG_SIG_Z);
-    this->aggsig.wlength=buf[INDEX_AGG_SIG_WLENGTH];
+    this->aggsig.wlength=buf.at(INDEX_AGG_SIG_WLENGTH);
     this->aggsig.w.resize(this->aggsig.wlength);
     for(int i=0;i<this->aggsig.wlength;i++){
         this->pvo.deserialize_polyveck(this->aggsig.w.at(i),buf,INDEX_AGG_SIG_W+(i*POLYVECK_MODQ_SIZE));

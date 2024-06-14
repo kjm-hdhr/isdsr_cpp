@@ -23,19 +23,21 @@ uint32_t ar_packet::serialize(vector<std::uint8_t> &buf){
 	if(buf.size()<this->packet_size()){
 		buf.resize(this->packet_size());
 	}
-    buf[INDEX_TYPE]=this->type;
+	buf.at(SEQUENCE_NO_SIZE)=this->seq;
+    buf.at(INDEX_TYPE)=this->type;
     for(int i=0;i<PACKET_LENGTH_SIZE;i++){
-        buf[INDEX_PACKET_LENGTH+i]=(this->packet_length>>(8*i))&0xFF;
+        buf.at(INDEX_PACKET_LENGTH+i)=(this->packet_length>>(8*i))&0xFF;
     }
     std::copy(this->src.begin(),this->src.end(),buf.begin()+INDEX_SRC);
     std::copy(this->dest.begin(),this->dest.end(),buf.begin()+INDEX_DEST);
 	return INDEX_DEST+ADDR_SIZE;
 }
 uint32_t ar_packet::deserialize(const vector<std::uint8_t> &buf){
-    this->type=buf[INDEX_TYPE];
+	this->seq=buf.at(INDEX_SEQUENCE_NO);
+    this->type=buf.at(INDEX_TYPE);
     this->packet_length=0;
     for(int i=0;i<PACKET_LENGTH_SIZE;i++){
-        this->packet_length+=(((uint32_t)buf[INDEX_PACKET_LENGTH+i])&0x000000FF)<<(8*i);
+        this->packet_length+=(((uint32_t)buf.at(INDEX_PACKET_LENGTH+i))&0x000000FF)<<(8*i);
     }
     std::copy(buf.begin()+INDEX_SRC,buf.begin()+INDEX_SRC+ADDR_SIZE,this->src.begin());
     std::copy(buf.begin()+INDEX_DEST,buf.begin()+INDEX_DEST+ADDR_SIZE,this->dest.begin());
@@ -44,7 +46,8 @@ uint32_t ar_packet::deserialize(const vector<std::uint8_t> &buf){
 
 std::string ar_packet::to_string(){
 	this->packet_length=this->packet_size();
-	string ret="type:"+std::to_string(this->type);
+	string ret="seq:"+std::to_string(this->seq);
+	ret+="type:"+std::to_string(this->type);
 	ret+=" packet length:"+std::to_string(this->packet_length);
 	ret+=" src"+adhoc_util::to_string_iparray(this->src);
 	ret+=" dest"+adhoc_util::to_string_iparray(this->dest);

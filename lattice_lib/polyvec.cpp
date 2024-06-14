@@ -54,18 +54,18 @@ void poly_operation::serialize_poly_modQ(const poly &p, std::vector<std::uint8_t
 		buf.resize(POLY_MODQ_SIZE);
 	}
 	for(int i=0;i<N;i++){
-		buf[i*3+0+index]=p.coeffs[i];
-		buf[i*3+1+index]=p.coeffs[i]>>8;
-		buf[i*3+2+index]=p.coeffs[i]>>16;
+		buf.at(i*3+0+index)=p.coeffs[i];
+		buf.at(i*3+1+index)=p.coeffs[i]>>8;
+		buf.at(i*3+2+index)=p.coeffs[i]>>16;
 		//printf("pack[%x %x %x]=coeffs[%d] %x\n",pack[i*3+0],pack[i*3+1],pack[i*3+2],i,p->coeffs[i]);
 	}
 }
 void poly_operation::deserialize_poly_modQ(poly &p, const std::vector<std::uint8_t> &buf,int index){
 
 	for(int i=0;i<N;i++){
-		p.coeffs[i]=buf[i*3+0+index];
-		p.coeffs[i]|=((std::int32_t)buf[i*3+1+index])<<8;
-		p.coeffs[i]|=(((std::int32_t)buf[i*3+2+index])<<24)>>8;
+		p.coeffs[i]=buf.at(i*3+0+index);
+		p.coeffs[i]|=((std::int32_t)buf.at(i*3+1+index))<<8;
+		p.coeffs[i]|=(((std::int32_t)buf.at(i*3+2+index))<<24)>>8;
 		//printf("unpack[%x %x %x]=coeffs[%d] %x\n",pack[i*3+0],pack[i*3+1],pack[i*3+2],i,p->coeffs[i]);
 	}
 }

@@ -53,7 +53,7 @@ std::uint32_t dsr_packet::serialize(vector<std::uint8_t> &buf){
     }
     this->ar_packet::serialize(buf);
     this->ri_length=this->ri.size();
-    buf[INDEX_RI_LENGTH]=this->ri_length;
+    buf.at(INDEX_RI_LENGTH)=this->ri_length;
     for(size_t i=0;i<this->ri.size();i++){
         std::copy(this->ri.at(i).begin(),this->ri.at(i).end(),buf.begin()+INDEX_RI+ADDR_SIZE*i);
     }
@@ -61,7 +61,7 @@ std::uint32_t dsr_packet::serialize(vector<std::uint8_t> &buf){
 }
 std::uint32_t dsr_packet::deserialize(const vector<std::uint8_t> &buf){
     this->ar_packet::deserialize(buf);
-    this->ri_length=buf[INDEX_RI_LENGTH];
+    this->ri_length=buf.at(INDEX_RI_LENGTH);
     this->ri.resize(this->ri_length);
     for(int i=0;i<this->ri_length;i++){
         array<std::uint8_t,ADDR_SIZE> tmp;

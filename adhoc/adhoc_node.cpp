@@ -178,7 +178,7 @@ void adhoc_node::start(){
 
     std::cerr<<"start 1"<<std::endl;
     this->rcv_th=std::thread(&adhoc_node::receive_msg, this);
-
+    
     std::cerr<<"start 2"<<std::endl;
     this->rcv_th.join();
 }

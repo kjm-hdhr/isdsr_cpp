@@ -34,7 +34,7 @@ class adhoc_routing{
 
 	virtual std::array<std::uint8_t,ADDR_SIZE>* packet_processing(std::vector<std::uint8_t> &buf){
         
-        switch(buf[INDEX_TYPE]){
+        switch(buf.at(INDEX_TYPE)){
             case RREQ:{
                 return this->processing_rreq(buf);
             }

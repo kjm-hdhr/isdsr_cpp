@@ -85,9 +85,9 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::generate_initiali_request(array<st
 	//std::cerr<<"isdsr initial req generate signature verify "<<std::to_string(v)<<std::endl;
 	p.serialize(buf);
 	//std::cerr<<"isdsr_routing initial request: "<<p.to_string()<<std::endl;
-	//std::cerr<<"isdsr_routing initial request buf["<<std::to_string(buf[0]);
+	std::cerr<<"isdsr_routing initial request buf["<<std::to_string(buf.at(0));
 	for(size_t i=1;i<buf.size();i++){
-		std::cerr<<","<<std::to_string(buf[i]);
+		std::cerr<<","<<std::to_string(buf.at(i));
 	}
 	std::cerr<<"]"<<std::endl;
 	std::cerr<<"isdsr_packet addr:"<<&p<<std::endl;

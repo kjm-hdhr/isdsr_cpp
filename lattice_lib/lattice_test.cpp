@@ -15,7 +15,7 @@ int main(int argc, char** argv){
     std::array<std::uint8_t,ADDR_SIZE> f2={10,0,0,5};
     std::array<std::uint8_t,ADDR_SIZE> f3={10,0,0,6};
     std::array<std::uint8_t,ADDR_SIZE> f4={10,0,0,7};
-    
+    std::vector<std::uint8_t> buf1(60000);
     std::cerr<<" generate nodes "<<std::endl;
     isdsr_packet p(RREQ,src,dest);
     isdsr_routing ir1,ir2;
@@ -31,8 +31,8 @@ int main(int argc, char** argv){
     p.add_id(src);
     lattice1.sign(p);
     std::uint8_t b_array[p.packet_size()];
-    std::vector<std::uint8_t> buf1;
-    buf1.push_back(0);
+    
+    //buf1.push_back(0);
     buf1.resize(8000);
     //std::vector<std::uint8_t> buf1(p.packet_size());
     std::cerr<<"buf1 capacity:"<<std::to_string(buf1.capacity())<<std::endl;

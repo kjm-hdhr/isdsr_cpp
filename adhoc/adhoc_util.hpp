@@ -27,32 +27,32 @@ class adhoc_util{
     };
     static void serialize_uint32(std::uint32_t index, std::vector<std::uint8_t> &buf, const std::uint32_t value){
         for(int i=0;i<LENGTH_UINT32;i++){
-            buf[index+i]=(value>>(8*i))&0xFF;
+            buf.at(index+i)=(value>>(8*i))&0xFF;
         }
     };
     static void serialize_uint16(std::uint32_t index, std::vector<std::uint8_t> &buf, const std::uint16_t value){
         for(int i=0;i<LENGTH_UINT16;i++){
-            buf[index+i]=(value>>(8*i))&0xFF;
+            buf.at(index+i)=(value>>(8*i))&0xFF;
         }
     };
     static std::uint32_t deserialize_uint32(std::uint32_t index, const std::vector<std::uint8_t> &buf){
         std::uint32_t ret=0;
         for(int i=0;i<LENGTH_UINT32;i++){
-            ret+=(((std::uint32_t)buf[index+i])&0x000000FF)<<(8*i);
+            ret+=(((std::uint32_t)buf.at(index+i))&0x000000FF)<<(8*i);
         }
         return ret;
     };
     static std::uint16_t deserialize_uint16(std::uint32_t index, const std::vector<std::uint8_t> &buf){
         std::uint16_t ret=0;
         for(int i=0;i<LENGTH_UINT16;i++){
-            ret+=(((std::uint16_t)buf[index+i])&0x00FF)<<(8*i);
+            ret+=(((std::uint16_t)buf.at(index+i))&0x00FF)<<(8*i);
         }
         return ret;
     };
     static std::string to_string_iparray(std::array<std::uint8_t,ADDR_SIZE> &a){
-        std::string ret="["+std::to_string(a[0]);
+        std::string ret="["+std::to_string(a.at(0));
         for(int i=1;i<ADDR_SIZE;i++){
-            ret+=","+std::to_string(a[i]);
+            ret+=","+std::to_string(a.at(i));
         }
         return ret+"]";
     }
@@ -60,10 +60,10 @@ class adhoc_util{
         if(v.size()<1){
             return "";
         }
-        std::string ret="v["+std::to_string(v[0]);
+        std::string ret="v["+std::to_string(v.at(0));
         for(size_t i=1;i<v.size();i++){
             //std::cerr<<"i:"<<std::to_string(i)<<" v[]:"<<std::to_string(v[i])<<std::endl;
-            ret+=","+std::to_string(v[i]);
+            ret+=","+std::to_string(v.at(i));
         }
         return ret+"]";
     }

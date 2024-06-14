@@ -10,15 +10,15 @@ void arf_header::serialize(vector<std::uint8_t> &buf){
         buf.resize(this->header_length());
     }
     adhoc_util::serialize_uint32(INDEX_SEQUENCE_NUMBER,buf,this->seq_no);
-    buf[INDEX_FRAGMENT_ID]=this->fragment_id;
-    buf[INDEX_NUM_OF_FRAGMENTS]=this->num_of_fragments;
+    buf.at(INDEX_FRAGMENT_ID)=this->fragment_id;
+    buf.at(INDEX_NUM_OF_FRAGMENTS)=this->num_of_fragments;
     adhoc_util::serialize_uint32(INDEX_TOTAL_LENGTH,buf,this->total_length);
     std::copy(this->remote_address.begin(),this->remote_address.end(),buf.begin()+INDEX_REMOTE_ADDRESS);
 }
 void arf_header::deserialize(const vector<std::uint8_t> &buf){
     this->seq_no=adhoc_util::deserialize_uint32(INDEX_SEQUENCE_NUMBER,buf);
-    this->fragment_id=buf[INDEX_FRAGMENT_ID];
-    this->num_of_fragments=buf[INDEX_NUM_OF_FRAGMENTS];
+    this->fragment_id=buf.at(INDEX_FRAGMENT_ID);
+    this->num_of_fragments=buf.at(INDEX_NUM_OF_FRAGMENTS);
     this->total_length=adhoc_util::deserialize_uint32(INDEX_TOTAL_LENGTH,buf);
     std::copy(buf.begin()+INDEX_REMOTE_ADDRESS,buf.begin()+INDEX_REMOTE_ADDRESS+REMOTE_ADDRESS_SIZE,this->remote_address.begin());
 }

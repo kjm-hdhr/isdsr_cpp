@@ -38,7 +38,7 @@ std::uint32_t isdsr_packet::serialize(vector<std::uint8_t> &buf){
     this->dsr_packet::serialize(buf);
     std::cerr<<"serialize update buf size2:"<<std::to_string(buf.size())<<std::endl;
     for(size_t i=0;i<buf.size();i++){
-        std::cerr<<","<<std::to_string(buf[i]);
+        std::cerr<<","<<std::to_string(buf.at(i));
     }
     std::cerr<<std::endl;
     std::cerr<<"packet size:"<<std::to_string(this->packet_size())<<std::endl;
