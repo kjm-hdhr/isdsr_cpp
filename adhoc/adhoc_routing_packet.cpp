@@ -23,7 +23,8 @@ uint32_t ar_packet::serialize(vector<std::uint8_t> &buf){
 	if(buf.size()<this->packet_size()){
 		buf.resize(this->packet_size());
 	}
-	buf.at(SEQUENCE_NO_SIZE)=this->seq;
+	//buf.at(SEQUENCE_NO_SIZE)=this->seq;
+	adhoc_util::serialize_uint32(INDEX_SEQUENCE_NO,buf,this->seq);
     buf.at(INDEX_TYPE)=this->type;
     for(int i=0;i<PACKET_LENGTH_SIZE;i++){
         buf.at(INDEX_PACKET_LENGTH+i)=(this->packet_length>>(8*i))&0xFF;
@@ -33,7 +34,8 @@ uint32_t ar_packet::serialize(vector<std::uint8_t> &buf){
 	return INDEX_DEST+ADDR_SIZE;
 }
 uint32_t ar_packet::deserialize(const vector<std::uint8_t> &buf){
-	this->seq=buf.at(INDEX_SEQUENCE_NO);
+	//this->seq=buf.at(INDEX_SEQUENCE_NO);
+	this->seq=adhoc_util::deserialize_uint32(INDEX_SEQUENCE_NO,buf);
     this->type=buf.at(INDEX_TYPE);
     this->packet_length=0;
     for(int i=0;i<PACKET_LENGTH_SIZE;i++){

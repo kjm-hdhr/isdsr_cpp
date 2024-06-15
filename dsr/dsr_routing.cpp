@@ -59,6 +59,8 @@ array<std::uint8_t,ADDR_SIZE>* dsr_routing::processing_data(std::vector<std::uin
 }
 array<std::uint8_t,ADDR_SIZE>* dsr_routing::generate_initiali_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf){
 	dsr_packet p(RREQ,id,dest);
+	this->seq++;
+	p.set_seq(this->seq);
 	p.add_id(id);
 	p.serialize(buf);
 	return &(this->broadcast);

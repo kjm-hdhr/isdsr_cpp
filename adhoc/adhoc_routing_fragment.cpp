@@ -154,7 +154,7 @@ void arf_manager::fragment(vector<arf_packet> &pkts,const vector<std::uint8_t> &
     arfp.set_remote_address(this->own_id);
     std::cerr<<"fragment buf size: "<<std::to_string(buf.size())<<std::endl;
     arfp.put_data(index,buf.size(),buf);
-    std::cerr<<"fragment arfp:"<<arfp.to_string()<<std::endl;
+    //std::cerr<<"fragment arfp:"<<arfp.to_string()<<std::endl;
     pkts.push_back(arfp);
 
 }

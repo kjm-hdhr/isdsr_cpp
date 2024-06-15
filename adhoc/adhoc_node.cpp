@@ -12,6 +12,7 @@ adhoc_node::adhoc_node(string &if_name){
     this->if_name=if_name;
     this->initialize(if_name);
     this->arfm.set_own_id(this->ip_addr);
+    this->seq=0;
 }
 adhoc_node::~adhoc_node(){
 
@@ -100,21 +101,27 @@ void adhoc_node::receive_msg(){
         rcv=recv(this->rcv_sock,rcv_buf,fragment_length,0);
         //std::cerr<<"receive msg 7"<<std::endl;
         fragmented_buf.resize(fragment_length);
-
-        std::cerr<<"receive msg 8"<<std::endl;
+        
+        //std::cerr<<"receive msg 8"<<std::endl;
         for(std::uint32_t i=0;i<fragment_length;i++){
             fragmented_buf[i]=rcv_buf[i];
-            std::cerr<<","<<std::to_string(fragmented_buf[i]);
+            //std::cerr<<","<<std::to_string(fragmented_buf[i]);
         }
-        std::cerr<<std::endl;
+        //std::cerr<<std::endl;
+        
         arfp.deserialize(fragmented_buf);
-        std::cerr<<"arfp:"<<arfp.to_string()<<std::endl;
+        //std::cerr<<"arfp:"<<arfp.to_string()<<std::endl;
         int defrag=arfm.defragment(arfp,buf);
         if(defrag==0){
             continue;
         }
         next=this->routing->packet_processing(buf);
+        
         if(next!=nullptr){
+            if(this->is_own_id(*next)){
+                std::cout<<"route established adhoc node"<<std::endl;
+                continue;
+            }
             this->send_msg(*next,buf);
             std::cerr<<"rec next:"<<adhoc_util::to_string_iparray(*next)<<std::endl;
         }
@@ -125,11 +132,11 @@ void adhoc_node::receive_msg(){
 void adhoc_node::send_msg(array<std::uint8_t,ADDR_SIZE> &next,vector<std::uint8_t> &buf){
     
     std::cerr<<"adhoc node send_msg next:"<<adhoc_util::to_string_iparray(next)<<std::endl;
-    std::cerr<<"buf["<<std::to_string(buf[0]);
-    for(size_t i=1;i<buf.size();i++){
-        std::cerr<<","<<std::to_string(buf[i]);
-    }
-    std::cerr<<"]"<<std::endl;
+    //std::cerr<<"buf["<<std::to_string(buf[0]);
+    //for(size_t i=1;i<buf.size();i++){
+    //    std::cerr<<","<<std::to_string(buf[i]);
+    //}
+    //std::cerr<<"]"<<std::endl;
     std::uint32_t next_ip=adhoc_util::array_to_ip(next);
     vector<arf_packet> arfp_v;
     this->arfm.fragment(arfp_v,buf);

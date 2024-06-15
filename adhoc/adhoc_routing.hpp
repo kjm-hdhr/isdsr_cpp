@@ -6,12 +6,13 @@ namespace oit::ist::nws::adhoc_routing{
 
 class adhoc_routing{
 	protected:
+    std::uint32_t seq;
     std::array<std::uint8_t,ADDR_SIZE> id;
     std::array<std::uint8_t,ADDR_SIZE> next;
     std::array<std::uint8_t,ADDR_SIZE> broadcast;
 
 	public:
-	adhoc_routing(){}
+	adhoc_routing(){this->seq=0;}
 	~adhoc_routing(){}
 	void set_id(std::array<std::uint8_t,ADDR_SIZE> &id){
         std::copy(id.begin(),id.end(),this->id.begin());

@@ -58,8 +58,9 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rrep(std::vector<std::u
 		return nullptr;
 	}
 	if(p.is_dest(id)){
-		std::cout<<"route established"<<std::endl;
-		return nullptr;
+		std::cout<<"route established processing rrep"<<std::endl;
+		std::cout<<"return address:"<<adhoc_util::to_string_iparray(this->id)<<std::endl;
+		return &(this->id);
 	}
 	next=p.previous_id(id);
 	std::copy(next->begin(),next->end(),this->next.begin());
@@ -74,23 +75,25 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_data(std::vector<std::u
 }
 array<std::uint8_t,ADDR_SIZE>* isdsr_routing::generate_initiali_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf){
 	isdsr_packet p(RREQ,id,dest);
+	this->seq++;
+	p.set_seq(this->seq);
 	p.add_id(this->id);
-	std::cerr<<"routing "<<std::endl;
+	std::cerr<<"routing seq:"<<std::to_string(this->seq)<<std::endl;
 	std::cerr<<this->to_string()<<std::endl;
 	std::cerr<<"isdsr initial req"<<std::endl;
-	std::cerr<<p.dsr_packet::to_string()<<std::endl;
+	//std::cerr<<p.dsr_packet::to_string()<<std::endl;
 	this->ss->sign(p);
 	std::cerr<<"isdsr initial req generate signature"<<std::endl;
 	//bool v=this->ss->verify(p);
 	//std::cerr<<"isdsr initial req generate signature verify "<<std::to_string(v)<<std::endl;
 	p.serialize(buf);
 	//std::cerr<<"isdsr_routing initial request: "<<p.to_string()<<std::endl;
-	std::cerr<<"isdsr_routing initial request buf["<<std::to_string(buf.at(0));
-	for(size_t i=1;i<buf.size();i++){
-		std::cerr<<","<<std::to_string(buf.at(i));
-	}
-	std::cerr<<"]"<<std::endl;
-	std::cerr<<"isdsr_packet addr:"<<&p<<std::endl;
+	//std::cerr<<"isdsr_routing initial request buf["<<std::to_string(buf.at(0));
+	//for(size_t i=1;i<buf.size();i++){
+	//	std::cerr<<","<<std::to_string(buf.at(i));
+	//}
+	//std::cerr<<"]"<<std::endl;
+	//std::cerr<<"isdsr_packet addr:"<<&p<<std::endl;
 	return &(this->broadcast);
 }
 

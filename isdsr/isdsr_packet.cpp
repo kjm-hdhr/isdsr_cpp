@@ -27,15 +27,13 @@ void isdsr_packet::initialize(){
 }
 
 std::uint32_t isdsr_packet::serialize(vector<std::uint8_t> &buf){
-    std::cerr<<"serialize orignal buf size:"<<std::to_string(buf.size())<<std::endl;
-    std::cerr<<"serialize packet size:"<<std::to_string(this->packet_size())<<std::endl;
-    std::cout<<"max size:"<<std::to_string(buf.max_size())<<std::endl;
     std::uint8_t buf_array[this->packet_size()];
     if(buf.size()<this->packet_size()){
         buf.resize(this->packet_size(),0);
     }
-    std::cerr<<"serialize update buf size1:"<<std::to_string(buf.size())<<std::endl;
+    
     this->dsr_packet::serialize(buf);
+    /*
     std::cerr<<"serialize update buf size2:"<<std::to_string(buf.size())<<std::endl;
     for(size_t i=0;i<buf.size();i++){
         std::cerr<<","<<std::to_string(buf.at(i));
@@ -43,6 +41,7 @@ std::uint32_t isdsr_packet::serialize(vector<std::uint8_t> &buf){
     std::cerr<<std::endl;
     std::cerr<<"packet size:"<<std::to_string(this->packet_size())<<std::endl;
     std::cerr<<"buf size:"<<std::to_string(buf.size())<<std::endl;
+    */
     //std::cerr<<"isdsr_packet serialize dsr"<<adhoc_util::to_string_vector(buf)<<std::endl;
     this->sig_length=this->sig.size();
     adhoc_util::serialize_uint32(INDEX_SIG_LENGTH,buf,this->sig_length);
@@ -55,7 +54,7 @@ std::uint32_t isdsr_packet::deserialize(const vector<std::uint8_t> &buf){
     this->sig_length=adhoc_util::deserialize_uint32(INDEX_SIG_LENGTH,buf);
     this->sig.resize(this->sig_length);
     std::copy(buf.begin()+INDEX_SIG,buf.end(),this->sig.begin());
-    std::cerr<<"isdsr_packet deserialize:"<<this->to_string()<<std::endl;
+    //std::cerr<<"isdsr_packet deserialize:"<<this->to_string()<<std::endl;
     return INDEX_SIG+this->sig_length;
 }
 string isdsr_packet::to_string(){
