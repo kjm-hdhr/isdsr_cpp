@@ -18,6 +18,6 @@ ssl_lib = /opt/homebrew/opt/openssl@3/lib
 flags = -lssl -lcrypto -lmclbn384_256 -lmcl -lpthread
 
 ecdsa_test: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt)
-	g++ -o ecdsa_test $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt) $(ecdsa_rt_dir)/ecdsa_test.cpp -std=c++17 -I$(mcl_include) -L$(mcl_lib) $(flags)
+	g++ -o ecdsa_test $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt) $(ecdsa_rt_dir)/ecdsa_test.cpp -std=c++17 $(flags) -I$(mcl_include) -L$(mcl_lib) 
 ecdsa_node: $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt)
-	g++ -o ecdsa_node $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt) $(ecdsa_rt_dir)/ecdsa_main.cpp -std=c++17 -I$(mcl_include) -L$(mcl_lib) $(flags)
+	g++ -o ecdsa_node $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(ecdsa_rt) $(ecdsa_rt_dir)/ecdsa_main.cpp -std=c++17 $(flags) -I$(mcl_include) -L$(mcl_lib) 

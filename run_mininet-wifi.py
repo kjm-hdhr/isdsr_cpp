@@ -78,7 +78,7 @@ class TopologyGenerator:
     num=self.x*self.y;
     with open("cmd.txt", mode='w') as f:
       for i in range(1,num):
-        f.write("py sta"+str(i+1)+".cmd(\"xterm -n sta"+str(i+1)+" -hold -e bash "+self.prot.lower()+".sh &\")\n");
+        f.write("py sta"+str(i+1)+".cmd(\"xterm -n sta"+str(i+1)+" -hold -e bash run_isdsr_"+self.prot.lower()+".sh &\")\n");
   
   def sendCommand(self):
     num=self.x*self.y;

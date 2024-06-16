@@ -289,11 +289,11 @@ rej:
   shake256_finalize(&state);
   shake256_squeeze(sig, SEEDBYTES, &state);
 	pack_agg.c_pack(c,sig);
-	printf("----- sig -----\n");
-	for(int cnt=0;cnt<SEEDBYTES;cnt++){
-		printf("c[%d]=%d,",cnt,c[cnt]);
-	}
-	printf("\n");
+	//printf("----- sig -----\n");
+	//for(int cnt=0;cnt<SEEDBYTES;cnt++){
+	//	printf("c[%d]=%d,",cnt,c[cnt]);
+	//}
+	//printf("\n");
   //poly_challenge(&cp, sig);
 	poly_challenge(&cp, c);
   //poly_ntt(&cp);
