@@ -20,6 +20,7 @@ class TopologyGenerator:
     self.jars=["jpbc-pbc-2.0.0.jar","jpbc-plaf-2.0.0.jar","jpbc-pbc-2.0.0.jar"];
 
   def params(self,args):
+    self.cpu_rate_flag=False
     for param in args:
       if param.startswith("-w"):
         self.x=int(param.split(":")[1]);
@@ -33,6 +34,7 @@ class TopologyGenerator:
         self.error_rate=param.split(":")[1];
       if param.startswith("-cpu"):
         self.cpu_rate=param.split(":")[1];
+        self.cpu_rate_flag=True;
         
 
     print("w:"+str(self.x)+" h:"+str(self.y)+" p:"+self.prot);
@@ -51,10 +53,12 @@ class TopologyGenerator:
     #sta1 = net.addStation('sta1', ip6='fe80::1',cls=CPULimitedStation,position='10,10,0', **kwargs)
     #sta1.setCPUFrac(f=0.01)
     for i in range(num):
-        sta = net.addStation('sta' + str(i+1), cls=CPULimitedStation, position=str(i%self.x*interval)+','+str(math.floor(i/self.x)*interval)+',0', range=100)
-        sta.setCPUFrac(f=float(self.cpu_rate))
-        self.stas.append(sta)
-        #self.stas.append(net.addStation('sta' + str(i+1), position=str(i%self.x*interval)+','+str(math.floor(i/self.x)*interval)+',0', range=100))
+        if(self.cpu_rate_flag):
+            sta = net.addStation('sta' + str(i+1), cls=CPULimitedStation, position=str(i%self.x*interval)+','+str(math.floor(i/self.x)*interval)+',0', range=100)
+            sta.setCPUFrac(f=float(self.cpu_rate))
+            self.stas.append(sta)
+        else:
+            self.stas.append(net.addStation('sta' + str(i+1), position=str(i%self.x*interval)+','+str(math.floor(i/self.x)*interval)+',0', range=100))
 		
     info("*** Configuring Propagation Model\n")
     net.setPropagationModel(model="logDistance", exp=4)
