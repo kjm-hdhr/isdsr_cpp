@@ -10,6 +10,7 @@ from mn_wifi.cli import CLI
 from mn_wifi.net import Mininet_wifi
 from mn_wifi.wmediumdConnector import interference
 from mn_wifi.wmediumdConnector import error_prob
+from mn_wifi.node import CPULimitedStation
 
 class TopologyGenerator:
   def __init__(self,width=3,height=3):
@@ -30,12 +31,15 @@ class TopologyGenerator:
         self.mode=param.split(":")[1];
       if param.startswith("-er"):
         self.error_rate=param.split(":")[1];
+      if param.startswith("-cpu"):
+        self.cpu_rate=param.split(":")[1];
+        
 
     print("w:"+str(self.x)+" h:"+str(self.y)+" p:"+self.prot);
 
   def generate(self):
-    net = Mininet_wifi(link=wmediumd, wmediumd_mode=interference,noise_th=-91, fading_cof=1)
-    #net = Mininet_wifi(link=wmediumd, wmediumd_mode=interference)
+    #net = Mininet_wifi(link=wmediumd, wmediumd_mode=interference,noise_th=-91, fading_cof=1)
+    net = Mininet_wifi(link=wmediumd, wmediumd_mode=interference)
     #net = Mininet_wifi(link=wmediumd)
     num=self.x*self.y;
     
@@ -44,8 +48,13 @@ class TopologyGenerator:
 
     print("*** Creating nodes")
     interval=70;
+    #sta1 = net.addStation('sta1', ip6='fe80::1',cls=CPULimitedStation,position='10,10,0', **kwargs)
+    #sta1.setCPUFrac(f=0.01)
     for i in range(num):
-        self.stas.append(net.addStation('sta' + str(i+1), position=str(i%self.x*interval)+','+str(math.floor(i/self.x)*interval)+',0', range=100))
+        sta = net.addStation('sta' + str(i+1), cls=CPULimitedStation, position=str(i%self.x*interval)+','+str(math.floor(i/self.x)*interval)+',0', range=100)
+        sta.setCPUFrac(f=float(self.cpu_rate))
+        self.stas.append(sta)
+        #self.stas.append(net.addStation('sta' + str(i+1), position=str(i%self.x*interval)+','+str(math.floor(i/self.x)*interval)+',0', range=100))
 		
     info("*** Configuring Propagation Model\n")
     net.setPropagationModel(model="logDistance", exp=4)
@@ -78,7 +87,7 @@ class TopologyGenerator:
     num=self.x*self.y;
     with open("cmd.txt", mode='w') as f:
       for i in range(1,num):
-        f.write("py sta"+str(i+1)+".cmd(\"xterm -n sta"+str(i+1)+" -hold -e bash run_isdsr_"+self.prot.lower()+".sh &\")\n");
+        f.write("py sta"+str(i+1)+".cmd(\"xterm -n sta"+str(i+1)+" -hold -e bash run_isdsr_"+self.prot.lower()+".sh -i sta"+str(i+1)+"-wlan0 &\")\n");
   
   def sendCommand(self):
     num=self.x*self.y;

@@ -1,0 +1,4 @@
+py sta2.cmd("xterm -n sta2 -hold -e bash run_isdsr_ecdsa.sh -i sta2-wlan0 &")
+py sta3.cmd("xterm -n sta3 -hold -e bash run_isdsr_ecdsa.sh -i sta3-wlan0 &")
+py sta4.cmd("xterm -n sta4 -hold -e bash run_isdsr_ecdsa.sh -i sta4-wlan0 &")
+py sta5.cmd("xterm -n sta5 -hold -e bash run_isdsr_ecdsa.sh -i sta5-wlan0 &")

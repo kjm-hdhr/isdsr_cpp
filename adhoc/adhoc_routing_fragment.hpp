@@ -3,7 +3,7 @@
 
 
 #define TIME_OUT 1000
-#define DEFAULT_FRAGMENT_SIZE 1000
+#define DEFAULT_FRAGMENT_SIZE 30000
 #include <cstdint>
 #include <vector>
 #include <string>
