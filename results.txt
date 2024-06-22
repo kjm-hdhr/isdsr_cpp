@@ -1,0 +1,13 @@
+lattice
+10.0.0.1 to 10.0.0.2 100 times 100 route establishment 0.06929
+10.0.0.1 to 10.0.0.3 100 times 100 route establishment 0.175360
+10.0.0.1 to 10.0.0.4 100 times 100 route establishment 0.323760
+10.0.0.1 to 10.0.0.5 100 times 100 route establishment 0.488740
+10.0.0.1 to 10.0.0.6 100 times 100 route establishment 0.694140
+
+ecdsa
+10.0.0.1 to 10.0.0.2 100 times 100 route establishment 0.014060
+10.0.0.1 to 10.0.0.3 100 times 100 route establishment 0.025340
+10.0.0.1 to 10.0.0.4 100 times 100 route establishment 0.036720
+10.0.0.1 to 10.0.0.5 100 times 100 route establishment 0.046600
+10.0.0.1 to 10.0.0.6 100 times 100 route establishment 0.062450
