@@ -2,6 +2,7 @@
 #define ISDSR_ROUTING_HPP
 
 #include <vector>
+#include <chrono>
 #include "../dsr/dsr_routing.hpp"
 #include "isdsr_packet.hpp"
 #include "signature_scheme.hpp"
@@ -12,6 +13,8 @@ class isdsr_routing:public dsr_routing{
 	
     protected:
     signature_scheme *ss;
+	std::vector<double> time_verify;
+	std::vector<double> time_sign;
 	public:
 	isdsr_routing(){}
 	~isdsr_routing(){}
