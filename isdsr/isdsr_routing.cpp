@@ -20,7 +20,9 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<std::u
     bool verification=this->ss->verify(p);
 
 	std::chrono::steady_clock::time_point ve=std::chrono::steady_clock::now();
-	this->time_verify.push_back(((double)std::chrono::duration_cast<std::chrono::nanoseconds>(ve-vs).count()));
+	this->t_verify+=((double)std::chrono::duration_cast<std::chrono::nanoseconds>(ve-vs).count());
+	this->c_verify++;
+	//this->time_verify.push_back(((double)std::chrono::duration_cast<std::chrono::nanoseconds>(ve-vs).count()));
 	
 	std::cerr<<"----- verification -----"<<std::to_string(verification)<<std::endl;
     if(!verification){
@@ -46,23 +48,27 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<std::u
 	std::chrono::steady_clock::time_point ss=std::chrono::steady_clock::now();
     this->ss->sign(p);
 	std::chrono::steady_clock::time_point se=std::chrono::steady_clock::now();
-	this->time_sign.push_back(((double)std::chrono::duration_cast<std::chrono::nanoseconds>(se-ss).count()));
+	this->t_sign+=((double)std::chrono::duration_cast<std::chrono::nanoseconds>(se-ss).count());
+	this->c_sign++;
+	//this->time_sign.push_back(((double)std::chrono::duration_cast<std::chrono::nanoseconds>(se-ss).count()));
 	std::copy(next->begin(),next->end(),this->next.begin());
 	p.set_next(this->next);
 	p.serialize(buf);
 
 	std::cerr<<"next ip:"<<adhoc_util::to_string_iparray(*next)<<std::endl;
 	std::cout<<"---------- node id ----------"<<adhoc_util::to_string_iparray(this->id)<<std::endl;
-    double ave_verify=0;
-	double ave_sign=0;
-	for(int i=0;i<this->time_sign.size();i++){
-		ave_sign+=this->time_sign.at(i);
-	}
-	for(int i=0;i<this->time_verify.size();i++){
-		ave_verify+=this->time_verify.at(i);
-	}
-	std::cout<<" signing time:"<<std::to_string(ave_sign)<<"/"<<std::to_string(this->time_sign.size())<<"="<<std::to_string((ave_sign/this->time_sign.size()))<<std::endl;
-	std::cout<<" verification time:"<<std::to_string(ave_verify)<<"/"<<std::to_string(this->time_verify.size())<<"="<<std::to_string((ave_verify/this->time_verify.size()))<<std::endl;
+    //double ave_verify=0;
+	//double ave_sign=0;
+	//for(int i=0;i<this->time_sign.size();i++){
+	//	ave_sign+=this->time_sign.at(i);
+	//}
+	//for(int i=0;i<this->time_verify.size();i++){
+	//	ave_verify+=this->time_verify.at(i);
+	//}
+	//std::cout<<" signing time:"<<std::to_string(ave_sign)<<"/"<<std::to_string(this->time_sign.size())<<"="<<std::to_string((ave_sign/this->time_sign.size()))<<std::endl;
+	//std::cout<<" verification time:"<<std::to_string(ave_verify)<<"/"<<std::to_string(this->time_verify.size())<<"="<<std::to_string((ave_verify/this->time_verify.size()))<<std::endl;
+	std::cout<<" signing time:"<<std::to_string(this->t_sign)<<"/"<<std::to_string(this->c_sign)<<"="<<std::to_string((this->t_sign/this->c_sign))<<std::endl;
+	std::cout<<" verification time:"<<std::to_string(this->t_verify)<<"/"<<std::to_string(this->c_verify)<<"="<<std::to_string((this->t_verify/this->c_verify))<<std::endl;
 	return &(this->next);
 }
 array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rrep(std::vector<std::uint8_t> &buf){

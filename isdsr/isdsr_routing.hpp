@@ -15,8 +15,12 @@ class isdsr_routing:public dsr_routing{
     signature_scheme *ss;
 	std::vector<double> time_verify;
 	std::vector<double> time_sign;
+	double t_verify;
+	double t_sign;
+	int c_verify;
+	int c_sign;
 	public:
-	isdsr_routing(){}
+	isdsr_routing(){this->t_sign=0;this->t_verify=0;this->c_sign=0;this->c_verify=0;}
 	~isdsr_routing(){}
 	string routing_name(){return string("isdsr")+" "+ss->signature_scheme_name();}
     void set_signature_scheme(signature_scheme *ss);
