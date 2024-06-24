@@ -66,7 +66,7 @@ int main(int argc, char** argv){
         std::cout<<"dest ip:"<<adhoc_util::to_string_iparray(dest)<<std::endl;
         ane.set_dest(dest);
         ane.set_repeat_times(std::stoi(string(c_repeat)));
-        ane.set_repeat_interval(1);
+        ane.set_repeat_interval(2);
         std::cerr<<"exp1"<<std::endl;
         ane.start();
     }
