@@ -15,11 +15,8 @@ extern "C"{
 #ifdef __cplusplus
 }
 #endif
-#include "matrix_cpp.hpp"
-//#include "packing_agg_cpp.hpp"
-//#include "sign_agg_cpp.hpp"
+#include "matrix.hpp"
 #include "polyvec_op.hpp"
-//#include "packing.hpp"
 
 namespace oit::ist::nws::adhoc_routing{
 
