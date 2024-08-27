@@ -27,7 +27,6 @@ void isdsr_packet::initialize(){
 }
 
 std::uint32_t isdsr_packet::serialize(vector<std::uint8_t> &buf){
-    std::uint8_t buf_array[this->packet_size()];
     if(buf.size()<this->packet_size()){
         buf.resize(this->packet_size(),0);
     }

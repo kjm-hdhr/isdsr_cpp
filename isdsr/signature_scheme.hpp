@@ -9,6 +9,8 @@ class signature_scheme{
     array<uint8_t,ADDR_SIZE> id;
 
     public:
+    signature_scheme(){};
+    signature_scheme(array<uint8_t, ADDR_SIZE> &id){this->set_id(id);};
     void set_id(array<uint8_t, ADDR_SIZE> &id){std::copy(id.begin(),id.end(),this->id.begin());}
     virtual void setup()=0;
     virtual void key_derivation()=0;
