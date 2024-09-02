@@ -253,7 +253,7 @@ void lattice_sig::sign(isdsr_packet &p){
     shake256_absorb(&state, this->skid.trid, SEEDBYTES);
     shake256_absorb(&state, ri_bytes, p.get_ri_length()*ADDR_SIZE);
     shake256_finalize(&state);
-    print_keccak_state(state);
+    //print_keccak_state(state);
     shake256_squeeze(mu, CRHBYTES, &state);
 
     uint8_t rhoprime[CRHBYTES];

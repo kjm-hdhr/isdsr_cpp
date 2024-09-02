@@ -107,9 +107,9 @@ void adhoc_node_exp::establish_route(array<std::uint8_t,ADDR_SIZE> &dest){
 void adhoc_node_exp::measure_time(){
     std::vector<double> durations;
     for(std::pair<std::uint32_t,std::chrono::steady_clock::time_point> t:this->rtt_s){
-        std::cerr<<"measure1"<<std::endl;
+        //std::cerr<<"measure1"<<std::endl;
         if (this->rtt_r.find(t.first) != this->rtt_r.end()) {
-            std::cerr<<"measure2"<<std::endl;
+            //std::cerr<<"measure2"<<std::endl;
             durations.push_back(((double)std::chrono::duration_cast<std::chrono::milliseconds>(rtt_r.at(t.first)-t.second).count())/1000);
         }
     }

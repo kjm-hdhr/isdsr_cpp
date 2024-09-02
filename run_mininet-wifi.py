@@ -68,7 +68,8 @@ class TopologyGenerator:
 
     print("*** Creating links")
     for i in range(num):
-        net.addLink(self.stas[i], cls=adhoc, intf='sta'+str(i+1)+'-wlan0',ssid='adhocNet',mode='g', channel=5, ht_cap='HT40+')
+        net.addLink(self.stas[i], cls=adhoc, intf='sta'+str(i+1)+'-wlan0',ssid='adhocNet',mode='g', channel=6, bw=54)
+        #net.addLink(self.stas[i], cls=adhoc, intf='sta'+str(i+1)+'-wlan0',ssid='adhocNet',mode='g', channel=5, ht_cap='HT40+')
         #net.addLink(self.stas[i], cls=adhoc, intf='sta'+str(i+1)+'-wlan0',ssid='adhocNet',mode='g', channel=5)
     #net.plotGraph(max_x=500, max_y=500)
 
