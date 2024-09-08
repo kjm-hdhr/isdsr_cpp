@@ -15,6 +15,15 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<std::u
 	array<std::uint8_t,ADDR_SIZE>* next=nullptr;
 	p.deserialize(buf);
 
+	if(p.find_id(this->id)!=-1){
+		std::cerr<<"already sent this packet"<<std::endl;
+		return nullptr;
+	}
+	if(p.is_src(this->id)){
+		std::cerr<<"the source node of this packet"<<std::endl;
+		return nullptr;
+	}
+
 	std::chrono::steady_clock::time_point vs=std::chrono::steady_clock::now();
 
     bool verification=this->ss->verify(p);
@@ -28,14 +37,7 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<std::u
     if(!verification){
         return nullptr;
     }
-	if(p.find_id(this->id)!=-1){
-		std::cerr<<"already sent this packet"<<std::endl;
-		return nullptr;
-	}
-	if(p.is_src(this->id)){
-		std::cerr<<"the source node of this packet"<<std::endl;
-		return nullptr;
-	}
+	
 	std::cerr<<"req packet:"<<p.to_string()<<std::endl;
 	p.add_id(this->id);
 	std::cerr<<"req packet:"<<p.to_string()<<std::endl;
@@ -77,6 +79,14 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rrep(std::vector<std::u
 	array<std::uint8_t,ADDR_SIZE>* next=nullptr;
 	p.deserialize(buf);
 
+	//std::cerr<<"receive reply:"<<p.to_string()<<std::endl;
+	if(p.find_id(id)==-1){
+		return nullptr;
+	}
+	if(p.is_src(id)){
+		return nullptr;
+	}
+	
 	std::chrono::steady_clock::time_point vs=std::chrono::steady_clock::now();
 
     bool verification=this->ss->verify(p);
@@ -92,13 +102,7 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rrep(std::vector<std::u
     if(!verification){
         return nullptr;
     }
-	//std::cerr<<"receive reply:"<<p.to_string()<<std::endl;
-	if(p.find_id(id)==-1){
-		return nullptr;
-	}
-	if(p.is_src(id)){
-		return nullptr;
-	}
+	
 	if(p.is_dest(id)){
 		std::cout<<"route established processing rrep"<<std::endl;
 		std::cout<<"return address:"<<adhoc_util::to_string_iparray(this->id)<<std::endl;

@@ -1,0 +1,906 @@
+routing 
+routing nameisdsr  lattice id:[10,0,0,1] brd:[10,255,255,255]
+dest ip:[10,0,0,7]
+repeat:0 of 100
+sig length:6176buf size:6202
+ signing time:193749.000000/1=193749.000000
+ verification time:139583.000000/1=139583.000000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:1
+repeat:1 of 100
+sig length:6176buf size:6202
+ signing time:301415.000000/2=150707.500000
+ verification time:262999.000000/2=131499.500000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:2
+repeat:2 of 100
+sig length:6176buf size:6202
+ signing time:373332.000000/3=124444.000000
+ verification time:399081.000000/3=133027.000000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:3
+repeat:3 of 100
+sig length:6176buf size:6202
+ signing time:517207.000000/4=129301.750000
+ verification time:526747.000000/4=131686.750000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:4
+repeat:4 of 100
+sig length:6176buf size:6202
+ signing time:699790.000000/5=139958.000000
+ verification time:674830.000000/5=134966.000000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:5
+repeat:5 of 100
+sig length:6176buf size:6202
+ signing time:928664.000000/6=154777.333333
+ verification time:857246.000000/6=142874.333333
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:6
+repeat:6 of 100
+sig length:6176buf size:6202
+ signing time:1196871.000000/7=170981.571429
+ verification time:1093870.000000/7=156267.142857
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:7
+repeat:7 of 100
+sig length:6176buf size:6202
+ signing time:1326371.000000/8=165796.375000
+ verification time:1221828.000000/8=152728.500000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:8
+repeat:8 of 100
+sig length:6176buf size:6202
+ signing time:1497621.000000/9=166402.333333
+ verification time:1363536.000000/9=151504.000000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:9
+repeat:9 of 100
+sig length:6176buf size:6202
+ signing time:1935036.000000/10=193503.600000
+ verification time:1492536.000000/10=149253.600000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:10
+repeat:10 of 100
+sig length:6176buf size:6202
+ signing time:2136952.000000/11=194268.363636
+ verification time:1599119.000000/11=145374.454545
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:11
+repeat:11 of 100
+sig length:6176buf size:6202
+ signing time:2279409.000000/12=189950.750000
+ verification time:1715035.000000/12=142919.583333
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:12
+repeat:12 of 100
+sig length:6176buf size:6202
+ signing time:2416200.000000/13=185861.538462
+ verification time:1844285.000000/13=141868.076923
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:13
+repeat:13 of 100
+sig length:6176buf size:6202
+ signing time:2557825.000000/14=182701.785714
+ verification time:1979577.000000/14=141398.357143
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:14
+repeat:14 of 100
+sig length:6176buf size:6202
+ signing time:2937823.000000/15=195854.866667
+ verification time:2133201.000000/15=142213.400000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:15
+repeat:15 of 100
+sig length:6176buf size:6202
+ signing time:3100405.000000/16=193775.312500
+ verification time:2253700.000000/16=140856.250000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:16
+repeat:16 of 100
+sig length:6176buf size:6202
+ signing time:3308779.000000/17=194634.058824
+ verification time:2375367.000000/17=139727.470588
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:17
+repeat:17 of 100
+sig length:6176buf size:6202
+ signing time:3464237.000000/18=192457.611111
+ verification time:2511908.000000/18=139550.444444
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:18
+repeat:18 of 100
+sig length:6176buf size:6202
+ signing time:3658236.000000/19=192538.736842
+ verification time:2646324.000000/19=139280.210526
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:19
+repeat:19 of 100
+sig length:6176buf size:6202
+ signing time:4050484.000000/20=202524.200000
+ verification time:2773032.000000/20=138651.600000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:20
+repeat:20 of 100
+sig length:6176buf size:6202
+ signing time:4414899.000000/21=210233.285714
+ verification time:2879656.000000/21=137126.476190
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:21
+repeat:21 of 100
+sig length:6176buf size:6202
+ signing time:4617149.000000/22=209870.409091
+ verification time:3094155.000000/22=140643.409091
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:22
+repeat:22 of 100
+sig length:6176buf size:6202
+ signing time:4765690.000000/23=207203.913043
+ verification time:3237905.000000/23=140778.478261
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:23
+repeat:23 of 100
+sig length:6176buf size:6202
+ signing time:4941647.000000/24=205901.958333
+ verification time:3372237.000000/24=140509.875000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:24
+repeat:24 of 100
+sig length:6176buf size:6202
+ signing time:5101063.000000/25=204042.520000
+ verification time:3478570.000000/25=139142.800000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:25
+repeat:25 of 100
+sig length:6176buf size:6202
+ signing time:5259313.000000/26=202281.269231
+ verification time:3584653.000000/26=137871.269231
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:26
+repeat:26 of 100
+sig length:6176buf size:6202
+ signing time:5441313.000000/27=201530.111111
+ verification time:3727819.000000/27=138067.370370
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:27
+repeat:27 of 100
+sig length:6176buf size:6202
+ signing time:5596812.000000/28=199886.142857
+ verification time:3843568.000000/28=137270.285714
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:28
+repeat:28 of 100
+sig length:6176buf size:6202
+ signing time:5683979.000000/29=195999.275862
+ verification time:3962651.000000/29=136643.137931
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:29
+repeat:29 of 100
+sig length:6176buf size:6202
+ signing time:5906520.000000/30=196884.000000
+ verification time:4065817.000000/30=135527.233333
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:30
+repeat:30 of 100
+sig length:6176buf size:6202
+ signing time:6271976.000000/31=202321.806452
+ verification time:4172192.000000/31=134586.838710
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:31
+repeat:31 of 100
+sig length:6176buf size:6202
+ signing time:6646808.000000/32=207712.750000
+ verification time:4307025.000000/32=134594.531250
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:32
+repeat:32 of 100
+sig length:6176buf size:6202
+ signing time:6794183.000000/33=205884.333333
+ verification time:4457691.000000/33=135081.545455
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:33
+repeat:33 of 100
+sig length:6176buf size:6202
+ signing time:6983973.000000/34=205410.970588
+ verification time:4583858.000000/34=134819.352941
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:34
+repeat:34 of 100
+sig length:6176buf size:6202
+ signing time:7445971.000000/35=212742.028571
+ verification time:4732024.000000/35=135200.685714
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:35
+repeat:35 of 100
+sig length:6176buf size:6202
+ signing time:8003344.000000/36=222315.111111
+ verification time:4865607.000000/36=135155.750000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:36
+repeat:36 of 100
+sig length:6176buf size:6202
+ signing time:8356342.000000/37=225847.081081
+ verification time:5028981.000000/37=135918.405405
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:37
+repeat:37 of 100
+sig length:6176buf size:6202
+ signing time:9105255.000000/38=239611.973684
+ verification time:5164730.000000/38=135913.947368
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:38
+repeat:38 of 100
+sig length:6176buf size:6202
+ signing time:9275462.000000/39=237832.358974
+ verification time:5307521.000000/39=136090.282051
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:39
+repeat:39 of 100
+sig length:6176buf size:6202
+ signing time:9430962.000000/40=235774.050000
+ verification time:5434562.000000/40=135864.050000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:40
+repeat:40 of 100
+sig length:6176buf size:6202
+ signing time:9794961.000000/41=238901.487805
+ verification time:5566061.000000/41=135757.585366
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:41
+repeat:41 of 100
+sig length:6176buf size:6202
+ signing time:10131168.000000/42=241218.285714
+ verification time:5692768.000000/42=135542.095238
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:42
+repeat:42 of 100
+sig length:6176buf size:6202
+ signing time:10501416.000000/43=244218.976744
+ verification time:5827101.000000/43=135513.976744
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:43
+repeat:43 of 100
+sig length:6176buf size:6202
+ signing time:10645249.000000/44=241937.477273
+ verification time:5950059.000000/44=135228.613636
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:44
+repeat:44 of 100
+sig length:6176buf size:6202
+ signing time:10791457.000000/45=239810.155556
+ verification time:6079975.000000/45=135110.555556
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:45
+repeat:45 of 100
+sig length:6176buf size:6202
+ signing time:11159248.000000/46=242592.347826
+ verification time:6227016.000000/46=135369.913043
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:46
+repeat:46 of 100
+sig length:6176buf size:6202
+ signing time:11551497.000000/47=245776.531915
+ verification time:6398891.000000/47=136146.617021
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:47
+repeat:47 of 100
+sig length:6176buf size:6202
+ signing time:11795788.000000/48=245745.583333
+ verification time:6525266.000000/48=135943.041667
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:48
+repeat:48 of 100
+sig length:6176buf size:6202
+ signing time:11969662.000000/49=244278.816327
+ verification time:6669140.000000/49=136104.897959
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:49
+repeat:49 of 100
+sig length:6176buf size:6202
+ signing time:12116578.000000/50=242331.560000
+ verification time:6807306.000000/50=136146.120000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:50
+repeat:50 of 100
+sig length:6176buf size:6202
+ signing time:12826867.000000/51=251507.196078
+ verification time:6933722.000000/51=135955.333333
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:51
+repeat:51 of 100
+sig length:6176buf size:6202
+ signing time:13753946.000000/52=264498.961538
+ verification time:7053388.000000/52=135642.076923
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:52
+repeat:52 of 100
+sig length:6176buf size:6202
+ signing time:14116486.000000/53=266348.792453
+ verification time:7187387.000000/53=135611.075472
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:53
+repeat:53 of 100
+sig length:6176buf size:6202
+ signing time:14477443.000000/54=268100.796296
+ verification time:7332886.000000/54=135794.185185
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:54
+repeat:54 of 100
+sig length:6176buf size:6202
+ signing time:14621067.000000/55=265837.581818
+ verification time:7470469.000000/55=135826.709091
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:55
+repeat:55 of 100
+sig length:6176buf size:6202
+ signing time:14784108.000000/56=264001.928571
+ verification time:7597552.000000/56=135670.571429
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:56
+repeat:56 of 100
+sig length:6176buf size:6202
+ signing time:15166482.000000/57=266078.631579
+ verification time:7775968.000000/57=136420.491228
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:57
+repeat:57 of 100
+sig length:6176buf size:6202
+ signing time:15538647.000000/58=267907.706897
+ verification time:7915801.000000/58=136479.327586
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:58
+repeat:58 of 100
+sig length:6176buf size:6202
+ signing time:15658146.000000/59=265392.305085
+ verification time:8030176.000000/59=136104.677966
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:59
+repeat:59 of 100
+sig length:6176buf size:6202
+ signing time:15830228.000000/60=263837.133333
+ verification time:8179009.000000/60=136316.816667
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:60
+repeat:60 of 100
+sig length:6176buf size:6202
+ signing time:16191977.000000/61=265442.245902
+ verification time:8347633.000000/61=136846.442623
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:61
+repeat:61 of 100
+sig length:6176buf size:6202
+ signing time:16661934.000000/62=268740.870968
+ verification time:8482674.000000/62=136817.322581
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:62
+repeat:62 of 100
+sig length:6176buf size:6202
+ signing time:16824392.000000/63=267053.841270
+ verification time:8625882.000000/63=136918.761905
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:63
+repeat:63 of 100
+sig length:6176buf size:6202
+ signing time:17014517.000000/64=265851.828125
+ verification time:8775548.000000/64=137117.937500
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:64
+repeat:64 of 100
+sig length:6176buf size:6202
+ signing time:17156725.000000/65=263949.615385
+ verification time:8936631.000000/65=137486.630769
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:65
+repeat:65 of 100
+sig length:6176buf size:6202
+ signing time:17361224.000000/66=263048.848485
+ verification time:9100588.000000/66=137887.696970
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:66
+repeat:66 of 100
+sig length:6176buf size:6202
+ signing time:17726806.000000/67=264579.194030
+ verification time:9230921.000000/67=137774.940299
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:67
+repeat:67 of 100
+sig length:6176buf size:6202
+ signing time:17881347.000000/68=262960.985294
+ verification time:9365045.000000/68=137721.250000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:68
+repeat:68 of 100
+sig length:6176buf size:6202
+ signing time:18038472.000000/69=261427.130435
+ verification time:9491253.000000/69=137554.391304
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:69
+repeat:69 of 100
+sig length:6176buf size:6202
+ signing time:18270137.000000/70=261001.957143
+ verification time:9627002.000000/70=137528.600000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:70
+repeat:70 of 100
+sig length:6176buf size:6202
+ signing time:18411303.000000/71=259314.126761
+ verification time:9763252.000000/71=137510.591549
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:71
+repeat:71 of 100
+sig length:6176buf size:6202
+ signing time:18811010.000000/72=261264.027778
+ verification time:9892084.000000/72=137390.055556
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:72
+repeat:72 of 100
+sig length:6176buf size:6202
+ signing time:19297174.000000/73=264344.849315
+ verification time:10040292.000000/73=137538.246575
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:73
+repeat:73 of 100
+sig length:6176buf size:6202
+ signing time:19405049.000000/74=262230.391892
+ verification time:10218958.000000/74=138094.027027
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:74
+repeat:74 of 100
+sig length:6176buf size:6202
+ signing time:19597673.000000/75=261302.306667
+ verification time:10411249.000000/75=138816.653333
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:75
+repeat:75 of 100
+sig length:6176buf size:6202
+ signing time:19768506.000000/76=260111.921053
+ verification time:10555665.000000/76=138890.328947
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:76
+repeat:76 of 100
+sig length:6176buf size:6202
+ signing time:20130046.000000/77=261429.168831
+ verification time:10700748.000000/77=138970.753247
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:77
+repeat:77 of 100
+sig length:6176buf size:6202
+ signing time:20491002.000000/78=262705.153846
+ verification time:10832706.000000/78=138880.846154
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:78
+repeat:78 of 100
+sig length:6176buf size:6202
+ signing time:20647085.000000/79=261355.506329
+ verification time:10962831.000000/79=138770.012658
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:79
+repeat:79 of 100
+sig length:6176buf size:6202
+ signing time:20741835.000000/80=259272.937500
+ verification time:11114706.000000/80=138933.825000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:80
+repeat:80 of 100
+sig length:6176buf size:6202
+ signing time:20915542.000000/81=258216.567901
+ verification time:11260789.000000/81=139022.086420
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:81
+repeat:81 of 100
+sig length:6176buf size:6202
+ signing time:21295499.000000/82=259701.207317
+ verification time:11408581.000000/82=139129.036585
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:82
+repeat:82 of 100
+sig length:6176buf size:6202
+ signing time:21670955.000000/83=261095.843373
+ verification time:11549956.000000/83=139156.096386
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:83
+repeat:83 of 100
+sig length:6176buf size:6202
+ signing time:21836787.000000/84=259961.750000
+ verification time:11685955.000000/84=139118.511905
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:84
+repeat:84 of 100
+sig length:6176buf size:6202
+ signing time:21981787.000000/85=258609.258824
+ verification time:11814913.000000/85=138998.976471
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:85
+repeat:85 of 100
+sig length:6176buf size:6202
+ signing time:22151786.000000/86=257578.906977
+ verification time:11936538.000000/86=138796.953488
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:86
+repeat:86 of 100
+sig length:6176buf size:6202
+ signing time:22583826.000000/87=259584.206897
+ verification time:12073537.000000/87=138776.287356
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:87
+repeat:87 of 100
+sig length:6176buf size:6202
+ signing time:22929325.000000/88=260560.511364
+ verification time:12207953.000000/88=138726.738636
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:88
+repeat:88 of 100
+sig length:6176buf size:6202
+ signing time:23105366.000000/89=259610.853933
+ verification time:12338077.000000/89=138630.078652
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:89
+repeat:89 of 100
+sig length:6176buf size:6202
+ signing time:23269116.000000/90=258545.733333
+ verification time:12492076.000000/90=138800.844444
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:90
+repeat:90 of 100
+sig length:6176buf size:6202
+ signing time:23439698.000000/91=257579.098901
+ verification time:12620034.000000/91=138681.692308
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:91
+repeat:91 of 100
+sig length:6176buf size:6202
+ signing time:23801530.000000/92=258712.282609
+ verification time:12755200.000000/92=138643.478261
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:92
+repeat:92 of 100
+sig length:6176buf size:6202
+ signing time:24172821.000000/93=259922.806452
+ verification time:12889575.000000/93=138597.580645
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:93
+repeat:93 of 100
+sig length:6176buf size:6202
+ signing time:24340237.000000/94=258938.691489
+ verification time:13029533.000000/94=138612.053191
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:94
+repeat:94 of 100
+sig length:6176buf size:6202
+ signing time:24754819.000000/95=260577.042105
+ verification time:13174740.000000/95=138681.473684
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:95
+repeat:95 of 100
+sig length:6176buf size:6202
+ signing time:24957402.000000/96=259972.937500
+ verification time:13313323.000000/96=138680.447917
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:96
+repeat:96 of 100
+sig length:6176buf size:6202
+ signing time:25166443.000000/97=259447.865979
+ verification time:13462281.000000/97=138786.402062
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:97
+repeat:97 of 100
+sig length:6176buf size:6202
+ signing time:25553192.000000/98=260746.857143
+ verification time:13639072.000000/98=139174.204082
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:98
+repeat:98 of 100
+sig length:6176buf size:6202
+ signing time:25697192.000000/99=259567.595960
+ verification time:13796738.000000/99=139360.989899
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:99
+repeat:99 of 100
+sig length:6176buf size:6202
+ signing time:25865608.000000/100=258656.080000
+ verification time:13932196.000000/100=139321.960000
+route established processing rrep
+return address:[10,0,0,1]
+------------- next address = [10,0,0,1]
+route established seq:100
+duration d:0.380000
+duration d:0.393000
+duration d:0.383000
+duration d:0.377000
+duration d:0.398000
+duration d:0.377000
+duration d:0.401000
+duration d:0.380000
+duration d:0.401000
+duration d:0.382000
+duration d:0.399000
+duration d:0.378000
+duration d:0.391000
+duration d:0.383000
+duration d:0.381000
+duration d:0.376000
+duration d:0.400000
+duration d:0.383000
+duration d:0.404000
+duration d:0.377000
+duration d:0.381000
+duration d:0.397000
+duration d:0.384000
+duration d:0.392000
+duration d:0.392000
+duration d:0.381000
+duration d:0.391000
+duration d:0.380000
+duration d:0.394000
+duration d:0.378000
+duration d:0.383000
+duration d:0.375000
+duration d:0.385000
+duration d:0.383000
+duration d:0.388000
+duration d:0.388000
+duration d:0.397000
+duration d:0.393000
+duration d:0.381000
+duration d:0.380000
+duration d:0.378000
+duration d:0.381000
+duration d:0.384000
+duration d:0.397000
+duration d:0.384000
+duration d:0.387000
+duration d:0.377000
+duration d:0.403000
+duration d:0.385000
+duration d:0.417000
+duration d:0.395000
+duration d:0.378000
+duration d:0.379000
+duration d:0.384000
+duration d:0.380000
+duration d:0.396000
+duration d:0.386000
+duration d:0.372000
+duration d:0.379000
+duration d:0.383000
+duration d:0.377000
+duration d:0.414000
+duration d:0.379000
+duration d:0.403000
+duration d:0.372000
+duration d:0.413000
+duration d:0.375000
+duration d:0.378000
+duration d:0.393000
+duration d:0.402000
+duration d:0.372000
+duration d:0.382000
+duration d:0.383000
+duration d:0.395000
+duration d:0.379000
+duration d:0.410000
+duration d:0.388000
+duration d:0.397000
+duration d:0.380000
+duration d:0.400000
+duration d:0.380000
+duration d:0.377000
+duration d:0.385000
+duration d:0.384000
+duration d:0.390000
+duration d:0.386000
+duration d:0.385000
+duration d:0.382000
+duration d:0.396000
+duration d:0.382000
+duration d:0.398000
+duration d:0.378000
+duration d:0.378000
+duration d:0.378000
+duration d:0.398000
+duration d:0.397000
+duration d:0.377000
+duration d:0.409000
+duration d:0.393000
+duration d:0.383000
+repeat time:100 repeat interval:1
+from [10,0,0,1] to [10,0,0,7]
+100 route establishment average rtt:0.387200
