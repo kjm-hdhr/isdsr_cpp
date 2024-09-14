@@ -17,7 +17,6 @@ class TopologyGenerator:
     self.x=width;
     self.y=height;
     self.prot="";
-    self.jars=["jpbc-pbc-2.0.0.jar","jpbc-plaf-2.0.0.jar","jpbc-pbc-2.0.0.jar"];
 
   def params(self,args):
     self.cpu_rate_flag=False
