@@ -28,7 +28,7 @@ class isdsr_routing:public dsr_routing{
 	virtual array<std::uint8_t,ADDR_SIZE>* processing_rrep(std::vector<std::uint8_t> &buf);
 	virtual array<std::uint8_t,ADDR_SIZE>* processing_rerr(std::vector<std::uint8_t> &buf);
 	virtual array<std::uint8_t,ADDR_SIZE>* processing_data(std::vector<std::uint8_t> &buf);
-	virtual array<std::uint8_t,ADDR_SIZE>* generate_initiali_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf);
+	virtual array<std::uint8_t,ADDR_SIZE>* generate_initial_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf);
 };
 }
 #endif

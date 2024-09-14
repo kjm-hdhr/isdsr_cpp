@@ -1,0 +1,3700 @@
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:83083.000000/1=83083.000000
+ verification time:99167.000000/1=99167.000000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:82834.000000/1=82834.000000
+ verification time:130542.000000/1=130542.000000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:83333.000000/1=83333.000000
+ verification time:119875.000000/1=119875.000000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:83875.000000/1=83875.000000
+ verification time:137000.000000/1=137000.000000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:90000.000000/1=90000.000000
+ verification time:182333.000000/1=182333.000000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:142541.000000/1=142541.000000
+ verification time:192500.000000/1=192500.000000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:114834.000000/1=114834.000000
+ verification time:189375.000000/1=189375.000000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:121291.000000/1=121291.000000
+ verification time:228625.000000/1=228625.000000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:120500.000000/1=120500.000000
+ verification time:259292.000000/1=259292.000000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:165458.000000/2=82729.000000
+ verification time:194042.000000/2=97021.000000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:164418.000000/2=82209.000000
+ verification time:230751.000000/2=115375.500000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:165041.000000/2=82520.500000
+ verification time:262417.000000/2=131208.500000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:169667.000000/2=84833.500000
+ verification time:279875.000000/2=139937.500000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:177000.000000/2=88500.000000
+ verification time:339791.000000/2=169895.500000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:264458.000000/2=132229.000000
+ verification time:407333.000000/2=203666.500000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:233501.000000/2=116750.500000
+ verification time:392458.000000/2=196229.000000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:241666.000000/2=120833.000000
+ verification time:483416.000000/2=241708.000000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:237792.000000/2=118896.000000
+ verification time:528167.000000/2=264083.500000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:254291.000000/3=84763.666667
+ verification time:349084.000000/3=116361.333333
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:257418.000000/3=85806.000000
+ verification time:359585.000000/3=119861.666667
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:251916.000000/3=83972.000000
+ verification time:383334.000000/3=127778.000000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:266334.000000/3=88778.000000
+ verification time:449792.000000/3=149930.666667
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:266791.000000/3=88930.333333
+ verification time:507541.000000/3=169180.333333
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:410750.000000/3=136916.666667
+ verification time:583875.000000/3=194625.000000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:343585.000000/3=114528.333333
+ verification time:585125.000000/3=195041.666667
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:365208.000000/3=121736.000000
+ verification time:693874.000000/3=231291.333333
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:353959.000000/3=117986.333333
+ verification time:770625.000000/3=256875.000000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:348249.000000/4=87062.250000
+ verification time:456751.000000/4=114187.750000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:343877.000000/4=85969.250000
+ verification time:464210.000000/4=116052.500000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:337624.000000/4=84406.000000
+ verification time:505001.000000/4=126250.250000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:355292.000000/4=88823.000000
+ verification time:602459.000000/4=150614.750000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:354916.000000/4=88729.000000
+ verification time:670041.000000/4=167510.250000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:543791.000000/4=135947.750000
+ verification time:767125.000000/4=191781.250000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:450793.000000/4=112698.250000
+ verification time:791292.000000/4=197823.000000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:500500.000000/4=125125.000000
+ verification time:949041.000000/4=237260.250000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:470417.000000/4=117604.250000
+ verification time:1003042.000000/4=250760.500000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:434124.000000/5=86824.800000
+ verification time:546834.000000/5=109366.800000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:433919.000000/5=86783.800000
+ verification time:597668.000000/5=119533.600000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:421332.000000/5=84266.400000
+ verification time:637792.000000/5=127558.400000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:449125.000000/5=89825.000000
+ verification time:771918.000000/5=154383.600000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:451832.000000/5=90366.400000
+ verification time:829208.000000/5=165841.600000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:691624.000000/5=138324.800000
+ verification time:974541.000000/5=194908.200000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:570001.000000/5=114000.200000
+ verification time:984917.000000/5=196983.400000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:617417.000000/5=123483.400000
+ verification time:1157874.000000/5=231574.800000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:586542.000000/5=117308.400000
+ verification time:1232501.000000/5=246500.200000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:519707.000000/6=86617.833333
+ verification time:632584.000000/6=105430.666667
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:517460.000000/6=86243.333333
+ verification time:733793.000000/6=122298.833333
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:510290.000000/6=85048.333333
+ verification time:799876.000000/6=133312.666667
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:540667.000000/6=90111.166667
+ verification time:941710.000000/6=156951.666667
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:552124.000000/6=92020.666667
+ verification time:1028750.000000/6=171458.333333
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:858332.000000/6=143055.333333
+ verification time:1179000.000000/6=196500.000000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:706209.000000/6=117701.500000
+ verification time:1230042.000000/6=205007.000000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:735375.000000/6=122562.500000
+ verification time:1375707.000000/6=229284.500000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:703584.000000/6=117264.000000
+ verification time:1484626.000000/6=247437.666667
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:613916.000000/7=87702.285714
+ verification time:738918.000000/7=105559.714286
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:601919.000000/7=85988.428571
+ verification time:867418.000000/7=123916.857143
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:597498.000000/7=85356.857143
+ verification time:952418.000000/7=136059.714286
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:626001.000000/7=89428.714286
+ verification time:1090835.000000/7=155833.571429
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:644915.000000/7=92130.714286
+ verification time:1187625.000000/7=169660.714286
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:991207.000000/7=141601.000000
+ verification time:1353292.000000/7=193327.428571
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:823917.000000/7=117702.428571
+ verification time:1428167.000000/7=204023.857143
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:843792.000000/7=120541.714286
+ verification time:1606957.000000/7=229565.285714
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:827000.000000/7=118142.857143
+ verification time:1713835.000000/7=244833.571429
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:698708.000000/8=87338.500000
+ verification time:825376.000000/8=103172.000000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:685753.000000/8=85719.125000
+ verification time:972876.000000/8=121609.500000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:692290.000000/8=86536.250000
+ verification time:1077793.000000/8=134724.125000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:722917.000000/8=90364.625000
+ verification time:1237252.000000/8=154656.500000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:730165.000000/8=91270.625000
+ verification time:1345667.000000/8=168208.375000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:1130790.000000/8=141348.750000
+ verification time:1529500.000000/8=191187.500000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:936500.000000/8=117062.500000
+ verification time:1621958.000000/8=202744.750000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:950000.000000/8=118750.000000
+ verification time:1830999.000000/8=228874.875000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:933833.000000/8=116729.125000
+ verification time:1946377.000000/8=243297.125000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:803416.000000/9=89268.444444
+ verification time:917001.000000/9=101889.000000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:772212.000000/9=85801.333333
+ verification time:1091626.000000/9=121291.777778
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:780498.000000/9=86722.000000
+ verification time:1253043.000000/9=139227.000000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:806834.000000/9=89648.222222
+ verification time:1377252.000000/9=153028.000000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:823374.000000/9=91486.000000
+ verification time:1515125.000000/9=168347.222222
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:1270624.000000/9=141180.444444
+ verification time:1704125.000000/9=189347.222222
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:1052375.000000/9=116930.555556
+ verification time:1820667.000000/9=202296.333333
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:1065375.000000/9=118375.000000
+ verification time:2050624.000000/9=227847.111111
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:1054500.000000/9=117166.666667
+ verification time:2197711.000000/9=244190.111111
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:894624.000000/10=89462.400000
+ verification time:1003585.000000/10=100358.500000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:858171.000000/10=85817.100000
+ verification time:1203709.000000/10=120370.900000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:872456.000000/10=87245.600000
+ verification time:1406959.000000/10=140695.900000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:901126.000000/10=90112.600000
+ verification time:1589294.000000/10=158929.400000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:911457.000000/10=91145.700000
+ verification time:1673583.000000/10=167358.300000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:1406832.000000/10=140683.200000
+ verification time:1881958.000000/10=188195.800000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:1166334.000000/10=116633.400000
+ verification time:2015208.000000/10=201520.800000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:1185125.000000/10=118512.500000
+ verification time:2270791.000000/10=227079.100000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:1170583.000000/10=117058.300000
+ verification time:2425711.000000/10=242571.100000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:981124.000000/11=89193.090909
+ verification time:1091085.000000/11=99189.545455
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:941754.000000/11=85614.000000
+ verification time:1308500.000000/11=118954.545455
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:956998.000000/11=86999.818182
+ verification time:1529792.000000/11=139072.000000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:988626.000000/11=89875.090909
+ verification time:1734503.000000/11=157682.090909
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:999291.000000/11=90844.636364
+ verification time:1840541.000000/11=167321.909091
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:1553748.000000/11=141249.818182
+ verification time:2059208.000000/11=187200.727273
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:1282084.000000/11=116553.090909
+ verification time:2233250.000000/11=203022.727273
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:1301125.000000/11=118284.090909
+ verification time:2514333.000000/11=228575.727273
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:1285292.000000/11=116844.727273
+ verification time:2661628.000000/11=241966.181818
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1065165.000000/12=88763.750000
+ verification time:1178085.000000/12=98173.750000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1027087.000000/12=85590.583333
+ verification time:1424625.000000/12=118718.750000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1045914.000000/12=87159.500000
+ verification time:1652250.000000/12=137687.500000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1077918.000000/12=89826.500000
+ verification time:1915461.000000/12=159621.750000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1086416.000000/12=90534.666667
+ verification time:2008250.000000/12=167354.166667
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:1688332.000000/12=140694.333333
+ verification time:2235625.000000/12=186302.083333
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:1394500.000000/12=116208.333333
+ verification time:2429333.000000/12=202444.416667
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:1412875.000000/12=117739.583333
+ verification time:2733874.000000/12=227822.833333
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:1401501.000000/12=116791.750000
+ verification time:2895378.000000/12=241281.500000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1151415.000000/13=88570.384615
+ verification time:1265460.000000/13=97343.076923
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1113295.000000/13=85638.076923
+ verification time:1532542.000000/13=117887.846154
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1136414.000000/13=87416.461538
+ verification time:1776416.000000/13=136647.384615
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1161210.000000/13=89323.846154
+ verification time:2055461.000000/13=158112.384615
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1171124.000000/13=90086.461538
+ verification time:2198875.000000/13=169144.230769
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:1840373.000000/13=141567.153846
+ verification time:2427917.000000/13=186762.846154
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:1515084.000000/13=116544.923077
+ verification time:2869124.000000/13=220701.846154
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:1545375.000000/13=118875.000000
+ verification time:2963832.000000/13=227987.076923
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:1519709.000000/13=116900.692308
+ verification time:3162045.000000/13=243234.230769
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1239707.000000/14=88550.500000
+ verification time:1353127.000000/14=96651.928571
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1199878.000000/14=85705.571429
+ verification time:1636042.000000/14=116860.142857
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1221497.000000/14=87249.785714
+ verification time:1899291.000000/14=135663.642857
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1249669.000000/14=89262.071429
+ verification time:2196378.000000/14=156884.142857
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1265499.000000/14=90392.785714
+ verification time:2357084.000000/14=168363.142857
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:1975831.000000/14=141130.785714
+ verification time:2604750.000000/14=186053.571429
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:1621042.000000/14=115788.714286
+ verification time:3074624.000000/14=219616.000000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:1653792.000000/14=118128.000000
+ verification time:3257540.000000/14=232681.428571
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:1633126.000000/14=116651.857143
+ verification time:3409336.000000/14=243524.000000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1333415.000000/15=88894.333333
+ verification time:1439461.000000/15=95964.066667
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1284336.000000/15=85622.400000
+ verification time:1739750.000000/15=115983.333333
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1314872.000000/15=87658.133333
+ verification time:2021999.000000/15=134799.933333
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1339669.000000/15=89311.266667
+ verification time:2341628.000000/15=156108.533333
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1357624.000000/15=90508.266667
+ verification time:2527417.000000/15=168494.466667
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:2124831.000000/15=141655.400000
+ verification time:2799792.000000/15=186652.800000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:1736501.000000/15=115766.733333
+ verification time:3289582.000000/15=219305.466667
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:1769709.000000/15=117980.600000
+ verification time:3476832.000000/15=231788.800000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:1749918.000000/15=116661.200000
+ verification time:3642794.000000/15=242852.933333
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1418040.000000/16=88627.500000
+ verification time:1525711.000000/16=95356.937500
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1370336.000000/16=85646.000000
+ verification time:1872958.000000/16=117059.875000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1398831.000000/16=87426.937500
+ verification time:2144707.000000/16=134044.187500
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1431419.000000/16=89463.687500
+ verification time:2489836.000000/16=155614.750000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1444999.000000/16=90312.437500
+ verification time:2684417.000000/16=167776.062500
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:2264498.000000/16=141531.125000
+ verification time:2987500.000000/16=186718.750000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:1850209.000000/16=115638.062500
+ verification time:3484665.000000/16=217791.562500
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:1886459.000000/16=117903.687500
+ verification time:3691915.000000/16=230744.687500
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:1865959.000000/16=116622.437500
+ verification time:3884877.000000/16=242804.812500
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1505540.000000/17=88561.176471
+ verification time:1626127.000000/17=95654.529412
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1454086.000000/17=85534.470588
+ verification time:1992958.000000/17=117232.823529
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1481456.000000/17=87144.470588
+ verification time:2280707.000000/17=134159.235294
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1514336.000000/17=89078.588235
+ verification time:2644295.000000/17=155546.764706
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1546707.000000/17=90982.764706
+ verification time:2857292.000000/17=168076.000000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:2418623.000000/17=142271.941176
+ verification time:3183000.000000/17=187235.294118
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:1964459.000000/17=115556.411765
+ verification time:3677998.000000/17=216352.823529
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:2005250.000000/17=117955.882353
+ verification time:3912790.000000/17=230164.117647
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:1990459.000000/17=117085.823529
+ verification time:4110752.000000/17=241808.941176
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1589540.000000/18=88307.777778
+ verification time:1726418.000000/18=95912.111111
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1540419.000000/18=85578.833333
+ verification time:2096166.000000/18=116453.666667
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1566498.000000/18=87027.666667
+ verification time:2400457.000000/18=133358.722222
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1598544.000000/18=88808.000000
+ verification time:2784920.000000/18=154717.777778
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1661582.000000/18=92310.111111
+ verification time:3013208.000000/18=167400.444444
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:2546707.000000/18=141483.722222
+ verification time:3362708.000000/18=186817.111111
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:2076918.000000/18=115384.333333
+ verification time:3883915.000000/18=215773.055556
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:2124000.000000/18=118000.000000
+ verification time:4122332.000000/18=229018.444444
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:2104375.000000/18=116909.722222
+ verification time:4345461.000000/18=241414.500000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1686331.000000/19=88754.263158
+ verification time:1823251.000000/19=95960.578947
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1626461.000000/19=85603.210526
+ verification time:2201291.000000/19=115857.421053
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1651206.000000/19=86905.578947
+ verification time:2530999.000000/19=133210.473684
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1687752.000000/19=88829.052632
+ verification time:2927420.000000/19=154074.736842
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1752998.000000/19=92263.052632
+ verification time:3189458.000000/19=167866.210526
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:2692749.000000/19=141723.631579
+ verification time:3538166.000000/19=186219.263158
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:2183876.000000/19=114940.842105
+ verification time:4088457.000000/19=215181.947368
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:2240166.000000/19=117903.473684
+ verification time:4333915.000000/19=228100.789474
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:2221208.000000/19=116905.684211
+ verification time:4592420.000000/19=241706.315789
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1772706.000000/20=88635.300000
+ verification time:1929501.000000/20=96475.050000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1714627.000000/20=85731.350000
+ verification time:2308375.000000/20=115418.750000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1732498.000000/20=86624.900000
+ verification time:2654582.000000/20=132729.100000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1770960.000000/20=88548.000000
+ verification time:3083253.000000/20=154162.650000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1837456.000000/20=91872.800000
+ verification time:3351666.000000/20=167583.300000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:2850124.000000/20=142506.200000
+ verification time:3708749.000000/20=185437.450000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:2299001.000000/20=114950.050000
+ verification time:4275666.000000/20=213783.300000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:2355666.000000/20=117783.300000
+ verification time:4547207.000000/20=227360.350000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:2338333.000000/20=116916.650000
+ verification time:4817879.000000/20=240893.950000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1871164.000000/21=89103.047619
+ verification time:2028542.000000/21=96597.238095
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1795752.000000/21=85512.000000
+ verification time:2424750.000000/21=115464.285714
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1819582.000000/21=86646.761905
+ verification time:2829749.000000/21=134749.952381
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1863293.000000/21=88728.238095
+ verification time:3262170.000000/21=155341.428571
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:1925997.000000/21=91714.142857
+ verification time:3510958.000000/21=167188.476190
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:2982041.000000/21=142001.952381
+ verification time:3893166.000000/21=185388.857143
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:2415418.000000/21=115019.904762
+ verification time:4493166.000000/21=213960.285714
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:2483332.000000/21=118253.904762
+ verification time:4770915.000000/21=227186.428571
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:2450791.000000/21=116704.333333
+ verification time:5092713.000000/21=242510.142857
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:1956997.000000/22=88954.409091
+ verification time:2128792.000000/22=96763.272727
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1885085.000000/22=85685.681818
+ verification time:2560125.000000/22=116369.318182
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:1913582.000000/22=86981.000000
+ verification time:3016583.000000/22=137117.409091
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:1945709.000000/22=88441.318182
+ verification time:3437753.000000/22=156261.500000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2018789.000000/22=91763.136364
+ verification time:3722667.000000/22=169212.136364
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:3115583.000000/22=141617.409091
+ verification time:4073875.000000/22=185176.136364
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:2532876.000000/22=115130.727273
+ verification time:4696707.000000/22=213486.681818
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:2614957.000000/22=118861.681818
+ verification time:4980248.000000/22=226374.909091
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:2567457.000000/22=116702.590909
+ verification time:5349254.000000/22=243147.909091
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2042289.000000/23=88795.173913
+ verification time:2224501.000000/23=96717.434783
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:1981669.000000/23=86159.521739
+ verification time:2674416.000000/23=116278.956522
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2002916.000000/23=87083.304348
+ verification time:3172583.000000/23=137938.391304
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2045209.000000/23=88922.130435
+ verification time:3608503.000000/23=156891.434783
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2106831.000000/23=91601.347826
+ verification time:3916125.000000/23=170266.304348
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:3249208.000000/23=141269.913043
+ verification time:4258750.000000/23=185163.043478
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:2644793.000000/23=114991.000000
+ verification time:4895082.000000/23=212829.652174
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:2730415.000000/23=118713.695652
+ verification time:5194998.000000/23=225869.478261
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:2685124.000000/23=116744.521739
+ verification time:5591379.000000/23=243103.434783
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2127247.000000/24=88635.291667
+ verification time:2310251.000000/24=96260.458333
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2069127.000000/24=86213.625000
+ verification time:2779374.000000/24=115807.250000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2087708.000000/24=86987.833333
+ verification time:3295542.000000/24=137314.250000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2138626.000000/24=89109.416667
+ verification time:3748712.000000/24=156196.333333
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2195206.000000/24=91466.916667
+ verification time:4081083.000000/24=170045.125000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:3389624.000000/24=141234.333333
+ verification time:4437375.000000/24=184890.625000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:2758710.000000/24=114946.250000
+ verification time:5094207.000000/24=212258.625000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:2837582.000000/24=118232.583333
+ verification time:5407039.000000/24=225293.291667
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:2810499.000000/24=117104.125000
+ verification time:5835295.000000/24=243137.291667
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2213622.000000/25=88544.880000
+ verification time:2397126.000000/25=95885.040000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2155502.000000/25=86220.080000
+ verification time:2884166.000000/25=115366.640000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2175833.000000/25=87033.320000
+ verification time:3431959.000000/25=137278.360000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2243043.000000/25=89721.720000
+ verification time:3901295.000000/25=156051.800000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2288456.000000/25=91538.240000
+ verification time:4276250.000000/25=171050.000000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:3534040.000000/25=141361.600000
+ verification time:4653333.000000/25=186133.320000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:2886752.000000/25=115470.080000
+ verification time:5325374.000000/25=213014.960000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:2968249.000000/25=118729.960000
+ verification time:5646539.000000/25=225861.560000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:2923874.000000/25=116954.960000
+ verification time:6081337.000000/25=243253.480000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2297580.000000/26=88368.461538
+ verification time:2484335.000000/26=95551.346154
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2240252.000000/26=86163.538462
+ verification time:2988958.000000/26=114959.923077
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2268167.000000/26=87237.192308
+ verification time:3551001.000000/26=136576.961538
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2337418.000000/26=89900.692308
+ verification time:4055253.000000/26=155971.269231
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2385872.000000/26=91764.307692
+ verification time:4472667.000000/26=172025.653846
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:3678290.000000/26=141472.692308
+ verification time:4841250.000000/26=186201.923077
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:3004544.000000/26=115559.384615
+ verification time:5528833.000000/26=212647.423077
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:3084665.000000/26=118640.961538
+ verification time:5863456.000000/26=225517.538462
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:3047666.000000/26=117217.923077
+ verification time:6319753.000000/26=243067.423077
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2390122.000000/27=88523.037037
+ verification time:2571335.000000/27=95234.629630
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2326043.000000/27=86149.740741
+ verification time:3093791.000000/27=114584.851852
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2353667.000000/27=87172.851852
+ verification time:3675668.000000/27=136135.851852
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2422335.000000/27=89716.111111
+ verification time:4194503.000000/27=155351.962963
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2476622.000000/27=91726.740741
+ verification time:4653917.000000/27=172367.296296
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:3815831.000000/27=141327.074074
+ verification time:5027625.000000/27=186208.333333
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:3122711.000000/27=115655.962963
+ verification time:5736625.000000/27=212467.592593
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:3200915.000000/27=118552.407407
+ verification time:6087872.000000/27=225476.740741
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:3164916.000000/27=117219.111111
+ verification time:6553295.000000/27=242714.629630
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2475538.000000/28=88412.071429
+ verification time:2659460.000000/28=94980.714286
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2410710.000000/28=86096.785714
+ verification time:3198291.000000/28=114224.678571
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2439500.000000/28=87125.000000
+ verification time:3797835.000000/28=135636.964286
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2507585.000000/28=89556.607143
+ verification time:4332337.000000/28=154726.321429
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2568705.000000/28=91739.464286
+ verification time:4832251.000000/28=172580.392857
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:3963039.000000/28=141537.107143
+ verification time:5250334.000000/28=187511.928571
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:3254336.000000/28=116226.285714
+ verification time:6031458.000000/28=215409.214286
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:3333956.000000/28=119069.857143
+ verification time:6355289.000000/28=226974.607143
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:3290457.000000/28=117516.321429
+ verification time:6820837.000000/28=243601.321429
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2561871.000000/29=88340.379310
+ verification time:2746960.000000/29=94722.758621
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2496210.000000/29=86076.206897
+ verification time:3302166.000000/29=113867.793103
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2542000.000000/29=87655.172414
+ verification time:3921293.000000/29=135217.000000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2590710.000000/29=89334.827586
+ verification time:4472212.000000/29=154214.206897
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2665538.000000/29=91915.103448
+ verification time:4991542.000000/29=172122.137931
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:4097747.000000/29=141301.620690
+ verification time:5430875.000000/29=187271.551724
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:3359836.000000/29=115856.413793
+ verification time:6224000.000000/29=214620.689655
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:3446373.000000/29=118840.448276
+ verification time:6566455.000000/29=226429.482759
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:3414290.000000/29=117734.137931
+ verification time:7053753.000000/29=243232.862069
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2648287.000000/30=88276.233333
+ verification time:2834168.000000/30=94472.266667
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2582502.000000/30=86083.400000
+ verification time:3409000.000000/30=113633.333333
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2626167.000000/30=87538.900000
+ verification time:4043377.000000/30=134779.233333
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2673043.000000/30=89101.433333
+ verification time:4614212.000000/30=153807.066667
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2752538.000000/30=91751.266667
+ verification time:5149876.000000/30=171662.533333
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:4251997.000000/30=141733.233333
+ verification time:5607542.000000/30=186918.066667
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:3472628.000000/30=115754.266667
+ verification time:6417833.000000/30=213927.766667
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:3562165.000000/30=118738.833333
+ verification time:6776913.000000/30=225897.100000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:3543873.000000/30=118129.100000
+ verification time:7301628.000000/30=243387.600000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2732662.000000/31=88150.387097
+ verification time:2920043.000000/31=94194.935484
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2667543.000000/31=86049.774194
+ verification time:3512417.000000/31=113303.774194
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2709875.000000/31=87415.322581
+ verification time:4166918.000000/31=134416.709677
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2760502.000000/31=89048.451613
+ verification time:4754087.000000/31=153357.645161
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2840538.000000/31=91630.258065
+ verification time:5312168.000000/31=171360.258065
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:4397330.000000/31=141849.354839
+ verification time:5783125.000000/31=186552.419355
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:3589753.000000/31=115798.483871
+ verification time:6624958.000000/31=213708.322581
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:3715081.000000/31=119841.322581
+ verification time:6995663.000000/31=225666.548387
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:3671957.000000/31=118450.225806
+ verification time:7533794.000000/31=243025.612903
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2817912.000000/32=88059.750000
+ verification time:3005835.000000/32=93932.343750
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2751168.000000/32=85974.000000
+ verification time:3630626.000000/32=113457.062500
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2795750.000000/32=87367.187500
+ verification time:4289876.000000/32=134058.625000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2848585.000000/32=89018.281250
+ verification time:4894712.000000/32=152959.750000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:2931746.000000/32=91617.062500
+ verification time:5481293.000000/32=171290.406250
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:4543205.000000/32=141975.156250
+ verification time:5982666.000000/32=186958.312500
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:3715419.000000/32=116106.843750
+ verification time:6831708.000000/32=213490.875000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:3832789.000000/32=119774.656250
+ verification time:7216829.000000/32=225525.906250
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:3788332.000000/32=118385.375000
+ verification time:7771960.000000/32=242873.750000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2903954.000000/33=87998.606061
+ verification time:3092960.000000/33=93726.060606
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2836459.000000/33=85953.303030
+ verification time:3733959.000000/33=113150.272727
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2878291.000000/33=87220.939394
+ verification time:4441542.000000/33=134592.181818
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:2938085.000000/33=89032.878788
+ verification time:5050128.000000/33=153034.181818
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3019413.000000/33=91497.363636
+ verification time:5640835.000000/33=170934.393939
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:4694080.000000/33=142244.848485
+ verification time:6163666.000000/33=186777.757576
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:3831961.000000/33=116120.030303
+ verification time:7034250.000000/33=213159.090909
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:3950455.000000/33=119710.757576
+ verification time:7425912.000000/33=225027.636364
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:3908415.000000/33=118436.818182
+ verification time:8017919.000000/33=242967.242424
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:2990745.000000/34=87963.088235
+ verification time:3204335.000000/34=94245.147059
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:2922167.000000/34=85946.088235
+ verification time:3838667.000000/34=112901.970588
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:2960624.000000/34=87077.176471
+ verification time:4584375.000000/34=134834.558824
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3020418.000000/34=88835.823529
+ verification time:5212336.000000/34=153304.000000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3107996.000000/34=91411.647059
+ verification time:5810377.000000/34=170893.441176
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:4832497.000000/34=142132.264706
+ verification time:6347416.000000/34=186688.705882
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:3940086.000000/34=115884.882353
+ verification time:7239583.000000/34=212928.911765
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:4068788.000000/34=119670.235294
+ verification time:7638787.000000/34=224670.205882
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:4017415.000000/34=118159.264706
+ verification time:8248585.000000/34=242605.441176
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3081370.000000/35=88039.142857
+ verification time:3322418.000000/35=94926.228571
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3013750.000000/35=86107.142857
+ verification time:3971167.000000/35=113461.914286
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3047999.000000/35=87085.685714
+ verification time:4748542.000000/35=135672.628571
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3104460.000000/35=88698.857143
+ verification time:5351545.000000/35=152901.285714
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3215871.000000/35=91882.028571
+ verification time:5996836.000000/35=171338.171429
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:4972497.000000/35=142071.342857
+ verification time:6540332.000000/35=186866.628571
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:4099378.000000/35=117125.085714
+ verification time:7461791.000000/35=213194.028571
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:4185621.000000/35=119589.171429
+ verification time:7850996.000000/35=224314.171429
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:4134707.000000/35=118134.485714
+ verification time:8475419.000000/35=242154.828571
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3171662.000000/36=88101.722222
+ verification time:3413877.000000/36=94829.916667
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3100084.000000/36=86113.444444
+ verification time:4074750.000000/36=113187.500000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3131916.000000/36=86997.666667
+ verification time:4872333.000000/36=135342.583333
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3191918.000000/36=88664.388889
+ verification time:5492878.000000/36=152579.944444
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3302913.000000/36=91747.583333
+ verification time:6154753.000000/36=170965.361111
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:5111705.000000/36=141991.805556
+ verification time:6716374.000000/36=186565.944444
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:4222753.000000/36=117298.694444
+ verification time:7658749.000000/36=212743.027778
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:4306954.000000/36=119637.611111
+ verification time:8068913.000000/36=224136.472222
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:4251624.000000/36=118100.666667
+ verification time:8732419.000000/36=242567.194444
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3256620.000000/37=88016.756757
+ verification time:3505085.000000/37=94732.027027
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3191292.000000/37=86251.135135
+ verification time:4183917.000000/37=113078.837838
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3220499.000000/37=87040.513514
+ verification time:4988208.000000/37=134816.432432
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3291751.000000/37=88966.243243
+ verification time:5627628.000000/37=152098.054054
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3386454.000000/37=91525.783784
+ verification time:6319461.000000/37=170796.243243
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:5245288.000000/37=141764.540541
+ verification time:6913124.000000/37=186841.189189
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:4335253.000000/37=117169.000000
+ verification time:7861458.000000/37=212471.837838
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:4418829.000000/37=119427.810811
+ verification time:8283288.000000/37=223872.648649
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:4370874.000000/37=118131.729730
+ verification time:8996961.000000/37=243161.108108
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3343370.000000/38=87983.421053
+ verification time:3598293.000000/38=94691.921053
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3291000.000000/38=86605.263158
+ verification time:4288042.000000/38=112843.210526
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3305874.000000/38=86996.684211
+ verification time:5111625.000000/38=134516.447368
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3376376.000000/38=88852.000000
+ verification time:5767711.000000/38=151781.868421
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3471912.000000/38=91366.105263
+ verification time:6476128.000000/38=170424.421053
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:5382788.000000/38=141652.315789
+ verification time:7106540.000000/38=187014.210526
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:4452920.000000/38=117182.105263
+ verification time:8065749.000000/38=212256.552632
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:4537412.000000/38=119405.578947
+ verification time:8493871.000000/38=223522.921053
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:4493290.000000/38=118244.473684
+ verification time:9235586.000000/38=243041.736842
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3429079.000000/39=87925.102564
+ verification time:3686335.000000/39=94521.410256
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3393958.000000/39=87024.564103
+ verification time:4390376.000000/39=112573.743590
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3391541.000000/39=86962.589744
+ verification time:5234291.000000/39=134212.589744
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3461126.000000/39=88746.820513
+ verification time:5918127.000000/39=151746.846154
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3556412.000000/39=91190.051282
+ verification time:6637211.000000/39=170184.897436
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:5539122.000000/39=142028.769231
+ verification time:7281082.000000/39=186694.410256
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:4566545.000000/39=117090.897436
+ verification time:8298082.000000/39=212771.333333
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:4652078.000000/39=119284.051282
+ verification time:8705079.000000/39=223207.153846
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:4609956.000000/39=118204.000000
+ verification time:9485419.000000/39=243215.871795
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3522121.000000/40=88053.025000
+ verification time:3772460.000000/40=94311.500000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3479667.000000/40=86991.675000
+ verification time:4494251.000000/40=112356.275000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3483499.000000/40=87087.475000
+ verification time:5374624.000000/40=134365.600000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3545960.000000/40=88649.000000
+ verification time:6056835.000000/40=151420.875000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3653704.000000/40=91342.600000
+ verification time:6794170.000000/40=169854.250000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:5679039.000000/40=141975.975000
+ verification time:7467832.000000/40=186695.800000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:4688378.000000/40=117209.450000
+ verification time:8505957.000000/40=212648.925000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:4769078.000000/40=119226.950000
+ verification time:8926788.000000/40=223169.700000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:4727331.000000/40=118183.275000
+ verification time:9739878.000000/40=243496.950000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3607830.000000/41=87995.853659
+ verification time:3858501.000000/41=94109.780488
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3568458.000000/41=87035.560976
+ verification time:4595335.000000/41=112081.341463
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3569999.000000/41=87073.146341
+ verification time:5496082.000000/41=134050.780488
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3638335.000000/41=88739.878049
+ verification time:6195502.000000/41=151109.804878
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3737495.000000/41=91158.414634
+ verification time:6953129.000000/41=169588.512195
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:5811914.000000/41=141754.000000
+ verification time:7647540.000000/41=186525.365854
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:4805461.000000/41=117206.365854
+ verification time:8706332.000000/41=212349.560976
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:4876953.000000/41=118950.073171
+ verification time:9153288.000000/41=223250.926829
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:4841956.000000/41=118096.487805
+ verification time:9966336.000000/41=243081.365854
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3693705.000000/42=87945.357143
+ verification time:3945085.000000/42=93930.595238
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3660750.000000/42=87160.714286
+ verification time:4700793.000000/42=111923.642857
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3667708.000000/42=87326.380952
+ verification time:5668998.000000/42=134976.142857
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3732085.000000/42=88859.166667
+ verification time:6337377.000000/42=150889.928571
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3831495.000000/42=91226.071429
+ verification time:7109921.000000/42=169283.833333
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:5959164.000000/42=141884.857143
+ verification time:7834290.000000/42=186530.714286
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:4918711.000000/42=117112.166667
+ verification time:8905248.000000/42=212029.714286
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:4994411.000000/42=118914.547619
+ verification time:9362288.000000/42=222911.619048
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:4960997.000000/42=118118.976190
+ verification time:10193586.000000/42=242704.428571
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3785288.000000/43=88029.953488
+ verification time:4031419.000000/43=93753.930233
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3747292.000000/43=87146.325581
+ verification time:4805251.000000/43=111750.023256
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3754458.000000/43=87312.976744
+ verification time:5809581.000000/43=135106.534884
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3815293.000000/43=88727.744186
+ verification time:6478168.000000/43=150655.069767
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:3919162.000000/43=91143.302326
+ verification time:7266838.000000/43=168996.232558
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:6103789.000000/43=141948.581395
+ verification time:8010040.000000/43=186280.000000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:5035419.000000/43=117102.767442
+ verification time:9112998.000000/43=211930.186047
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:5126161.000000/43=119213.046512
+ verification time:9592872.000000/43=223090.046512
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:5077622.000000/43=118084.232558
+ verification time:10434294.000000/43=242658.000000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3871288.000000/44=87983.818182
+ verification time:4118794.000000/44=93608.954545
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3832459.000000/44=87101.340909
+ verification time:4908792.000000/44=111563.454545
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3849250.000000/44=87482.954545
+ verification time:5932206.000000/44=134822.863636
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3898752.000000/44=88608.000000
+ verification time:6625168.000000/44=150572.000000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4004495.000000/44=91011.250000
+ verification time:7451047.000000/44=169341.977273
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:6237872.000000/44=141769.818182
+ verification time:8184332.000000/44=186007.545455
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:5152294.000000/44=117097.590909
+ verification time:9309290.000000/44=211574.772727
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:5252036.000000/44=119364.454545
+ verification time:9803705.000000/44=222811.477273
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:5194330.000000/44=118052.954545
+ verification time:10664252.000000/44=242369.363636
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:3956496.000000/45=87922.133333
+ verification time:4205419.000000/45=93453.755556
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:3917209.000000/45=87049.088889
+ verification time:5014167.000000/45=111425.933333
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:3932125.000000/45=87380.555556
+ verification time:6053956.000000/45=134532.355556
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:3987960.000000/45=88621.333333
+ verification time:6765793.000000/45=150350.955556
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4086536.000000/45=90811.911111
+ verification time:7608381.000000/45=169075.133333
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:6382247.000000/45=141827.711111
+ verification time:8369665.000000/45=185992.555556
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:5271794.000000/45=117150.977778
+ verification time:9502873.000000/45=211174.955556
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:5368036.000000/45=119289.688889
+ verification time:10014996.000000/45=222555.466667
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:5311914.000000/45=118042.533333
+ verification time:10891460.000000/45=242032.444444
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4041121.000000/46=87850.456522
+ verification time:4314752.000000/46=93798.956522
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4003209.000000/46=87026.282609
+ verification time:5155126.000000/46=112067.956522
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4017375.000000/46=87334.239130
+ verification time:6176164.000000/46=134264.434783
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4076751.000000/46=88625.021739
+ verification time:6911627.000000/46=150252.760870
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4174286.000000/46=90745.347826
+ verification time:7767048.000000/46=168848.869565
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:6515331.000000/46=141637.630435
+ verification time:8546915.000000/46=185802.500000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:5385169.000000/46=117068.891304
+ verification time:9705415.000000/46=210987.282609
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:5482203.000000/46=119178.326087
+ verification time:10227829.000000/46=222344.108696
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:5425247.000000/46=117940.152174
+ verification time:11123168.000000/46=241808.000000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4123912.000000/47=87742.808511
+ verification time:4422293.000000/47=94091.340426
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4095376.000000/47=87135.659574
+ verification time:5260043.000000/47=111915.808511
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4101959.000000/47=87275.723404
+ verification time:6307622.000000/47=134204.723404
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4160334.000000/47=88517.744681
+ verification time:7058169.000000/47=150173.808511
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4259202.000000/47=90621.319149
+ verification time:7925589.000000/47=168629.553191
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:6659873.000000/47=141699.425532
+ verification time:8723498.000000/47=185606.340426
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:5502211.000000/47=117068.319149
+ verification time:9898456.000000/47=210605.446809
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:5607869.000000/47=119316.361702
+ verification time:10456412.000000/47=222476.851064
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:5541997.000000/47=117914.829787
+ verification time:11365418.000000/47=241817.404255
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4208329.000000/48=87673.520833
+ verification time:4510126.000000/48=93960.958333
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4188668.000000/48=87263.916667
+ verification time:5390960.000000/48=112311.666667
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4188417.000000/48=87258.687500
+ verification time:6445956.000000/48=134290.750000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4262209.000000/48=88796.020833
+ verification time:7216419.000000/48=150342.062500
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4349327.000000/48=90610.979167
+ verification time:8109255.000000/48=168942.812500
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:6808623.000000/48=141846.312500
+ verification time:8911165.000000/48=185649.270833
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:5617586.000000/48=117033.041667
+ verification time:10106914.000000/48=210560.708333
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:5725910.000000/48=119289.791667
+ verification time:10676203.000000/48=222420.895833
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:5660413.000000/48=117925.270833
+ verification time:11635002.000000/48=242395.875000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4294413.000000/49=87641.081633
+ verification time:4597834.000000/49=93833.346939
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4275043.000000/49=87245.775510
+ verification time:5493543.000000/49=112113.122449
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4271709.000000/49=87177.734694
+ verification time:6597248.000000/49=134637.714286
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4352334.000000/49=88823.142857
+ verification time:7385710.000000/49=150728.775510
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4443202.000000/49=90677.591837
+ verification time:8275880.000000/49=168895.510204
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:6963373.000000/49=142109.653061
+ verification time:9118124.000000/49=186084.163265
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:5741836.000000/49=117180.326531
+ verification time:10334248.000000/49=210903.020408
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:5841327.000000/49=119210.755102
+ verification time:10891537.000000/49=222276.265306
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:5809788.000000/49=118567.102041
+ verification time:11935002.000000/49=243571.469388
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4379497.000000/50=87589.940000
+ verification time:4684626.000000/50=93692.520000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4370085.000000/50=87401.700000
+ verification time:5602668.000000/50=112053.360000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4361459.000000/50=87229.180000
+ verification time:6742540.000000/50=134850.800000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4441168.000000/50=88823.360000
+ verification time:7527835.000000/50=150556.700000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4524744.000000/50=90494.880000
+ verification time:8431046.000000/50=168620.920000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:7097081.000000/50=141941.620000
+ verification time:9296541.000000/50=185930.820000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:5858961.000000/50=117179.220000
+ verification time:10528082.000000/50=210561.640000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:5962035.000000/50=119240.700000
+ verification time:11115912.000000/50=222318.240000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:5926122.000000/50=118522.440000
+ verification time:12176669.000000/50=243533.380000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4465705.000000/51=87562.843137
+ verification time:4771293.000000/51=93554.764706
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4456169.000000/51=87375.862745
+ verification time:5707668.000000/51=111915.058824
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4453417.000000/51=87321.901961
+ verification time:6899373.000000/51=135281.823529
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4546626.000000/51=89149.529412
+ verification time:7688335.000000/51=150751.666667
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4613202.000000/51=90454.941176
+ verification time:8596338.000000/51=168555.647059
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:7252206.000000/51=142200.117647
+ verification time:9500958.000000/51=186293.294118
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:5996961.000000/51=117587.470588
+ verification time:10754498.000000/51=210872.509804
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:6078701.000000/51=119190.215686
+ verification time:11339662.000000/51=222346.313725
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:6051831.000000/51=118663.352941
+ verification time:12411294.000000/51=243358.705882
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4561122.000000/52=87713.884615
+ verification time:4874210.000000/52=93734.807692
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4548252.000000/52=87466.384615
+ verification time:5824126.000000/52=112002.423077
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4544667.000000/52=87397.442308
+ verification time:7043582.000000/52=135453.500000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4636417.000000/52=89161.865385
+ verification time:7834293.000000/52=150659.480769
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4701494.000000/52=90413.346154
+ verification time:8753880.000000/52=168343.846154
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:7388206.000000/52=142080.884615
+ verification time:9685916.000000/52=186267.615385
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:6126377.000000/52=117814.942308
+ verification time:10944873.000000/52=210478.326923
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:6197868.000000/52=119189.769231
+ verification time:11578162.000000/52=222656.961538
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:6171748.000000/52=118687.461538
+ verification time:12638169.000000/52=243041.711538
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4646622.000000/53=87672.113208
+ verification time:4960168.000000/53=93588.075472
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4634044.000000/53=87434.792453
+ verification time:5927710.000000/53=111843.584906
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4629792.000000/53=87354.566038
+ verification time:7166415.000000/53=135215.377358
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4719958.000000/53=89055.811321
+ verification time:7975751.000000/53=150485.867925
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4788660.000000/53=90352.075472
+ verification time:8914047.000000/53=168189.566038
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:7521540.000000/53=141915.849057
+ verification time:9870166.000000/53=186229.547170
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:6240627.000000/53=117747.679245
+ verification time:11162581.000000/53=210614.735849
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:6310118.000000/53=119058.830189
+ verification time:11785162.000000/53=222361.547170
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:6287540.000000/53=118632.830189
+ verification time:12868085.000000/53=242794.056604
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4734455.000000/54=87675.092593
+ verification time:5052209.000000/54=93559.425926
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4732877.000000/54=87645.870370
+ verification time:6045626.000000/54=111956.037037
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4718042.000000/54=87371.148148
+ verification time:7289707.000000/54=134994.574074
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4802167.000000/54=88929.018519
+ verification time:8119168.000000/54=150354.962963
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4877327.000000/54=90320.870370
+ verification time:9076963.000000/54=168091.907407
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:7663498.000000/54=141916.629630
+ verification time:10049832.000000/54=186108.000000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:6362586.000000/54=117825.666667
+ verification time:11365539.000000/54=210472.944444
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:6429327.000000/54=119061.611111
+ verification time:12002662.000000/54=222271.518519
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:6401581.000000/54=118547.796296
+ verification time:13113210.000000/54=242837.222222
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4819038.000000/55=87618.872727
+ verification time:5144250.000000/55=93531.818182
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4820835.000000/55=87651.545455
+ verification time:6149668.000000/55=111812.145455
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4803417.000000/55=87334.854545
+ verification time:7412291.000000/55=134768.927273
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4887417.000000/55=88862.127273
+ verification time:8259377.000000/55=150170.490909
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:4966036.000000/55=90291.563636
+ verification time:9233921.000000/55=167889.472727
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:7805623.000000/55=141920.418182
+ verification time:10226207.000000/55=185931.036364
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:6474086.000000/55=117710.654545
+ verification time:11567206.000000/55=210312.836364
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:6543869.000000/55=118979.436364
+ verification time:12237370.000000/55=222497.636364
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:6516165.000000/55=118475.727273
+ verification time:13347919.000000/55=242689.436364
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:4904954.000000/56=87588.464286
+ verification time:5230291.000000/56=93398.053571
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4913294.000000/56=87737.392857
+ verification time:6253460.000000/56=111668.928571
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4888209.000000/56=87289.446429
+ verification time:7541708.000000/56=134673.357143
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:4973083.000000/56=88805.053571
+ verification time:8424085.000000/56=150430.089286
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5056119.000000/56=90287.839286
+ verification time:9395130.000000/56=167770.178571
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:7934248.000000/56=141683.000000
+ verification time:10402207.000000/56=185753.696429
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:6600420.000000/56=117864.642857
+ verification time:11799664.000000/56=210708.285714
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:6662619.000000/56=118975.339286
+ verification time:12452412.000000/56=222364.500000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:6633332.000000/56=118452.357143
+ verification time:13582711.000000/56=242548.410714
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5003246.000000/57=87776.245614
+ verification time:5335791.000000/57=93610.368421
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:4998586.000000/57=87694.491228
+ verification time:6357293.000000/57=111531.456140
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:4972584.000000/57=87238.315789
+ verification time:7664041.000000/57=134456.859649
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5055541.000000/57=88693.701754
+ verification time:8563627.000000/57=150239.070175
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5146994.000000/57=90298.140351
+ verification time:9553214.000000/57=167600.245614
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:8082789.000000/57=141803.315789
+ verification time:10578415.000000/57=185586.228070
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:6710504.000000/57=117728.140351
+ verification time:12000248.000000/57=210530.666667
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:6779911.000000/57=118945.807018
+ verification time:12664370.000000/57=222181.929825
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:6746915.000000/57=118366.929825
+ verification time:13822003.000000/57=242491.280702
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5087704.000000/58=87719.034483
+ verification time:5430875.000000/58=93635.775862
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5084544.000000/58=87664.551724
+ verification time:6462877.000000/58=111428.913793
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5057417.000000/58=87196.844828
+ verification time:7790957.000000/58=134326.844828
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5143124.000000/58=88674.551724
+ verification time:8712210.000000/58=150210.517241
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5231035.000000/58=90190.258621
+ verification time:9731005.000000/58=167775.948276
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:8222414.000000/58=141765.758621
+ verification time:10761748.000000/58=185547.379310
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:6838254.000000/58=117900.931034
+ verification time:12212665.000000/58=210563.189655
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:6903536.000000/58=119026.482759
+ verification time:12897287.000000/58=222367.017241
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:6865790.000000/58=118375.689655
+ verification time:14056961.000000/58=242361.396552
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5174329.000000/59=87700.491525
+ verification time:5521833.000000/59=93590.389831
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5169086.000000/59=87611.627119
+ verification time:6567502.000000/59=111313.593220
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5143792.000000/59=87182.915254
+ verification time:7915957.000000/59=134168.762712
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5231249.000000/59=88665.237288
+ verification time:8853335.000000/59=150056.525424
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5323452.000000/59=90228.000000
+ verification time:9888172.000000/59=167596.135593
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:8369664.000000/59=141858.711864
+ verification time:10937373.000000/59=185379.203390
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:6956087.000000/59=117899.779661
+ verification time:12422707.000000/59=210554.355932
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:7033786.000000/59=119216.711864
+ verification time:13111204.000000/59=222223.796610
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:6982415.000000/59=118346.016949
+ verification time:14315503.000000/59=242635.644068
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5259454.000000/60=87657.566667
+ verification time:5607375.000000/60=93456.250000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5258961.000000/60=87649.350000
+ verification time:6684085.000000/60=111401.416667
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5227126.000000/60=87118.766667
+ verification time:8060124.000000/60=134335.400000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5315957.000000/60=88599.283333
+ verification time:8992918.000000/60=149881.966667
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5406744.000000/60=90112.400000
+ verification time:10046880.000000/60=167448.000000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:8505123.000000/60=141752.050000
+ verification time:11113665.000000/60=185227.750000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:7072754.000000/60=117879.233333
+ verification time:12617999.000000/60=210299.983333
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:7155661.000000/60=119261.016667
+ verification time:13329912.000000/60=222165.200000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:7099123.000000/60=118318.716667
+ verification time:14540461.000000/60=242341.016667
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5362913.000000/61=87916.606557
+ verification time:5694708.000000/61=93355.868852
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5343961.000000/61=87605.918033
+ verification time:6795501.000000/61=111401.655738
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5312418.000000/61=87088.819672
+ verification time:8194624.000000/61=134338.098361
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5398499.000000/61=88499.983607
+ verification time:9133959.000000/61=149737.032787
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5491119.000000/61=90018.344262
+ verification time:10204588.000000/61=167288.327869
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:8644957.000000/61=141720.606557
+ verification time:11289665.000000/61=185076.475410
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:7190546.000000/61=117877.803279
+ verification time:12817374.000000/61=210120.885246
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:7275036.000000/61=119262.885246
+ verification time:13547829.000000/61=222095.557377
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:7215540.000000/61=118287.540984
+ verification time:14775961.000000/61=242228.868852
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5447871.000000/62=87868.887097
+ verification time:5782500.000000/62=93266.129032
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5430086.000000/62=87582.032258
+ verification time:6905876.000000/62=111385.096774
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5397293.000000/62=87053.112903
+ verification time:8318208.000000/62=134164.645161
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5485999.000000/62=88483.854839
+ verification time:9284167.000000/62=149744.629032
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5576119.000000/62=89937.403226
+ verification time:10360880.000000/62=167110.967742
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:8774207.000000/62=141519.467742
+ verification time:11466082.000000/62=184936.806452
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:7328129.000000/62=118195.629032
+ verification time:13018416.000000/62=209974.451613
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:7388036.000000/62=119161.870968
+ verification time:13772412.000000/62=222135.677419
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:7333332.000000/62=118279.548387
+ verification time:15012378.000000/62=242135.129032
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5534121.000000/63=87843.190476
+ verification time:5868833.000000/63=93156.079365
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5558211.000000/63=88225.571429
+ verification time:7007626.000000/63=111232.158730
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5484251.000000/63=87051.603175
+ verification time:8455250.000000/63=134210.317460
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5572082.000000/63=88445.746032
+ verification time:9424251.000000/63=149591.285714
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5663661.000000/63=89899.380952
+ verification time:10522588.000000/63=167025.206349
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:8924749.000000/63=141662.682540
+ verification time:11642624.000000/63=184803.555556
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:7447379.000000/63=118212.365079
+ verification time:13224124.000000/63=209906.730159
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:7506286.000000/63=119147.396825
+ verification time:13982996.000000/63=221952.317460
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:7449290.000000/63=118242.698413
+ verification time:15248170.000000/63=242034.444444
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5621621.000000/64=87837.828125
+ verification time:5964458.000000/64=93194.656250
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5652961.000000/64=88327.515625
+ verification time:7111418.000000/64=111115.906250
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5573668.000000/64=87088.562500
+ verification time:8577792.000000/64=134028.000000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5655749.000000/64=88371.078125
+ verification time:9564460.000000/64=149444.687500
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5750661.000000/64=89854.078125
+ verification time:10680754.000000/64=166886.781250
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:9058541.000000/64=141539.703125
+ verification time:11821582.000000/64=184712.218750
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:7564087.000000/64=118188.859375
+ verification time:13427040.000000/64=209797.500000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:7621828.000000/64=119091.062500
+ verification time:14227787.000000/64=222309.171875
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:7555290.000000/64=118051.406250
+ verification time:15486129.000000/64=241970.765625
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5706871.000000/65=87798.015385
+ verification time:6078875.000000/65=93521.153846
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5738128.000000/65=88278.892308
+ verification time:7224210.000000/65=111141.692308
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5655209.000000/65=87003.215385
+ verification time:8714958.000000/65=134076.276923
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5754915.000000/65=88537.153846
+ verification time:9717626.000000/65=149501.938462
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5835620.000000/65=89778.769231
+ verification time:10907754.000000/65=167811.600000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:9209749.000000/65=141688.446154
+ verification time:12034665.000000/65=185148.692308
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:7688045.000000/65=118277.615385
+ verification time:13650331.000000/65=210005.092308
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:7737786.000000/65=119042.861538
+ verification time:14471078.000000/65=222631.969231
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:7682124.000000/65=118186.523077
+ verification time:15739671.000000/65=242148.784615
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5800287.000000/66=87883.136364
+ verification time:6184875.000000/66=93710.227273
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5823586.000000/66=88236.151515
+ verification time:7330002.000000/66=111060.636364
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5746251.000000/66=87064.409091
+ verification time:8835999.000000/66=133878.772727
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5844415.000000/66=88551.742424
+ verification time:9892793.000000/66=149890.803030
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:5923536.000000/66=89750.545455
+ verification time:11064963.000000/66=167650.954545
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:9361249.000000/66=141837.106061
+ verification time:12242748.000000/66=185496.181818
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:7804629.000000/66=118251.954545
+ verification time:13877790.000000/66=210269.545455
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:7859453.000000/66=119082.621212
+ verification time:14686369.000000/66=222520.742424
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:7796374.000000/66=118126.878788
+ verification time:16007296.000000/66=242534.787879
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5886995.000000/67=87865.597015
+ verification time:6291792.000000/67=93907.343284
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:5917461.000000/67=88320.313433
+ verification time:7434794.000000/67=110967.074627
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5831168.000000/67=87032.358209
+ verification time:8965374.000000/67=133811.552239
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:5927915.000000/67=88476.343284
+ verification time:10041835.000000/67=149878.134328
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6011120.000000/67=89718.208955
+ verification time:11223505.000000/67=167515.000000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:9492124.000000/67=141673.492537
+ verification time:12417623.000000/67=185337.656716
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:7919088.000000/67=118195.343284
+ verification time:14080456.000000/67=210156.059701
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:7979286.000000/67=119093.820896
+ verification time:14899119.000000/67=222374.910448
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:7913166.000000/67=118106.955224
+ verification time:16259046.000000/67=242672.328358
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:5973162.000000/68=87840.617647
+ verification time:6399292.000000/68=94107.235294
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6000628.000000/68=88244.529412
+ verification time:7571710.000000/68=111348.676471
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:5919835.000000/68=87056.397059
+ verification time:9117833.000000/68=134085.779412
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6026415.000000/68=88623.750000
+ verification time:10216085.000000/68=150236.544118
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6104037.000000/68=89765.250000
+ verification time:11424296.000000/68=168004.352941
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:9631124.000000/68=141634.176471
+ verification time:12597165.000000/68=185252.426471
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:8034421.000000/68=118153.250000
+ verification time:14273081.000000/68=209898.250000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:8103702.000000/68=119172.088235
+ verification time:15148785.000000/68=222776.250000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:8029832.000000/68=118085.764706
+ verification time:16498837.000000/68=242629.955882
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6071412.000000/69=87991.478261
+ verification time:6507458.000000/69=94310.985507
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6089211.000000/69=88249.434783
+ verification time:7713210.000000/69=111785.652174
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6005626.000000/69=87038.057971
+ verification time:9239916.000000/69=133911.826087
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6110831.000000/69=88562.768116
+ verification time:10356210.000000/69=150090.000000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6197079.000000/69=89812.739130
+ verification time:11610046.000000/69=168261.536232
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:9780791.000000/69=141750.594203
+ verification time:12772749.000000/69=185112.304348
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:8151629.000000/69=118139.550725
+ verification time:14464748.000000/69=209634.028986
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:8210327.000000/69=118990.246377
+ verification time:15380451.000000/69=222905.086957
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:8161998.000000/69=118289.826087
+ verification time:16777712.000000/69=243155.246377
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6156704.000000/70=87952.914286
+ verification time:6596125.000000/70=94230.357143
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6180544.000000/70=88293.485714
+ verification time:7847001.000000/70=112100.014286
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6090709.000000/70=87010.128571
+ verification time:9362957.000000/70=133756.528571
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6204414.000000/70=88634.485714
+ verification time:10525127.000000/70=150358.957143
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6284370.000000/70=89776.714286
+ verification time:11825712.000000/70=168938.742857
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:9924749.000000/70=141782.128571
+ verification time:12947374.000000/70=184962.485714
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:8263171.000000/70=118045.300000
+ verification time:14665498.000000/70=209507.114286
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:8327535.000000/70=118964.785714
+ verification time:15601034.000000/70=222871.914286
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:8285998.000000/70=118371.400000
+ verification time:17041087.000000/70=243444.100000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6260496.000000/71=88176.000000
+ verification time:6696208.000000/71=94312.788732
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6267710.000000/71=88277.605634
+ verification time:7976667.000000/71=112347.422535
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6179709.000000/71=87038.154930
+ verification time:9527082.000000/71=134184.253521
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6285873.000000/71=88533.422535
+ verification time:10696210.000000/71=150650.845070
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6376078.000000/71=89803.915493
+ verification time:12039337.000000/71=169568.126761
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:10075332.000000/71=141906.084507
+ verification time:13173790.000000/71=185546.338028
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:8384088.000000/71=118085.746479
+ verification time:14916206.000000/71=210087.408451
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:8424660.000000/71=118657.183099
+ verification time:15837493.000000/71=223063.281690
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:8404581.000000/71=118374.380282
+ verification time:17279587.000000/71=243374.464789
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6347621.000000/72=88161.402778
+ verification time:6782958.000000/72=94207.750000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6350668.000000/72=88203.722222
+ verification time:8122625.000000/72=112814.236111
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6267292.000000/72=87045.722222
+ verification time:9683332.000000/72=134490.722222
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6367706.000000/72=88440.361111
+ verification time:10841585.000000/72=150577.569444
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6457578.000000/72=89688.583333
+ verification time:12202504.000000/72=169479.222222
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:10216957.000000/72=141902.180556
+ verification time:13344373.000000/72=185338.513889
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:8488838.000000/72=117900.527778
+ verification time:15102623.000000/72=209758.652778
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:8544451.000000/72=118672.930556
+ verification time:16067326.000000/72=223157.305556
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:8528498.000000/72=118451.361111
+ verification time:17502378.000000/72=243088.583333
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6442621.000000/73=88255.082192
+ verification time:6892500.000000/73=94417.808219
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6446584.000000/73=88309.369863
+ verification time:8226166.000000/73=112687.205479
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6363542.000000/73=87171.808219
+ verification time:9804249.000000/73=134304.780822
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6450581.000000/73=88364.123288
+ verification time:10991210.000000/73=150564.520548
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6540245.000000/73=89592.397260
+ verification time:12383463.000000/73=169636.479452
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:10367749.000000/73=142023.958904
+ verification time:13523081.000000/73=185247.684932
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:8605796.000000/73=117887.616438
+ verification time:15295498.000000/73=209527.369863
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:8658534.000000/73=118610.054795
+ verification time:16278743.000000/73=222996.479452
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:8643248.000000/73=118400.657534
+ verification time:17738087.000000/73=242987.493151
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6536079.000000/74=88325.391892
+ verification time:6998667.000000/74=94576.581081
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6531584.000000/74=88264.648649
+ verification time:8358291.000000/74=112949.878378
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6452251.000000/74=87192.581081
+ verification time:9963291.000000/74=134639.067568
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6551622.000000/74=88535.432432
+ verification time:11170168.000000/74=150948.216216
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6627620.000000/74=89562.432432
+ verification time:12548255.000000/74=169571.013514
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:10513874.000000/74=142079.378378
+ verification time:13699165.000000/74=185123.851351
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:8724296.000000/74=117895.891892
+ verification time:15501165.000000/74=209475.202703
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:8784492.000000/74=118709.351351
+ verification time:16488868.000000/74=222822.540541
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:8767707.000000/74=118482.527027
+ verification time:18014337.000000/74=243436.986486
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6622162.000000/75=88295.493333
+ verification time:7091834.000000/75=94557.786667
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6616126.000000/75=88215.013333
+ verification time:8462291.000000/75=112830.546667
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6545168.000000/75=87268.906667
+ verification time:10084958.000000/75=134466.106667
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6640414.000000/75=88538.853333
+ verification time:11318085.000000/75=150907.800000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6712828.000000/75=89504.373333
+ verification time:12706130.000000/75=169415.066667
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:10651165.000000/75=142015.533333
+ verification time:13874290.000000/75=184990.533333
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:8845296.000000/75=117937.280000
+ verification time:15697915.000000/75=209305.533333
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:8902867.000000/75=118704.893333
+ verification time:16698493.000000/75=222646.573333
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:8875248.000000/75=118336.640000
+ verification time:18242087.000000/75=243227.826667
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6707995.000000/76=88263.092105
+ verification time:7178418.000000/76=94452.868421
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6701584.000000/76=88178.736842
+ verification time:8565166.000000/76=112699.552632
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6633627.000000/76=87284.565789
+ verification time:10211083.000000/76=134356.355263
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6735164.000000/76=88620.578947
+ verification time:11458377.000000/76=150768.118421
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6801244.000000/76=89490.052632
+ verification time:12871005.000000/76=169355.328947
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:10792081.000000/76=142001.065789
+ verification time:14049624.000000/76=184863.473684
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:8963046.000000/76=117934.815789
+ verification time:15892499.000000/76=209111.828947
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:9023575.000000/76=118731.250000
+ verification time:16912576.000000/76=222533.894737
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:8998915.000000/76=118406.776316
+ verification time:18499587.000000/76=243415.618421
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6794245.000000/77=88236.948052
+ verification time:7268877.000000/77=94401.000000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6786584.000000/77=88137.454545
+ verification time:8668624.000000/77=112579.532468
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6718169.000000/77=87248.948052
+ verification time:10330500.000000/77=134162.337662
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6818914.000000/77=88557.324675
+ verification time:11597918.000000/77=150622.311688
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6884160.000000/77=89404.675325
+ verification time:13041547.000000/77=169370.740260
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:10920456.000000/77=141824.103896
+ verification time:14226124.000000/77=184754.857143
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:9074254.000000/77=117847.454545
+ verification time:16086374.000000/77=208913.948052
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:9142992.000000/77=118740.155844
+ verification time:17123159.000000/77=222378.688312
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:9121498.000000/77=118461.012987
+ verification time:18730962.000000/77=243259.246753
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6879162.000000/78=88194.384615
+ verification time:7355627.000000/78=94302.910256
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6872709.000000/78=88111.653846
+ verification time:8772207.000000/78=112464.192308
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6803919.000000/78=87229.730769
+ verification time:10452000.000000/78=134000.000000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6902747.000000/78=88496.756410
+ verification time:11739335.000000/78=150504.294872
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:6966285.000000/78=89311.346154
+ verification time:13204464.000000/78=169288.000000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:11054872.000000/78=141729.128205
+ verification time:14415999.000000/78=184820.500000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:9186962.000000/78=117781.564103
+ verification time:16282957.000000/78=208755.858974
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:9259033.000000/78=118705.551282
+ verification time:17343534.000000/78=222353.000000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:9247123.000000/78=118552.858974
+ verification time:18999587.000000/78=243584.448718
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:6966870.000000/79=88188.227848
+ verification time:7437793.000000/79=94149.278481
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:6960000.000000/79=88101.265823
+ verification time:8876166.000000/79=112356.531646
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6892211.000000/79=87243.177215
+ verification time:10610750.000000/79=134313.291139
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:6986039.000000/79=88430.873418
+ verification time:11890126.000000/79=150507.924051
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7056368.000000/79=89321.113924
+ verification time:13366131.000000/79=169191.531646
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:11196622.000000/79=141729.392405
+ verification time:14610124.000000/79=184938.278481
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:9309129.000000/79=117837.075949
+ verification time:16476415.000000/79=208562.215190
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:9392075.000000/79=118887.025316
+ verification time:17630284.000000/79=223168.151899
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:9394498.000000/79=118917.696203
+ verification time:19260379.000000/79=243802.265823
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7052662.000000/80=88158.275000
+ verification time:7526376.000000/80=94079.700000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7046334.000000/80=88079.175000
+ verification time:8985499.000000/80=112318.737500
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:6981627.000000/80=87270.337500
+ verification time:10733667.000000/80=134170.837500
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7068581.000000/80=88357.262500
+ verification time:12029501.000000/80=150368.762500
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7150077.000000/80=89375.962500
+ verification time:13526881.000000/80=169086.012500
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:11346164.000000/80=141827.050000
+ verification time:14788124.000000/80=184851.550000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:9422629.000000/80=117782.862500
+ verification time:16700998.000000/80=208762.475000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:9506409.000000/80=118830.112500
+ verification time:17840242.000000/80=223003.025000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:9507123.000000/80=118839.037500
+ verification time:19492670.000000/80=243658.375000
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7145412.000000/81=88214.962963
+ verification time:7626834.000000/81=94158.444444
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7135584.000000/81=88093.629630
+ verification time:9110457.000000/81=112474.777778
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7067710.000000/81=87255.679012
+ verification time:10855542.000000/81=134019.037037
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7154747.000000/81=88330.209877
+ verification time:12169710.000000/81=150243.333333
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7242910.000000/81=89418.641975
+ verification time:13689965.000000/81=169011.913580
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:11495330.000000/81=141917.654321
+ verification time:14968166.000000/81=184792.172840
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:9539004.000000/81=117765.481481
+ verification time:16935248.000000/81=209077.135802
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:9619117.000000/81=118754.530864
+ verification time:18053992.000000/81=222888.790123
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:9622998.000000/81=118802.444444
+ verification time:19734170.000000/81=243631.728395
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7230745.000000/82=88179.817073
+ verification time:7718959.000000/82=94133.646341
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7234084.000000/82=88220.536585
+ verification time:9232874.000000/82=112596.024390
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7151793.000000/82=87216.987805
+ verification time:10978292.000000/82=133881.609756
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7238247.000000/82=88271.304878
+ verification time:12310543.000000/82=150128.573171
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7325951.000000/82=89340.865854
+ verification time:13848173.000000/82=168880.158537
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:11646288.000000/82=142027.902439
+ verification time:15143541.000000/82=184677.329268
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:9655129.000000/82=117745.475610
+ verification time:17135332.000000/82=208967.463415
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:9739283.000000/82=118771.743902
+ verification time:18270326.000000/82=222808.853659
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:9743581.000000/82=118824.158537
+ verification time:19960503.000000/82=243420.768293
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7316245.000000/83=88147.530120
+ verification time:7836542.000000/83=94416.168675
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7318126.000000/83=88170.192771
+ verification time:9352499.000000/83=112680.710843
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7236334.000000/83=87184.746988
+ verification time:11122000.000000/83=134000.000000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7326914.000000/83=88276.072289
+ verification time:12463543.000000/83=150163.168675
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7411410.000000/83=89294.096386
+ verification time:14012298.000000/83=168822.867470
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:11804080.000000/83=142217.831325
+ verification time:15320583.000000/83=184585.337349
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:9774088.000000/83=117760.096386
+ verification time:17369416.000000/83=209270.072289
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:9855783.000000/83=118744.373494
+ verification time:18484284.000000/83=222702.216867
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:9862956.000000/83=118830.795181
+ verification time:20212962.000000/83=243529.662651
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7400703.000000/84=88103.607143
+ verification time:7921625.000000/84=94305.059524
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7405042.000000/84=88155.261905
+ verification time:9457874.000000/84=112593.738095
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7319918.000000/84=87141.880952
+ verification time:11244500.000000/84=133863.095238
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7411456.000000/84=88231.619048
+ verification time:12613876.000000/84=150165.190476
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7509826.000000/84=89402.690476
+ verification time:14171131.000000/84=168703.940476
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:11944372.000000/84=142194.904762
+ verification time:15516708.000000/84=184722.714286
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:9906171.000000/84=117930.607143
+ verification time:17561374.000000/84=209063.976190
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:9971783.000000/84=118711.702381
+ verification time:18714159.000000/84=222787.607143
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:9979956.000000/84=118809.000000
+ verification time:20460837.000000/84=243581.392857
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7496369.000000/85=88192.576471
+ verification time:8041667.000000/85=94607.847059
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7488208.000000/85=88096.564706
+ verification time:9586041.000000/85=112776.952941
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7406126.000000/85=87130.894118
+ verification time:11365000.000000/85=133705.882353
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7497289.000000/85=88203.400000
+ verification time:12750835.000000/85=150009.823529
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7602993.000000/85=89446.976471
+ verification time:14338589.000000/85=168689.282353
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:12102039.000000/85=142376.929412
+ verification time:15692166.000000/85=184613.717647
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:10019463.000000/85=117876.035294
+ verification time:17770166.000000/85=209060.776471
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:10088242.000000/85=118685.200000
+ verification time:18972493.000000/85=223205.800000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:10098248.000000/85=118802.917647
+ verification time:20687545.000000/85=243382.882353
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7581702.000000/86=88159.325581
+ verification time:8127583.000000/86=94506.779070
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7572791.000000/86=88055.709302
+ verification time:9690874.000000/86=112684.581395
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7491293.000000/86=87108.058140
+ verification time:11486875.000000/86=133568.313953
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7581580.000000/86=88157.906977
+ verification time:12893169.000000/86=149920.569767
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7694868.000000/86=89475.209302
+ verification time:14497547.000000/86=168576.127907
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:12240789.000000/86=142334.755814
+ verification time:15877500.000000/86=184622.093023
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:10130921.000000/86=117801.406977
+ verification time:17965541.000000/86=208901.639535
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:10202076.000000/86=118628.790698
+ verification time:19191951.000000/86=223162.220930
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:10214665.000000/86=118775.174419
+ verification time:20916087.000000/86=243210.313953
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7667369.000000/87=88130.678161
+ verification time:8213292.000000/87=94405.655172
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7658958.000000/87=88034.000000
+ verification time:9794832.000000/87=112584.275862
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7575293.000000/87=87072.333333
+ verification time:11607917.000000/87=133424.333333
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7694372.000000/87=88441.057471
+ verification time:13044502.000000/87=149936.804598
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7785243.000000/87=89485.551724
+ verification time:14655088.000000/87=168449.287356
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:12378789.000000/87=142284.931034
+ verification time:16068750.000000/87=184698.275862
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:10248254.000000/87=117796.022989
+ verification time:18165874.000000/87=208803.149425
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:10316701.000000/87=118582.770115
+ verification time:19414826.000000/87=223158.919540
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:10325873.000000/87=118688.195402
+ verification time:21154712.000000/87=243157.609195
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7759577.000000/88=88177.011364
+ verification time:8308875.000000/88=94419.034091
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7745125.000000/88=88012.784091
+ verification time:9907040.000000/88=112580.000000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7662293.000000/88=87071.511364
+ verification time:11731667.000000/88=133314.397727
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7777539.000000/88=88381.125000
+ verification time:13194877.000000/88=149941.784091
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7870160.000000/88=89433.636364
+ verification time:14812504.000000/88=168323.909091
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:12525664.000000/88=142337.090909
+ verification time:16245750.000000/88=184610.795455
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:10369004.000000/88=117829.590909
+ verification time:18357749.000000/88=208610.784091
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:10432368.000000/88=118549.636364
+ verification time:19638618.000000/88=223166.113636
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:10442415.000000/88=118663.806818
+ verification time:21386170.000000/88=243024.659091
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7845827.000000/89=88155.359551
+ verification time:8409000.000000/89=94483.146067
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7831000.000000/89=87988.764045
+ verification time:10011332.000000/89=112486.876404
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7750001.000000/89=87078.662921
+ verification time:11863708.000000/89=133300.089888
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7862789.000000/89=88345.943820
+ verification time:13353294.000000/89=150037.011236
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:7967702.000000/89=89524.741573
+ verification time:14998546.000000/89=168522.988764
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:12669039.000000/89=142348.752809
+ verification time:16421208.000000/89=184507.955056
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:10483671.000000/89=117794.056180
+ verification time:18549916.000000/89=208426.022472
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:10553076.000000/89=118573.887640
+ verification time:19846451.000000/89=222993.831461
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:10565290.000000/89=118711.123596
+ verification time:21637587.000000/89=243118.955056
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:7926869.000000/90=88076.322222
+ verification time:8490500.000000/90=94338.888889
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:7918375.000000/90=87981.944444
+ verification time:10126207.000000/90=112513.411111
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7834459.000000/90=87049.544444
+ verification time:11993750.000000/90=133263.888889
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:7959956.000000/90=88443.955556
+ verification time:13523002.000000/90=150255.577778
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8063493.000000/90=89594.366667
+ verification time:15185171.000000/90=168724.122222
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:12811498.000000/90=142349.977778
+ verification time:16595333.000000/90=184392.588889
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:10593713.000000/90=117707.922222
+ verification time:18777791.000000/90=208642.122222
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:10667410.000000/90=118526.777778
+ verification time:20083409.000000/90=223148.988889
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:10683832.000000/90=118709.244444
+ verification time:21889171.000000/90=243213.011111
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8012244.000000/91=88046.637363
+ verification time:8577500.000000/91=94258.241758
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8001000.000000/91=87923.076923
+ verification time:10243624.000000/91=112567.296703
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:7917459.000000/91=87005.043956
+ verification time:12128875.000000/91=133284.340659
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8049498.000000/91=88456.021978
+ verification time:13691585.000000/91=150456.978022
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8152034.000000/91=89582.791209
+ verification time:15391546.000000/91=169137.868132
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:12951165.000000/91=142320.494505
+ verification time:16779249.000000/91=184387.351648
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:10710422.000000/91=117696.945055
+ verification time:19002041.000000/91=208813.637363
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:10784202.000000/91=118507.714286
+ verification time:20299409.000000/91=223070.428571
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:10801457.000000/91=118697.329670
+ verification time:22126546.000000/91=243148.857143
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8110411.000000/92=88156.641304
+ verification time:8686750.000000/92=94421.195652
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8087542.000000/92=87908.065217
+ verification time:10348624.000000/92=112485.043478
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:8002292.000000/92=86981.434783
+ verification time:12251625.000000/92=133169.836957
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8144165.000000/92=88523.532609
+ verification time:13832627.000000/92=150354.641304
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8238868.000000/92=89552.913043
+ verification time:15560213.000000/92=169132.750000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:13106123.000000/92=142457.858696
+ verification time:16996791.000000/92=184747.728261
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:10820047.000000/92=117609.206522
+ verification time:19197625.000000/92=208669.836957
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:10903035.000000/92=118511.250000
+ verification time:20510701.000000/92=222942.402174
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:10929624.000000/92=118800.260870
+ verification time:22355504.000000/92=242994.608696
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8195036.000000/93=88118.666667
+ verification time:8802458.000000/93=94650.086022
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8170417.000000/93=87853.946237
+ verification time:10484208.000000/93=112733.419355
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:8085792.000000/93=86944.000000
+ verification time:12406042.000000/93=133398.301075
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8242123.000000/93=88624.978495
+ verification time:14001877.000000/93=150557.817204
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8332993.000000/93=89602.075269
+ verification time:15724213.000000/93=169077.559140
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:13237664.000000/93=142340.473118
+ verification time:17174749.000000/93=184674.720430
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:10931422.000000/93=117542.172043
+ verification time:19391750.000000/93=208513.440860
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:11051076.000000/93=118828.774194
+ verification time:20774659.000000/93=223383.430108
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:11044999.000000/93=118763.430108
+ verification time:22599795.000000/93=243008.548387
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8280744.000000/94=88093.021277
+ verification time:8889041.000000/94=94564.265957
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8256292.000000/94=87832.893617
+ verification time:10602583.000000/94=112793.436170
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:8178334.000000/94=87003.553191
+ verification time:12529876.000000/94=133296.553191
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8331415.000000/94=88632.074468
+ verification time:14150377.000000/94=150535.925532
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8415618.000000/94=89527.851064
+ verification time:15882046.000000/94=168957.936170
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:13374497.000000/94=142281.882979
+ verification time:17353999.000000/94=184617.010638
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:11049338.000000/94=117546.148936
+ verification time:19620750.000000/94=208731.382979
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:11171993.000000/94=118850.989362
+ verification time:20994325.000000/94=223343.882979
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:11163791.000000/94=118763.734043
+ verification time:22842628.000000/94=243006.680851
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8376452.000000/95=88173.178947
+ verification time:8995458.000000/95=94689.031579
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8345667.000000/95=87849.126316
+ verification time:10735083.000000/95=113000.873684
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:8263292.000000/95=86982.021053
+ verification time:12658542.000000/95=133247.810526
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8419832.000000/95=88629.810526
+ verification time:14289252.000000/95=150413.178947
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8514868.000000/95=89630.189474
+ verification time:16040171.000000/95=168843.905263
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:13518122.000000/95=142296.021053
+ verification time:17543124.000000/95=184664.463158
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:11169588.000000/95=117574.610526
+ verification time:19815042.000000/95=208579.389474
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:11299035.000000/95=118937.210526
+ verification time:21211784.000000/95=223281.936842
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:11285291.000000/95=118792.536842
+ verification time:23127211.000000/95=243444.326316
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8460827.000000/96=88133.614583
+ verification time:9136458.000000/96=95171.437500
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8439417.000000/96=87910.593750
+ verification time:10858542.000000/96=113109.812500
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:8347792.000000/96=86956.166667
+ verification time:12816251.000000/96=133502.614583
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8508291.000000/96=88628.031250
+ verification time:14471086.000000/96=150740.479167
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8597951.000000/96=89561.989583
+ verification time:16199213.000000/96=168741.802083
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:13650164.000000/96=142189.208333
+ verification time:17715457.000000/96=184536.010417
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:11275546.000000/96=117453.604167
+ verification time:20009042.000000/96=208427.520833
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:11416077.000000/96=118917.468750
+ verification time:21421825.000000/96=223144.010417
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:11401207.000000/96=118762.572917
+ verification time:23361836.000000/96=243352.458333
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8545911.000000/97=88102.175258
+ verification time:9222916.000000/97=95081.608247
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8525834.000000/97=87895.195876
+ verification time:10962708.000000/97=113017.608247
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:8431583.000000/97=86923.536082
+ verification time:12937959.000000/97=133381.020619
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8590375.000000/97=88560.567010
+ verification time:14609586.000000/97=150614.288660
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8685076.000000/97=89536.865979
+ verification time:16356796.000000/97=168626.762887
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:13780039.000000/97=142062.257732
+ verification time:17907207.000000/97=184610.381443
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:11395838.000000/97=117482.865979
+ verification time:20236500.000000/97=208623.711340
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:11536952.000000/97=118937.649485
+ verification time:21682409.000000/97=223529.989691
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:11521790.000000/97=118781.340206
+ verification time:23631336.000000/97=243622.020619
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8630161.000000/98=88062.867347
+ verification time:9330083.000000/98=95204.928571
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8609667.000000/98=87853.744898
+ verification time:11100708.000000/98=113272.530612
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:8519500.000000/98=86933.673469
+ verification time:13092251.000000/98=133594.397959
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8686667.000000/98=88639.459184
+ verification time:14778919.000000/98=150805.295918
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8769493.000000/98=89484.622449
+ verification time:16521379.000000/98=168585.500000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:13919039.000000/98=142031.010204
+ verification time:18104916.000000/98=184744.040816
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:11521630.000000/98=117567.653061
+ verification time:20455167.000000/98=208726.193878
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:11649536.000000/98=118872.816327
+ verification time:21889159.000000/98=223358.765306
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:11645207.000000/98=118828.642857
+ verification time:23863836.000000/98=243508.530612
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8717536.000000/99=88055.919192
+ verification time:9415417.000000/99=95105.222222
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8697167.000000/99=87850.171717
+ verification time:11209083.000000/99=113223.060606
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:8605709.000000/99=86926.353535
+ verification time:13215709.000000/99=133492.010101
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8772251.000000/99=88608.595960
+ verification time:14919961.000000/99=150706.676768
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8857243.000000/99=89467.101010
+ verification time:16678838.000000/99=168473.111111
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:14063831.000000/99=142058.898990
+ verification time:18282666.000000/99=184673.393939
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:11635589.000000/99=117531.202020
+ verification time:20658625.000000/99=208672.979798
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:11761619.000000/99=118804.232323
+ verification time:22102243.000000/99=223254.979798
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:11771124.000000/99=118900.242424
+ verification time:24100586.000000/99=243440.262626
+sig length:6176buf size:6202
+sig length:6176buf size:6206
+---------- node id ----------[10,0,0,100]
+ signing time:8802661.000000/100=88026.610000
+ verification time:9501917.000000/100=95019.170000
+sig length:6176buf size:6210
+---------- node id ----------[10,0,0,101]
+ signing time:8788125.000000/100=87881.250000
+ verification time:11314458.000000/100=113144.580000
+sig length:6176buf size:6214
+---------- node id ----------[10,0,0,102]
+ signing time:8692542.000000/100=86925.420000
+ verification time:13334042.000000/100=133340.420000
+sig length:6176buf size:6218
+---------- node id ----------[10,0,0,103]
+ signing time:8855751.000000/100=88557.510000
+ verification time:15082878.000000/100=150828.780000
+sig length:6176buf size:6222
+---------- node id ----------[10,0,0,104]
+ signing time:8970993.000000/100=89709.930000
+ verification time:16833838.000000/100=168338.380000
+sig length:6176buf size:6226
+---------- node id ----------[10,0,0,105]
+ signing time:14207790.000000/100=142077.900000
+ verification time:18495499.000000/100=184954.990000
+sig length:6176buf size:6230
+---------- node id ----------[10,0,0,106]
+ signing time:11768506.000000/100=117685.060000
+ verification time:20900875.000000/100=209008.750000
+sig length:6176buf size:6234
+---------- node id ----------[10,0,0,107]
+ signing time:11880703.000000/100=118807.030000
+ verification time:22350910.000000/100=223509.100000
+sig length:6176buf size:6238
+---------- node id ----------[10,0,0,10]
+ signing time:11888416.000000/100=118884.160000
+ verification time:24335086.000000/100=243350.860000

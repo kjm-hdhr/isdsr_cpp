@@ -38,9 +38,9 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rreq(std::vector<std::u
         return nullptr;
     }
 	
-	std::cerr<<"req packet:"<<p.to_string()<<std::endl;
+	//std::cerr<<"req packet:"<<p.to_string()<<std::endl;
 	p.add_id(this->id);
-	std::cerr<<"req packet:"<<p.to_string()<<std::endl;
+	//std::cerr<<"req packet:"<<p.to_string()<<std::endl;
 	next=&(this->broadcast);
 	if(p.is_dest(id)){
 		p.set_type(RREP);
@@ -119,7 +119,7 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_rerr(std::vector<std::u
 array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_data(std::vector<std::uint8_t> &buf){
 	return nullptr;
 }
-array<std::uint8_t,ADDR_SIZE>* isdsr_routing::generate_initiali_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf){
+array<std::uint8_t,ADDR_SIZE>* isdsr_routing::generate_initial_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf){
 	isdsr_packet p(RREQ,id,dest);
 	this->seq++;
 	p.set_seq(this->seq);
