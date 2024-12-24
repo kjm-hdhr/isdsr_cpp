@@ -12,6 +12,7 @@ extern "C"{
 #include <fips202.h>
 #include <packing.h>
 #include <reduce.h>
+#include <randombytes.h>
 #ifdef __cplusplus
 }
 #endif
