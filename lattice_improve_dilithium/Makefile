@@ -19,7 +19,7 @@ dilithium_include = $(dilithium_root_dir)/ref
 dilithium_src = $(dilithium_root_dir)/ref
 dilithium_sources = $(dilithium_root_dir)/ref/sign.c $(dilithium_root_dir)/ref/packing.c \
 				$(dilithium_root_dir)/ref/polyvec.c $(dilithium_root_dir)/ref/poly.c $(dilithium_root_dir)/ref/ntt.c \
-				$(dilithium_root_dir)/ref/reduce.c $(dilithium_root_dir)/ref/rounding.c
+				$(dilithium_root_dir)/ref/reduce.c $(dilithium_root_dir)/ref/rounding.c $(dilithium_root_dir)/ref/randombytes.c
 
 dilithium_headers = $(dilithium_root_dir)/ref/config.h $(dilithium_root_dir)/ref/params.h \
 					$(dilithium_root_dir)/ref/api.h $(dilithium_root_dir)/ref/sign.h \
@@ -28,7 +28,7 @@ dilithium_headers = $(dilithium_root_dir)/ref/config.h $(dilithium_root_dir)/ref
 					$(dilithium_root_dir)/ref/reduce.h $(dilithium_root_dir)/ref/rounding.h \
 					$(dilithium_root_dir)/ref/symmetric.h $(dilithium_root_dir)/ref/randombytes.h
 
-dilithium_objects = sign.o packing.o polyvec.o poly.o ntt.o reduce.o rounding.o
+dilithium_objects = sign.o packing.o polyvec.o poly.o ntt.o reduce.o rounding.o randombytes.o
 
 ssl_include = /opt/homebrew/opt/openssl@3/include
 dilithium_lib = .
