@@ -71,7 +71,7 @@ void adhoc_node::set_routing(adhoc_routing* routing){
 }
 
 void adhoc_node::receive_msg(){
-	std::uint32_t rcv=0;
+	
     vector<std::uint8_t> fragmented_buf;
     std::uint8_t rcv_length[ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE];
     std::uint32_t fragment_length;
@@ -81,9 +81,10 @@ void adhoc_node::receive_msg(){
     //std::cerr<<"receive msg 1"<<std::endl;
     vector<std::uint8_t> fl_array(4);
     while(loop){
-
+        //std::uint32_t rcv=0;
         //std::cerr<<"receive msg 2"<<std::endl;
-        rcv=recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
+        //rcv=recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
+        recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
         //std::cerr<<"receive msg 3 rcv:"<<rcv<<std::endl;
         //std::cerr<<"rcv_length["<<std::to_string(rcv_length[0]);
         //for(int i=1;i<(ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE);i++){
@@ -98,7 +99,8 @@ void adhoc_node::receive_msg(){
         //std::cerr<<"receive msg 5"<<std::endl;
         std::uint8_t rcv_buf[fragment_length];
         //std::cerr<<"receive msg 6"<<std::endl;
-        rcv=recv(this->rcv_sock,rcv_buf,fragment_length,0);
+        //rcv=recv(this->rcv_sock,rcv_buf,fragment_length,0);
+        recv(this->rcv_sock,rcv_buf,fragment_length,0);
         //std::cerr<<"receive msg 7"<<std::endl;
         fragmented_buf.resize(fragment_length);
         
@@ -115,6 +117,7 @@ void adhoc_node::receive_msg(){
         if(defrag==0){
             continue;
         }
+        std::cerr<<"receive message buf length="<<std::to_string(buf.size())<<std::endl;
         next=this->routing->packet_processing(buf);
         
         if(next!=nullptr){

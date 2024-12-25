@@ -4,6 +4,7 @@
 using namespace oit::ist::nws::adhoc_routing;
 
 void isdsr_routing::set_signature_scheme(signature_scheme *ss){
+	std::cerr<<"sig scheme is "<<ss->signature_scheme_name()<<std::endl;
 	this->ss=ss;
 	this->ss->set_id(this->id);
 	this->ss->setup();
@@ -120,6 +121,7 @@ array<std::uint8_t,ADDR_SIZE>* isdsr_routing::processing_data(std::vector<std::u
 	return nullptr;
 }
 array<std::uint8_t,ADDR_SIZE>* isdsr_routing::generate_initial_request(array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf){
+	std::cerr<<"generate initial request"<<std::endl;
 	isdsr_packet p(RREQ,id,dest);
 	this->seq++;
 	p.set_seq(this->seq);

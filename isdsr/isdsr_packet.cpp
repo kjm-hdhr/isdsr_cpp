@@ -49,6 +49,7 @@ std::uint32_t isdsr_packet::serialize(vector<std::uint8_t> &buf){
     return INDEX_SIG+this->sig_length;
 }
 std::uint32_t isdsr_packet::deserialize(const vector<std::uint8_t> &buf){
+    std::cerr<<"buf size="<<std::to_string(buf.size())<<std::endl;
     this->dsr_packet::deserialize(buf);
     this->sig_length=adhoc_util::deserialize_uint32(INDEX_SIG_LENGTH,buf);
     this->sig.resize(this->sig_length);

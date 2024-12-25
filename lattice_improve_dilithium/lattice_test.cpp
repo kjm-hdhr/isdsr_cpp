@@ -37,6 +37,7 @@ int main(int argc, char** argv){
         buf.clear();
         ir_src.generate_initial_request(dest,buf);
         for(int j=0;j<fnodes;j++){
+            //std::cout<<" repeat "<<std::to_string(j)<<"-----------"<<std::endl;
             irs[j].packet_processing(buf);
         }
         ir_dest.packet_processing(buf);

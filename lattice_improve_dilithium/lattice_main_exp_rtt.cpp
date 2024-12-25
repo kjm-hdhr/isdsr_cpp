@@ -60,7 +60,7 @@ int main(int argc, char** argv){
     lattice_sig lattice;
 
     if(exp){
-        adhoc_node_exp ane(ifname);
+        adhoc_node_exp_rtt ane(ifname);
         ane.set_routing(&isdsr);
         isdsr.set_signature_scheme(&lattice);
         lattice.set_id(*(isdsr.get_id()));
@@ -73,6 +73,7 @@ int main(int argc, char** argv){
         std::cout<<"dest ip:"<<adhoc_util::to_string_iparray(dest)<<std::endl;
         ane.set_dest(dest);
         ane.set_repeat_times(std::stoi(string(c_repeat)));
+        ane.set_hops(std::stoi(string(c_hops)));
         ane.set_repeat_interval(1);
         std::cerr<<"exp1"<<std::endl;
         ane.start();

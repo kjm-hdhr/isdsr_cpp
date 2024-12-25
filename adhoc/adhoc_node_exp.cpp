@@ -14,7 +14,7 @@ adhoc_node_exp::~adhoc_node_exp(){
 
 }
 void adhoc_node_exp::receive_msg(){
-	std::uint32_t rcv=0;
+	
     vector<std::uint8_t> fragmented_buf;
     std::uint8_t rcv_length[ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE];
     std::uint32_t fragment_length;
@@ -24,9 +24,10 @@ void adhoc_node_exp::receive_msg(){
     //std::cerr<<"receive msg 1"<<std::endl;
     vector<std::uint8_t> fl_array(4);
     while(loop){
-
+        //std::uint32_t rcv=0;
         //std::cerr<<"receive msg 2"<<std::endl;
-        rcv=recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
+        //rcv=recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
+        recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
         //std::cerr<<"receive msg 3 rcv:"<<rcv<<std::endl;
         //std::cerr<<"rcv_length["<<std::to_string(rcv_length[0]);
         //for(int i=1;i<(ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE);i++){
@@ -41,7 +42,8 @@ void adhoc_node_exp::receive_msg(){
         //std::cerr<<"receive msg 5"<<std::endl;
         std::uint8_t rcv_buf[fragment_length];
         //std::cerr<<"receive msg 6"<<std::endl;
-        rcv=recv(this->rcv_sock,rcv_buf,fragment_length,0);
+        //rcv=recv(this->rcv_sock,rcv_buf,fragment_length,0);
+        recv(this->rcv_sock,rcv_buf,fragment_length,0);
         //std::cerr<<"receive msg 7"<<std::endl;
         fragmented_buf.resize(fragment_length);
         
@@ -126,4 +128,128 @@ void adhoc_node_exp::measure_time(){
     std::cout<<" to "<<adhoc_util::to_string_iparray(this->ip_dest)<< std::endl;
     std::cout<<std::to_string(durations.size())<<" route establishment";
     std::cout<<" average rtt:"<<std::to_string(avg)<<std::endl;
+}
+
+void adhoc_node_exp_rtt::start(){
+    this->loop=true;
+    std::cerr<<"start 1"<<std::endl;
+    this->rcv_th=std::thread(&adhoc_node_exp::receive_msg, this);
+    this->establish_route(this->ip_dest);
+    /*
+    for(int i=0;i<this->repeat_time;i++){
+        std::cout<<"repeat:"<<std::to_string(i)<<" of "<<std::to_string(this->repeat_time)<<std::endl;
+        this->establish_route(this->ip_dest);
+        std::this_thread::sleep_for(std::chrono::seconds(this->repeat_interval));
+    }
+    */
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+    this->measure_time();
+    std::cerr<<"start 2"<<std::endl;
+    this->rcv_th.join();
+}
+
+void adhoc_node_exp_rtt::establish_route(array<std::uint8_t,ADDR_SIZE> &dest){
+    vector<std::uint8_t> buf;
+    array<std::uint8_t,ADDR_SIZE>* next;
+    std::cerr<<"establish route routing:"<<routing->routing_name()<<std::endl;
+    if(this->hops==1){
+        std::cerr<<"establish route 1 hop"<<std::endl;
+        next=this->routing->generate_initiali_request(dest,buf);
+        std::cerr<<"establish route 1 hop"<<std::endl;
+    }
+    else{
+        array<std::uint8_t,ADDR_SIZE> tmp={10,0,0,101};
+        this->routing->set_id(tmp);
+        next=this->routing->generate_initiali_request(dest,buf);
+        for(int i=1;i<this->hops-1;i++){
+            tmp[3]=tmp[3]+1;
+            this->routing->set_id(tmp);
+            this->routing->packet_processing(buf);
+        }
+        this->routing->set_id(this->ip_addr);
+        routing->packet_processing(buf);
+    }
+    std::cerr<<"ane_rtt establish route buf size="<<std::to_string(buf.size())<<std::endl;
+    std::uint32_t seq=0;
+    for(int i=0;i<this->repeat_time;i++){
+        seq++;
+        adhoc_util::serialize_uint32(0,buf,seq);
+        std::cerr<<"message sent including "<<std::to_string(this->hops)<< " hops seq:"<<std::to_string(seq)<<std::endl;
+        this->rtt_s.insert(std::make_pair(seq,std::chrono::steady_clock::now()));
+        this->send_msg(*next,buf);
+        std::this_thread::sleep_for(std::chrono::seconds(this->repeat_interval));
+    }
+    //next=this->routing->generate_initiali_request(dest,buf);
+    //std::uint32_t seq=adhoc_util::deserialize_uint32(0,buf);
+    //std::cerr<<"route establishment seq:"<<std::to_string(seq)<<std::endl;
+    //this->rtt_s.insert(std::make_pair(seq,std::chrono::steady_clock::now()));
+    //this->send_msg(*next,buf);
+}
+void adhoc_node_exp_rtt::receive_msg(){
+	
+    vector<std::uint8_t> fragmented_buf;
+    std::uint8_t rcv_length[ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE];
+    std::uint32_t fragment_length;
+    arf_packet arfp;
+    vector<std::uint8_t> buf;
+    //array<std::uint8_t,ADDR_SIZE> *next;
+    //std::cerr<<"receive msg 1"<<std::endl;
+    vector<std::uint8_t> fl_array(4);
+    while(loop){
+        //std::uint32_t rcv=0;
+        //std::cerr<<"receive msg 2"<<std::endl;
+        //rcv=recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
+        recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
+        //std::cerr<<"receive msg 3 rcv:"<<rcv<<std::endl;
+        //std::cerr<<"rcv_length["<<std::to_string(rcv_length[0]);
+        //for(int i=1;i<(ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE);i++){
+        //    std::cerr<<","<<std::to_string(rcv_length[i]);
+        //}
+        //std::cerr<<"]"<<std::endl;
+        //std::copy(std::begin(rcv_length)+INDEX_FRAGMENT_LENGTH,std::end(rcv_length),buf.begin());
+        std::copy(std::begin(rcv_length)+INDEX_FRAGMENT_LENGTH,std::end(rcv_length),fl_array.begin());
+        //std::cerr<<"receive msg 4"<<std::endl;
+        //fragment_length=adhoc_util::deserialize_uint32(0,buf);
+        fragment_length=adhoc_util::deserialize_uint32(0,fl_array);
+        //std::cerr<<"receive msg 5"<<std::endl;
+        std::uint8_t rcv_buf[fragment_length];
+        //std::cerr<<"receive msg 6"<<std::endl;
+        //rcv=recv(this->rcv_sock,rcv_buf,fragment_length,0);
+        recv(this->rcv_sock,rcv_buf,fragment_length,0);
+        //std::cerr<<"receive msg 7"<<std::endl;
+        fragmented_buf.resize(fragment_length);
+        
+        //std::cerr<<"receive msg 8"<<std::endl;
+        for(std::uint32_t i=0;i<fragment_length;i++){
+            fragmented_buf[i]=rcv_buf[i];
+            //std::cerr<<","<<std::to_string(fragmented_buf[i]);
+        }
+        //std::cerr<<std::endl;
+        
+        arfp.deserialize(fragmented_buf);
+        //std::cerr<<"arfp:"<<arfp.to_string()<<std::endl;
+        int defrag=arfm.defragment(arfp,buf);
+        if(defrag==0){
+            continue;
+        }
+        std::uint32_t seq=adhoc_util::deserialize_uint32(0,buf);
+        this->rtt_r.insert(std::make_pair(seq,std::chrono::steady_clock::now()));
+        std::cerr<<"receive msg 8"<<std::endl;
+        /*
+        next=this->routing->packet_processing(buf);
+
+        std::cerr<<"receive msg 8"<<std::endl;
+        if(next!=nullptr){
+            std::cout<<"------------- next address = "<<adhoc_util::to_string_iparray(*next)<<std::endl;
+            if(this->is_own_id(*next)){
+                this->rtt_r.insert(std::make_pair(seq,std::chrono::steady_clock::now()));
+                std::cout<<"route established seq:"<<std::to_string(seq)<<std::endl;
+                continue;
+            }
+            this->send_msg(*next,buf);
+            std::cerr<<"rec next:"<<adhoc_util::to_string_iparray(*next)<<std::endl;
+        }
+        */
+        //std::cerr<<"receive msg 9"<<std::endl;
+    }
 }

@@ -304,6 +304,7 @@ void lattice_sig::sign(isdsr_packet &p){
     if(p.get_ri_length()==1){
         p.get_sig()->resize(SIG_LENGTH);
         this->serialize_signature(*(p.get_sig()),sig);
+        std::cerr<<"lattice sign sig length="<<std::to_string(p.get_sig()->size())<<std::endl;
         return;
     }
     lattice_signature prev_sig;
