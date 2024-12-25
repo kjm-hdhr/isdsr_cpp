@@ -3,6 +3,14 @@
 #include <iostream>
 using namespace oit::ist::nws::adhoc_routing;
 
+void isdsr_routing::set_id(std::array<std::uint8_t,ADDR_SIZE> &id){
+	adhoc_routing::set_id(id);
+	if(this->ss!=nullptr){
+		this->ss->set_id(this->id);
+		this->ss->setup();
+		this->ss->key_derivation();
+	}
+}
 void isdsr_routing::set_signature_scheme(signature_scheme *ss){
 	std::cerr<<"sig scheme is "<<ss->signature_scheme_name()<<std::endl;
 	this->ss=ss;

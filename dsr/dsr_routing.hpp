@@ -12,11 +12,11 @@ class dsr_routing:public adhoc_routing{
 	dsr_routing(){}
 	~dsr_routing(){}
 	string routing_name(){return string("dsr");}
-	virtual array<uint8_t,ADDR_SIZE>* processing_rreq(std::vector<uint8_t> &buf);
-	virtual array<uint8_t,ADDR_SIZE>* processing_rrep(std::vector<uint8_t> &buf);
-	virtual array<uint8_t,ADDR_SIZE>* processing_rerr(std::vector<uint8_t> &buf);
-	virtual array<uint8_t,ADDR_SIZE>* processing_data(std::vector<uint8_t> &buf);
-	virtual array<uint8_t,ADDR_SIZE>* generate_initiali_request(array<uint8_t,ADDR_SIZE> dest, std::vector<uint8_t> &buf);
+	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_rreq(std::vector<std::uint8_t> &buf);
+	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_rrep(std::vector<std::uint8_t> &buf);
+	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_rerr(std::vector<std::uint8_t> &buf);
+	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_data(std::vector<std::uint8_t> &buf);
+	virtual std::array<std::uint8_t,ADDR_SIZE>* generate_initial_request(std::array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf);
 };
 }
 #endif

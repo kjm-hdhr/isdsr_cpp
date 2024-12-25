@@ -99,7 +99,7 @@ void adhoc_node_exp::stop(){
 void adhoc_node_exp::establish_route(array<std::uint8_t,ADDR_SIZE> &dest){
     vector<std::uint8_t> buf;
     array<std::uint8_t,ADDR_SIZE>* next;
-    next=this->routing->generate_initiali_request(dest,buf);
+    next=this->routing->generate_initial_request(dest,buf);
     std::uint32_t seq=adhoc_util::deserialize_uint32(0,buf);
     std::cerr<<"route establishment seq:"<<std::to_string(seq)<<std::endl;
     this->rtt_s.insert(std::make_pair(seq,std::chrono::steady_clock::now()));
@@ -154,13 +154,13 @@ void adhoc_node_exp_rtt::establish_route(array<std::uint8_t,ADDR_SIZE> &dest){
     std::cerr<<"establish route routing:"<<routing->routing_name()<<std::endl;
     if(this->hops==1){
         std::cerr<<"establish route 1 hop"<<std::endl;
-        next=this->routing->generate_initiali_request(dest,buf);
+        next=this->routing->generate_initial_request(dest,buf);
         std::cerr<<"establish route 1 hop"<<std::endl;
     }
     else{
         array<std::uint8_t,ADDR_SIZE> tmp={10,0,0,101};
         this->routing->set_id(tmp);
-        next=this->routing->generate_initiali_request(dest,buf);
+        next=this->routing->generate_initial_request(dest,buf);
         for(int i=1;i<this->hops-1;i++){
             tmp[3]=tmp[3]+1;
             this->routing->set_id(tmp);
@@ -179,7 +179,7 @@ void adhoc_node_exp_rtt::establish_route(array<std::uint8_t,ADDR_SIZE> &dest){
         this->send_msg(*next,buf);
         std::this_thread::sleep_for(std::chrono::seconds(this->repeat_interval));
     }
-    //next=this->routing->generate_initiali_request(dest,buf);
+    //next=this->routing->generate_initial_request(dest,buf);
     //std::uint32_t seq=adhoc_util::deserialize_uint32(0,buf);
     //std::cerr<<"route establishment seq:"<<std::to_string(seq)<<std::endl;
     //this->rtt_s.insert(std::make_pair(seq,std::chrono::steady_clock::now()));

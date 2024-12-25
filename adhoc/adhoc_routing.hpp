@@ -14,7 +14,7 @@ class adhoc_routing{
 	public:
 	adhoc_routing(){this->seq=0;}
 	~adhoc_routing(){}
-	void set_id(std::array<std::uint8_t,ADDR_SIZE> &id){
+	virtual void set_id(std::array<std::uint8_t,ADDR_SIZE> &id){
         std::copy(id.begin(),id.end(),this->id.begin());
     }
 	void set_next(std::array<std::uint8_t,ADDR_SIZE> &id){
@@ -58,7 +58,7 @@ class adhoc_routing{
 	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_rrep(std::vector<std::uint8_t> &buf)=0;
 	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_rerr(std::vector<std::uint8_t> &buf)=0;
 	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_data(std::vector<std::uint8_t> &buf)=0;
-	virtual std::array<std::uint8_t,ADDR_SIZE>* generate_initiali_request(std::array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf)=0;
+	virtual std::array<std::uint8_t,ADDR_SIZE>* generate_initial_request(std::array<std::uint8_t,ADDR_SIZE> dest, std::vector<std::uint8_t> &buf)=0;
     virtual std::string routing_name()=0;
 };
 }

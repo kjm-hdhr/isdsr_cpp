@@ -54,7 +54,7 @@ lattice_node: libpqcrystals $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(isdsr_rt) $(latt
 	g++ -O2 -Wall -g -o lattice_node $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main.cpp -std=c++17 $(flags)
 
 lattice_exp_rtt:libpqcrystals $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main_exp_rtt.cpp
-	g++ -O2 -Wall -o lattice_exp_rtt $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main_exp_rtt.cpp -std=c++17 $(flags)
+	g++  -Wall -o lattice_exp_rtt $(adhoc_rt) $(dsr_rt) $(isdsr_rt) $(lattice_rt) $(lattice_rt_dir)/lattice_main_exp_rtt.cpp -std=c++17 $(flags)
 
 clean:
 	rm *.o *.a lattice_sig_test lattice_test lattice_node

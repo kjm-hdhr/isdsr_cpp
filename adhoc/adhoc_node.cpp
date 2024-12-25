@@ -199,7 +199,7 @@ void adhoc_node::stop(){
 void adhoc_node::establish_route(array<std::uint8_t,ADDR_SIZE> &dest){
     vector<std::uint8_t> buf;
     array<std::uint8_t,ADDR_SIZE>* next;
-    next=this->routing->generate_initiali_request(dest,buf);
+    next=this->routing->generate_initial_request(dest,buf);
     this->send_msg(*next,buf);
 }
 string adhoc_node::to_string(){
