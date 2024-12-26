@@ -20,11 +20,11 @@ class isdsr_packet : public dsr_packet{
 	vector<std::uint8_t>* get_sig(){return &(this->sig);}
 	std::uint32_t get_sig_length(){this->sig_length=this->sig.size();return this->sig_length;}
 	void set_sig(vector<std::uint8_t> &sig){this->sig.resize(sig.size());std::copy(sig.begin(),sig.end(),this->sig.begin());};
-	virtual std::uint32_t packet_size();
-	virtual void initialize();
-	virtual std::uint32_t serialize(vector<std::uint8_t> &buf);
-	virtual std::uint32_t deserialize(const vector<std::uint8_t> &buf);
-	virtual string to_string();
+	virtual std::uint32_t packet_size() override;
+	virtual void initialize() override;
+	virtual std::uint32_t serialize(vector<std::uint8_t> &buf) override;
+	virtual std::uint32_t deserialize(const vector<std::uint8_t> &buf) override;
+	virtual string to_string() override;
 };
 };
 #endif

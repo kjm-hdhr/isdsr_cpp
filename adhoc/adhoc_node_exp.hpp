@@ -43,11 +43,9 @@ class adhoc_node_exp_rtt : public adhoc_node_exp{
     ~adhoc_node_exp_rtt(){};
     void set_hops(std::uint8_t h){this->hops=h;};
     //void generate_exp_packet();
-    void establish_route(array<std::uint8_t,ADDR_SIZE> &dest);
-    void set_repeat_times(int r){this->repeat_time=r;}
-    void set_repeat_interval(int i){this->repeat_interval=i;}
-    void virtual receive_msg();
-    void virtual start();
+    void establish_route(array<std::uint8_t,ADDR_SIZE> &dest) override;
+    void virtual receive_msg() override;
+    void virtual start() override;
     //void virtual stop();
     //void virtual measure_time();
     

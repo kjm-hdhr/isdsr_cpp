@@ -67,11 +67,11 @@ class ecdsa_sig:public signature_scheme{
     public:
     ecdsa_sig(){}
     ~ecdsa_sig(){}
-    virtual void setup();
-    virtual void key_derivation();
-    virtual void sign(isdsr_packet &pkt);
-    virtual bool verify(isdsr_packet &pkt);
-    virtual string signature_scheme_name(){return "ecdsa";};
+    virtual void setup() override;
+    virtual void key_derivation() override;
+    virtual void sign(isdsr_packet &pkt) override;
+    virtual bool verify(isdsr_packet &pkt) override;
+    virtual string signature_scheme_name() override {return "ecdsa";};
 };
 };
 #endif

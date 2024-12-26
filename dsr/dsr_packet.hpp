@@ -24,11 +24,11 @@ class dsr_packet:public ar_packet{
     std::array<std::uint8_t,ADDR_SIZE>* previous_id(std::array<std::uint8_t,ADDR_SIZE> &id);//return a previous id of own id
     int get_ri_length(){this->ri_length=ri.size();return this->ri_length;}
     std::vector<array<std::uint8_t,ADDR_SIZE>>* get_ri(){return &(this->ri);}
-    virtual std::uint32_t packet_size();
-	virtual void initialize();
-	virtual std::uint32_t serialize(std::vector<std::uint8_t> &buf);
-	virtual std::uint32_t deserialize(const std::vector<std::uint8_t> &buf);
-	virtual string to_string();
+    virtual std::uint32_t packet_size() override;
+	virtual void initialize() override;
+	virtual std::uint32_t serialize(std::vector<std::uint8_t> &buf) override;
+	virtual std::uint32_t deserialize(const std::vector<std::uint8_t> &buf) override;
+	virtual string to_string() override;
 };
 };
 
