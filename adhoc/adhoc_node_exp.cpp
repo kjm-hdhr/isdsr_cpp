@@ -112,7 +112,7 @@ void adhoc_node_exp::measure_time(){
         //std::cerr<<"measure1"<<std::endl;
         if (this->rtt_r.find(t.first) != this->rtt_r.end()) {
             //std::cerr<<"measure2"<<std::endl;
-            durations.push_back(((double)std::chrono::duration_cast<std::chrono::milliseconds>(rtt_r.at(t.first)-t.second).count())/1000);
+            durations.push_back(((double)std::chrono::duration_cast<std::chrono::nanoseconds>(rtt_r.at(t.first)-t.second).count())/1000);
         }
     }
     double sum=0;
@@ -133,7 +133,7 @@ void adhoc_node_exp::measure_time(){
 void adhoc_node_exp_rtt::start(){
     this->loop=true;
     std::cerr<<"start 1"<<std::endl;
-    this->rcv_th=std::thread(&adhoc_node_exp::receive_msg, this);
+    this->rcv_th=std::thread(&adhoc_node_exp_rtt::receive_msg, this);
     this->establish_route(this->ip_dest);
     /*
     for(int i=0;i<this->repeat_time;i++){
@@ -193,14 +193,15 @@ void adhoc_node_exp_rtt::receive_msg(){
     arf_packet arfp;
     vector<std::uint8_t> buf;
     //array<std::uint8_t,ADDR_SIZE> *next;
-    //std::cerr<<"receive msg 1"<<std::endl;
+    std::cerr<<"receive msg 1"<<std::endl;
     vector<std::uint8_t> fl_array(4);
     while(loop){
         //std::uint32_t rcv=0;
-        //std::cerr<<"receive msg 2"<<std::endl;
+        std::cerr<<"receive msg 2"<<std::endl;
         //rcv=recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
         recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
         //std::cerr<<"receive msg 3 rcv:"<<rcv<<std::endl;
+        std::cerr<<"receive msg 3 rcv:"<<std::endl;
         //std::cerr<<"rcv_length["<<std::to_string(rcv_length[0]);
         //for(int i=1;i<(ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE);i++){
         //    std::cerr<<","<<std::to_string(rcv_length[i]);

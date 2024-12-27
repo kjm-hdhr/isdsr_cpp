@@ -27,7 +27,7 @@ class adhoc_routing{
 	std::array<std::uint8_t,ADDR_SIZE>* get_next(){return &(this->next);}
 	std::array<std::uint8_t,ADDR_SIZE>* get_broadcast(){return &(this->broadcast);}
     std::string to_string(){
-        string ret="routing name"+this->routing_name();
+        string ret="routing name:"+this->routing_name();
         ret+=" id:"+adhoc_util::to_string_iparray(this->id);
         ret+=" brd:"+adhoc_util::to_string_iparray(this->broadcast);
         return ret;

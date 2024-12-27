@@ -13,16 +13,16 @@ array<std::uint8_t,ADDR_SIZE>* dsr_routing::processing_rreq(std::vector<std::uin
 	if(p.is_src(this->id)){
 		return nullptr;
 	}
-	std::cerr<<"req packet:"<<p.to_string()<<std::endl;
+	std::cerr<<"req1 packet:"<<p.to_string()<<std::endl;
 	p.add_id(this->id);
-	std::cerr<<"req packet:"<<p.to_string()<<std::endl;
+	
 	next=&(this->broadcast);
 	if(p.is_dest(id)){
 		p.set_type(RREP);
 		p.swap_src_dest();
 		next=p.previous_id(id);
 	}
-
+	std::cerr<<"req2 packet:"<<p.to_string()<<std::endl;
 	std::copy(next->begin(),next->end(),this->next.begin());
 	p.set_next(this->next);
 	p.serialize(buf);
@@ -62,6 +62,7 @@ array<std::uint8_t,ADDR_SIZE>* dsr_routing::generate_initial_request(array<std::
 	this->seq++;
 	p.set_seq(this->seq);
 	p.add_id(id);
+	std::cerr<<"dsr packet="<<p.to_string()<<std::endl;
 	p.serialize(buf);
 	return &(this->broadcast);
 }

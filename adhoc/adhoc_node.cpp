@@ -78,14 +78,15 @@ void adhoc_node::receive_msg(){
     arf_packet arfp;
     vector<std::uint8_t> buf;
     array<std::uint8_t,ADDR_SIZE> *next;
-    //std::cerr<<"receive msg 1"<<std::endl;
+    std::cerr<<"receive msg 1"<<std::endl;
     vector<std::uint8_t> fl_array(4);
     while(loop){
         //std::uint32_t rcv=0;
-        //std::cerr<<"receive msg 2"<<std::endl;
+        std::cerr<<"receive msg 2"<<std::endl;
         //rcv=recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
         recv(this->rcv_sock,rcv_length,ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE,MSG_PEEK);
         //std::cerr<<"receive msg 3 rcv:"<<rcv<<std::endl;
+        std::cerr<<"receive msg 3 rcv:"<<std::endl;
         //std::cerr<<"rcv_length["<<std::to_string(rcv_length[0]);
         //for(int i=1;i<(ARF_HEADER_LENGTH+FRAGMENT_LENGTH_SIZE);i++){
         //    std::cerr<<","<<std::to_string(rcv_length[i]);
@@ -104,7 +105,7 @@ void adhoc_node::receive_msg(){
         //std::cerr<<"receive msg 7"<<std::endl;
         fragmented_buf.resize(fragment_length);
         
-        //std::cerr<<"receive msg 8"<<std::endl;
+        std::cerr<<"receive msg 8"<<std::endl;
         for(std::uint32_t i=0;i<fragment_length;i++){
             fragmented_buf[i]=rcv_buf[i];
             //std::cerr<<","<<std::to_string(fragmented_buf[i]);
