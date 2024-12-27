@@ -62,11 +62,15 @@ void ecdsa_sig::deserialize_sig(signature &sig, const vector<std::uint8_t> &buf)
 	mclBnG2_deserialize(&(sig.g3g2),&buf[INDEX_SIG_3G2],G2_LENGTH);
 }
 void ecdsa_sig::setup(){
+    std::cerr<<"ecdsa setup1"<<std::endl;
 	int ret = mclBn_init(MCL_BLS12_381, MCLBN_COMPILED_TIME_VAR);
+    std::cerr<<"ecdsa setup2"<<std::endl;
 	if (ret != 0) {
 		printf("err ret=%d\n", ret);
 		return ;
 	}
+
+    std::cerr<<"ecdsa setup3"<<std::endl;
 	this->deserialize_keys();
 }
 void ecdsa_sig::key_derivation(){

@@ -4,6 +4,7 @@
 #include "../isdsr/isdsr_routing.hpp"
 #include "ecdsa_sig.hpp"
 #include <array>
+#include <memory>
 #include <unistd.h>
 
 #include <arpa/inet.h>
@@ -11,7 +12,7 @@ using namespace oit::ist::nws::adhoc_routing;
 
 int main(int argc, char** argv){
     //args -i ifname -d dest ip
-    const char* optstring = "i:d:r:";
+    const char* optstring = "i:d:r:h:";
     opterr = 0; // disable error log
 
     // non-option or end of argument list or error('?')までloop
@@ -19,6 +20,8 @@ int main(int argc, char** argv){
     char *c_ifname=nullptr;
     char *c_dest=nullptr;
     char *c_repeat=nullptr;
+    char *c_hops=nullptr;
+
     bool exp=false;
     while ((c=getopt(argc, argv, optstring)) != -1) {
         //printf("opt=%c ", c);
@@ -33,6 +36,11 @@ int main(int argc, char** argv){
             }
             case 'r':{
                 c_repeat=optarg;
+                exp=true;
+                break;
+            }
+            case 'h':{
+                c_hops=optarg;
                 exp=true;
                 break;
             }
@@ -52,7 +60,7 @@ int main(int argc, char** argv){
     ecdsa_sig ecdsa;
 
     if(exp){
-        adhoc_node_exp ane(ifname);
+        adhoc_node_exp_rtt ane(ifname);
         ane.set_routing(&isdsr);
         isdsr.set_signature_scheme(&ecdsa);
         ecdsa.set_id(*(isdsr.get_id()));
@@ -60,11 +68,12 @@ int main(int argc, char** argv){
         std::cout<<isdsr.to_string()<<std::endl;
         struct in_addr inaddr;
         inet_aton(c_dest,&inaddr);
-        std::array<uint8_t,ADDR_SIZE> dest;
+        array<uint8_t,ADDR_SIZE> dest;
         adhoc_util::ip_to_array(inaddr.s_addr,dest);
         std::cout<<"dest ip:"<<adhoc_util::to_string_iparray(dest)<<std::endl;
         ane.set_dest(dest);
         ane.set_repeat_times(std::stoi(string(c_repeat)));
+        ane.set_hops(std::stoi(string(c_hops)));
         ane.set_repeat_interval(1);
         std::cerr<<"exp1"<<std::endl;
         ane.start();

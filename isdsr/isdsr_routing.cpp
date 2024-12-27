@@ -4,15 +4,19 @@
 using namespace oit::ist::nws::adhoc_routing;
 
 void isdsr_routing::set_id(std::array<std::uint8_t,ADDR_SIZE> &id){
+	
 	adhoc_routing::set_id(id);
+	
 	if(this->ss!=nullptr){
 		this->ss->set_id(this->id);
+		std::cerr<<"isdsr routing ss!=null"<<std::endl;
 		this->ss->setup();
+		std::cerr<<"isdsr routing ss!=null"<<std::endl;
 		this->ss->key_derivation();
+		std::cerr<<"isdsr routing ss!=null"<<std::endl;
 	}
 }
 void isdsr_routing::set_signature_scheme(signature_scheme *ss){
-	std::cerr<<"sig scheme is "<<ss->signature_scheme_name()<<std::endl;
 	this->ss=ss;
 	this->ss->set_id(this->id);
 	this->ss->setup();
