@@ -1,3 +1,0 @@
-/root/workspace/git_workspace/isdsr_cpp/ecdsa/build/CMakeFiles/ecdsa.dir
-/root/workspace/git_workspace/isdsr_cpp/ecdsa/build/CMakeFiles/edit_cache.dir
-/root/workspace/git_workspace/isdsr_cpp/ecdsa/build/CMakeFiles/rebuild_cache.dir

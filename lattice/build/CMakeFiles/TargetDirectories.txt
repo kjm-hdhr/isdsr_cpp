@@ -1,5 +1,0 @@
-/root/workspace/git_workspace/isdsr_cpp/lattice/build/CMakeFiles/fips202.dir
-/root/workspace/git_workspace/isdsr_cpp/lattice/build/CMakeFiles/dilithium2.dir
-/root/workspace/git_workspace/isdsr_cpp/lattice/build/CMakeFiles/lattice.dir
-/root/workspace/git_workspace/isdsr_cpp/lattice/build/CMakeFiles/edit_cache.dir
-/root/workspace/git_workspace/isdsr_cpp/lattice/build/CMakeFiles/rebuild_cache.dir
