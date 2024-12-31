@@ -7,7 +7,7 @@ lattice_rt_dir = $(root_dir)/lattice_improve
 
 adhoc_rt = $(adhoc_rt_dir)/adhoc_routing_fragment.cpp $(adhoc_rt_dir)/adhoc_routing_packet.cpp $(adhoc_rt_dir)/adhoc_node.cpp $(adhoc_rt_dir)/adhoc_node_exp.cpp
 dsr_rt = $(dsr_rt_dir)/dsr_routing.cpp $(dsr_rt_dir)/dsr_packet.cpp
-isdsr_rt = $(isdsr_rt_dir)/isdsr_packet.cpp $(isdsr_rt_dir)/isdsr_routing.cpp
+isdsr_rt = $(isdsr_rt_dir)/isdsr_packet.cpp $(isdsr_rt_dir)/isdsr_routing.cpp $(isdsr_rt_dir)/signature_scheme.cpp
 #lattice_rt = $(lattice_rt_dir)/matrix_calc.cpp $(lattice_rt_dir)/polyvec.cpp  $(lattice_rt_dir)/lattice_sig.cpp 
 lattice_rt = $(lattice_rt_dir)/matrix.cpp $(lattice_rt_dir)/polyvec_op.cpp  $(lattice_rt_dir)/lattice_sig.cpp 
 

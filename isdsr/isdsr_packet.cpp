@@ -26,6 +26,18 @@ void isdsr_packet::initialize(){
     this->sig.clear();
 }
 
+std::vector<std::uint8_t>* isdsr_packet::get_sig(){
+    return &(this->sig);
+}
+std::uint32_t isdsr_packet::get_sig_length(){
+    this->sig_length=this->sig.size();
+    return this->sig_length;
+}
+void isdsr_packet::set_sig(std::vector<std::uint8_t> &sig){
+    this->sig.resize(sig.size());
+    std::copy(sig.begin(),sig.end(),this->sig.begin());
+}
+
 std::uint32_t isdsr_packet::serialize(vector<std::uint8_t> &buf){
     if(buf.size()<this->packet_size()){
         buf.resize(this->packet_size(),0);

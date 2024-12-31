@@ -35,6 +35,13 @@ array<std::uint8_t,ADDR_SIZE>* dsr_packet::previous_id(array<std::uint8_t,ADDR_S
     }
     return &(this->ri.at(index-1));
 }
+int dsr_packet::get_ri_length(){
+    this->ri_length=ri.size();
+    return this->ri_length;
+}
+std::vector<array<std::uint8_t,ADDR_SIZE>>* dsr_packet::get_ri(){
+    return &(this->ri);
+}
 std::uint32_t dsr_packet::packet_size(){
     std::uint32_t ret=this->ar_packet::packet_size();
     this->ri_length=this->ri.size();

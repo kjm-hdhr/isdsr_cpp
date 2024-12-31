@@ -1,0 +1,2 @@
+/usr/bin/ar qc libisdsr.a CMakeFiles/isdsr.dir/isdsr_packet.cpp.o CMakeFiles/isdsr.dir/isdsr_routing.cpp.o CMakeFiles/isdsr.dir/signature_scheme.cpp.o
+/usr/bin/ranlib libisdsr.a

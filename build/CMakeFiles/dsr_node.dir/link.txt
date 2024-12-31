@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/dsr_node.dir/main_exp.cpp.o -o dsr_node  dsr/libdsr.a adhoc/libadhoc.a 

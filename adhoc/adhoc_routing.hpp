@@ -12,48 +12,16 @@ class adhoc_routing{
     std::array<std::uint8_t,ADDR_SIZE> broadcast;
 
 	public:
-	adhoc_routing(){this->seq=0;}
-	~adhoc_routing(){}
-	virtual void set_id(std::array<std::uint8_t,ADDR_SIZE> &id){
-        std::copy(id.begin(),id.end(),this->id.begin());
-    }
-	void set_next(std::array<std::uint8_t,ADDR_SIZE> &id){
-        std::copy(id.begin(),id.end(),this->next.begin());
-    }
-	void set_broadcast(std::array<std::uint8_t,ADDR_SIZE> &id){
-        std::copy(id.begin(),id.end(),this->broadcast.begin());
-    }
-	std::array<std::uint8_t,ADDR_SIZE>* get_id(){return &(this->id);}
-	std::array<std::uint8_t,ADDR_SIZE>* get_next(){return &(this->next);}
-	std::array<std::uint8_t,ADDR_SIZE>* get_broadcast(){return &(this->broadcast);}
-    std::string to_string(){
-        string ret="routing name:"+this->routing_name();
-        ret+=" id:"+adhoc_util::to_string_iparray(this->id);
-        ret+=" brd:"+adhoc_util::to_string_iparray(this->broadcast);
-        return ret;
-    }
-
-	virtual std::array<std::uint8_t,ADDR_SIZE>* packet_processing(std::vector<std::uint8_t> &buf){
-        
-        switch(buf.at(INDEX_TYPE)){
-            case RREQ:{
-                return this->processing_rreq(buf);
-            }
-            case RREP:{
-                return this->processing_rrep(buf);
-            }
-            case RERR:{
-                return this->processing_rerr(buf);
-            }
-            case DATA:{
-                return this->processing_data(buf);
-            }
-            default:{
-
-            }
-        }
-        return nullptr;
-    }
+	adhoc_routing();
+	~adhoc_routing();
+	virtual void set_id(std::array<std::uint8_t,ADDR_SIZE> &id);
+	void set_next(std::array<std::uint8_t,ADDR_SIZE> &id);
+	void set_broadcast(std::array<std::uint8_t,ADDR_SIZE> &id);
+	std::array<std::uint8_t,ADDR_SIZE>* get_id();
+	std::array<std::uint8_t,ADDR_SIZE>* get_next();
+	std::array<std::uint8_t,ADDR_SIZE>* get_broadcast();
+    virtual std::string to_string();
+	virtual std::array<std::uint8_t,ADDR_SIZE>* packet_processing(std::vector<std::uint8_t> &buf);
 	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_rreq(std::vector<std::uint8_t> &buf)=0;
 	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_rrep(std::vector<std::uint8_t> &buf)=0;
 	virtual std::array<std::uint8_t,ADDR_SIZE>* processing_rerr(std::vector<std::uint8_t> &buf)=0;

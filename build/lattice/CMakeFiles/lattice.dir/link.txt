@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblattice.a CMakeFiles/lattice.dir/lattice_sig.cpp.o CMakeFiles/lattice.dir/matrix.cpp.o CMakeFiles/lattice.dir/polyvec_op.cpp.o
+/usr/bin/ranlib liblattice.a

@@ -2,6 +2,18 @@
 #include <algorithm>
 #include <iostream>
 using namespace oit::ist::nws::adhoc_routing;
+isdsr_routing::isdsr_routing(){
+	this->t_sign=0;
+	this->t_verify=0;
+	this->c_sign=0;
+	this->c_verify=0;
+	this->ss=nullptr;
+}
+isdsr_routing::~isdsr_routing(){}
+
+string isdsr_routing::routing_name(){
+	return string("isdsr")+" "+ss->signature_scheme_name();
+}
 
 void isdsr_routing::set_id(std::array<std::uint8_t,ADDR_SIZE> &id){
 	

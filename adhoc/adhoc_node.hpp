@@ -4,6 +4,10 @@
 #include "adhoc_routing.hpp"
 #include "adhoc_routing_fragment.hpp"
 #include <thread>
+#include <chrono>
+#include <map>
+#include <unordered_map>
+
 namespace oit::ist::nws::adhoc_routing{
 
 #define PORT 20000
@@ -23,26 +27,46 @@ class adhoc_node{
     int send_sock;
     int rcv_sock;
     bool loop;
+    std::uint32_t seq;
 
+    adhoc_node();
     void initialize(string &if_name);
     int get_interface();
-    bool is_own_id(array<std::uint8_t,ADDR_SIZE> &id){return std::equal(id.begin(),id.end(),this->ip_addr.begin(),this->ip_addr.end());}
-    adhoc_node();
-    std::uint32_t seq;
+    bool is_own_id(array<std::uint8_t,ADDR_SIZE> &id);
+    int receive(std::vector<std::uint8_t> &buf);
+    virtual void after_received(std::vector<std::uint8_t> &buf);
+
     public:
     adhoc_node(string &if_name);
     ~adhoc_node();
-    void set_dest(array<std::uint8_t,ADDR_SIZE> &dest){std::copy(dest.begin(),dest.end(),this->ip_dest.begin());}
+    void set_dest(array<std::uint8_t,ADDR_SIZE> &dest);
     void set_routing(adhoc_routing* routing);
-    void establish_route(array<std::uint8_t,ADDR_SIZE> &dest);
     void receive_msg();
     void send_msg(array<std::uint8_t,ADDR_SIZE> &next,vector<std::uint8_t> &buf);
     string to_string();
-    void data_send(ar_packet* pkt);
-    void start();
+    virtual void start();
     void stop();
-    
-    
+    virtual void establish_route(array<std::uint8_t,ADDR_SIZE> &dest);
+};
+class adhoc_node_exp : public adhoc_node{
+   
+    protected:
+    int repeat_time;
+    int repeat_interval;
+    int hops;
+    adhoc_node_exp();
+    virtual void after_received(std::vector<std::uint8_t> &buf) override;
+    std::unordered_map<std::uint32_t,std::chrono::steady_clock::time_point> rtt_s;
+    std::unordered_map<std::uint32_t,std::chrono::steady_clock::time_point> rtt_r;
+    public:
+    adhoc_node_exp(string &if_name);
+    ~adhoc_node_exp();
+    void set_hops(int h){this->hops=h;};
+    void virtual establish_route(array<std::uint8_t,ADDR_SIZE> &dest) override;
+    void set_repeat_times(int r){this->repeat_time=r;}
+    void set_repeat_interval(int i){this->repeat_interval=i;}
+    void virtual start() override;
+    void measure_time();
 };
 };
 #endif

@@ -58,7 +58,7 @@ int main(int argc, char** argv){
     dsr_routing dsr;
 
     if(exp){
-        adhoc_node_exp_rtt ane(ifname);
+        adhoc_node_exp ane(ifname);
         ane.set_routing(&dsr);
         std::cout<<"routing "<<std::endl;
         std::cout<<dsr.to_string()<<std::endl;

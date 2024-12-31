@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdsr.a CMakeFiles/dsr.dir/dsr_packet.cpp.o CMakeFiles/dsr.dir/dsr_routing.cpp.o
+/usr/bin/ranlib libdsr.a

@@ -5,6 +5,48 @@
 
 using namespace oit::ist::nws::adhoc_routing;
 
+arf_header::arf_header(){}
+arf_header::~arf_header(){}
+void arf_header::set_seq_no(std::uint8_t seq_no){
+    this->seq_no=seq_no;
+}
+void arf_header::set_fragment_id(std::uint8_t fragment_id){
+    this->fragment_id=fragment_id;
+}
+void arf_header::set_num_of_fratments(std::uint8_t num_of_fragments){
+    this->num_of_fragments=num_of_fragments;
+}
+void arf_header::set_total_length(std::uint32_t total_length){
+    this->total_length=total_length;
+}
+void arf_header::set_remote_address(array<std::uint8_t,ADDR_SIZE> &remote){
+    std::copy(remote.begin(),remote.end(),this->remote_address.begin());
+}
+void arf_header::set_arf_header(arf_header &arfh){
+    this->seq_no=arfh.seq_no;
+    this->fragment_id=arfh.fragment_id;
+    this->num_of_fragments=arfh.num_of_fragments;
+    this->total_length=arfh.total_length;
+    std::copy(arfh.remote_address.begin(),arfh.remote_address.end(),this->remote_address.begin());
+}
+std::uint32_t arf_header::get_seq_no(){
+    return this->seq_no;
+}
+std::uint8_t arf_header::get_fragment_id(){
+    return this->fragment_id;
+}
+std::uint8_t arf_header::get_num_of_fragments(){
+    return this->num_of_fragments;
+}
+std::uint32_t arf_header::get_total_length(){
+    return this->total_length;
+}
+array<std::uint8_t,ADDR_SIZE>* arf_header::get_remote_address(){
+    return &(this->remote_address);
+}
+std::uint32_t arf_header::header_length(){
+    return SEQUENCE_NUMBER_SIZE+FRAGMENT_ID_SIZE+NUM_OF_FRAGMENTS_SIZE+TOTAL_LENGTH_SIZE+REMOTE_ADDRESS_SIZE;
+}
 void arf_header::serialize(vector<std::uint8_t> &buf){
     if(buf.size()<this->header_length()){
         buf.resize(this->header_length());
@@ -30,6 +72,20 @@ string arf_header::to_string(){
     ret+=" total length: "+std::to_string(this->total_length);
     ret+=" remote"+adhoc_util::to_string_iparray(this->remote_address);
     return ret;
+}
+
+arf_packet::arf_packet(){}
+arf_packet::~arf_packet(){}
+void arf_packet::set_arf_packet(arf_packet &arfp){
+    this->set_arf_header(arfp);
+    this->fragment_length=arfp.fragment_length;
+    this->payload.clear();
+    this->payload.resize(arfp.payload.size());
+    std::copy(arfp.payload.begin(),arfp.payload.end(),this->payload.begin());
+}
+std::uint32_t arf_packet::get_fragment_length(){
+    this->fragment_length=FRAGMENT_LENGTH_SIZE+this->payload.size()+this->header_length();
+    return this->fragment_length;
 }
 
 void arf_packet::put_data(std::uint32_t index_begin, std::uint32_t index_end, const vector<std::uint8_t> &buf){
@@ -71,7 +127,15 @@ int arf_packet::move_date(std::uint32_t index_begin, vector<std::uint8_t> &buf){
     std::copy(this->payload.begin(),this->payload.end(),buf.begin()+index_begin);
     return this->payload.size();
 }
-
+arf_portion::arf_portion(){this->set_start();}
+arf_portion::~arf_portion(){}
+int arf_portion::storage_size(){
+    return this->storage.size();
+}
+void arf_portion::set_start(){
+    chrono::system_clock::time_point p = chrono::system_clock::now();
+    this->start = chrono::duration_cast<chrono::seconds>(p.time_since_epoch());
+}
 bool arf_portion::find_arf_packet_with_fragment_id(arf_packet& arfp){
     if(this->seq_no!=arfp.get_seq_no()){
         return false;
@@ -109,6 +173,23 @@ string arf_portion::to_string(){
         ret+=this->storage.at(i).to_string()+"\n";
     }
     return ret;
+}
+arf_manager::arf_manager(){
+    this->seq_no=0;this->fragment_size=0;
+}
+arf_manager::arf_manager(uint16_t size){
+    this->seq_no=0;this->fragment_size=size;
+}
+arf_manager::~arf_manager(){}
+
+void arf_manager::set_own_id(array<std::uint8_t,ADDR_SIZE> &id){
+    std::copy(id.begin(),id.end(),this->own_id.begin());
+}
+void arf_manager::set_initial_seq_no(std::uint32_t seq_no){
+    this->seq_no=seq_no;
+}
+void arf_manager::set_fragment_size(uint16_t size){
+    this->fragment_size=size;
 }
 
 void arf_manager::fragment(vector<arf_packet> &pkts,const vector<std::uint8_t> &buf){

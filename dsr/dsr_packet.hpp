@@ -22,8 +22,8 @@ class dsr_packet:public ar_packet{
     void add_id(std::array<std::uint8_t,ADDR_SIZE> &id);
     int find_id(std::array<std::uint8_t,ADDR_SIZE> &id);//return an index of id
     std::array<std::uint8_t,ADDR_SIZE>* previous_id(std::array<std::uint8_t,ADDR_SIZE> &id);//return a previous id of own id
-    int get_ri_length(){this->ri_length=ri.size();return this->ri_length;}
-    std::vector<array<std::uint8_t,ADDR_SIZE>>* get_ri(){return &(this->ri);}
+    int get_ri_length();
+    std::vector<array<std::uint8_t,ADDR_SIZE>>* get_ri();
     virtual std::uint32_t packet_size() override;
 	virtual void initialize() override;
 	virtual std::uint32_t serialize(std::vector<std::uint8_t> &buf) override;
