@@ -229,7 +229,6 @@ void adhoc_node_exp::establish_route(array<std::uint8_t,ADDR_SIZE> &dest){
     if(this->hops<=1){
         std::cerr<<"establish route 1 hop"<<std::endl;
         next=this->routing->generate_initial_request(dest,buf);
-        std::cerr<<"establish route 1 hop"<<std::endl;
     }
     else{
         array<std::uint8_t,ADDR_SIZE> tmp={10,0,0,101};
@@ -253,6 +252,7 @@ void adhoc_node_exp::establish_route(array<std::uint8_t,ADDR_SIZE> &dest){
         this->send_msg(*next,buf);
         std::this_thread::sleep_for(std::chrono::seconds(this->repeat_interval));
     }
+
 }
 
 void adhoc_node_exp::measure_time(){

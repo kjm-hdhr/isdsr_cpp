@@ -44,7 +44,7 @@ array<std::uint8_t,ADDR_SIZE>* dsr_routing::processing_rrep(std::vector<std::uin
 	}
 	if(p.is_dest(id)){
 		std::cout<<"route established"<<std::endl;
-		return nullptr;
+		return &(this->id);
 	}
 	next=p.previous_id(id);
 	std::copy(next->begin(),next->end(),this->next.begin());

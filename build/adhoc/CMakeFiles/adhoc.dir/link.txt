@@ -1,0 +1,2 @@
+/usr/bin/ar qc libadhoc.a CMakeFiles/adhoc.dir/adhoc_routing_packet.cpp.o CMakeFiles/adhoc.dir/adhoc_routing_fragment.cpp.o CMakeFiles/adhoc.dir/adhoc_routing.cpp.o CMakeFiles/adhoc.dir/adhoc_node.cpp.o
+/usr/bin/ranlib libadhoc.a
